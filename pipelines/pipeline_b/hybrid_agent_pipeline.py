@@ -6,13 +6,16 @@ from pipelines.pipeline_b.layout_parser import LayoutAwareParser, ExtractedTable
 from pipelines.pipeline_b.clinical_graph import build_clinical_graph_from_corpus, ClinicalKnowledgeGraph
 from pipelines.pipeline_a.naive_vectorstore import DenseCosineVectorStore
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DEFAULT_CORPUS = (PROJECT_ROOT / "data" / "corpus").resolve()
+DEFAULT_DB = (PROJECT_ROOT / "data" / "vectorstore_pipeline_b.json").resolve()
+
 class HybridAgenticRAGPipeline:
-    
-    def __init__(self, corpus_dir: str = "data/corpus"):
-        self.corpus_dir = Path(corpus_dir)
+    def __init__(self, corpus_dir: Optional[str] = None):
+        self.corpus_dir = Path(corpus_dir).resolve() if corpus_dir else DEFAULT_CORPUS
         self.parser = LayoutAwareParser()
-        self.graph: ClinicalKnowledgeGraph = build_clinical_graph_from_corpus(corpus_dir)
-        self.vector_store = DenseCosineVectorStore(persist_path="data/vectorstore_pipeline_b.json")
+        self.graph: ClinicalKnowledgeGraph = build_clinical_graph_from_corpus(str(self.corpus_dir))
+        self.vector_store = DenseCosineVectorStore(persist_path=str(DEFAULT_DB))
         self.parsed_docs: Dict[str, Any] = {}
         self.is_initialized = False
 

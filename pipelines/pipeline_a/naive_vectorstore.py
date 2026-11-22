@@ -54,13 +54,16 @@ class DenseCosineVectorStore:
         return results
 
     def save(self):
-        self.persist_path.parent.mkdir(parents=True, exist_ok=True)
-        data = {
-            "documents": self.documents,
-            "vocabulary": list(self.vectorizer.vocabulary_.keys()) if hasattr(self.vectorizer, 'vocabulary_') else []
-        }
-        with open(self.persist_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
+        try:
+            self.persist_path.parent.mkdir(parents=True, exist_ok=True)
+            data = {
+                "documents": self.documents,
+                "vocabulary": list(self.vectorizer.vocabulary_.keys()) if hasattr(self.vectorizer, 'vocabulary_') else []
+            }
+            with open(self.persist_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2)
+        except (OSError, PermissionError):
+            pass
 
     def load(self):
         if not self.persist_path.exists():

@@ -5,12 +5,15 @@ from typing import Dict, Any, List, Optional
 from pipelines.pipeline_a.naive_loader import NaiveDocumentLoader
 from pipelines.pipeline_a.naive_vectorstore import DenseCosineVectorStore
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DEFAULT_CORPUS = (PROJECT_ROOT / "data" / "corpus").resolve()
+DEFAULT_DB = (PROJECT_ROOT / "data" / "vectorstore_pipeline_a.json").resolve()
+
 class NaiveRAGPipeline:
-    
-    def __init__(self, corpus_dir: str = "data/corpus", persist_db: str = "data/vectorstore_pipeline_a.json"):
-        self.corpus_dir = Path(corpus_dir)
+    def __init__(self, corpus_dir: Optional[str] = None, persist_db: Optional[str] = None):
+        self.corpus_dir = Path(corpus_dir).resolve() if corpus_dir else DEFAULT_CORPUS
         self.loader = NaiveDocumentLoader(chunk_size=500, chunk_overlap=50)
-        self.vector_store = DenseCosineVectorStore(persist_path=persist_db)
+        self.vector_store = DenseCosineVectorStore(persist_path=str(persist_db) if persist_db else str(DEFAULT_DB))
         self.is_initialized = False
 
     def initialize(self, force_reload: bool = False):
