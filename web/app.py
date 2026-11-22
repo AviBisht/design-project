@@ -73,11 +73,11 @@ class RunRequest(BaseModel):
     query_text: str
     target_pipeline: str = "both"
 
-@app.get("/api/health")
+@app.api_route("/api/health", methods=["GET", "HEAD"])
 def health_check():
     return {"status": "healthy", "service": "clinical-intelligence-engine"}
 
-@app.get("/", response_class=HTMLResponse)
+@app.api_route("/", methods=["GET", "HEAD"], response_class=HTMLResponse)
 def index(request: Request):
     return templates.TemplateResponse(request=request, name="index.html")
 
