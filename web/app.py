@@ -43,13 +43,16 @@ async def add_cache_control_headers(request: Request, call_next):
         response.headers["Expires"] = "0"
     return response
 
-static_dir = Path("web/static")
-templates_dir = Path("web/templates")
+BASE_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = BASE_DIR.parent
+
+static_dir = BASE_DIR / "static"
+templates_dir = BASE_DIR / "templates"
 static_dir.mkdir(parents=True, exist_ok=True)
 templates_dir.mkdir(parents=True, exist_ok=True)
 
-app.mount("/static", StaticFiles(directory="web/static"), name="static")
-templates = Jinja2Templates(directory="web/templates")
+app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
+templates = Jinja2Templates(directory=str(templates_dir))
 
 pipeline_a = NaiveRAGPipeline()
 pipeline_b = HybridAgenticRAGPipeline()
@@ -74,7 +77,7 @@ def index(request: Request):
 
 @app.get("/api/summary")
 def get_summary_metrics():
-    metrics_file = Path("eval/comparative_metrics.json")
+    metrics_file = PROJECT_ROOT / "eval" / "comparative_metrics.json"
     if not metrics_file.exists():
         raise HTTPException(status_code=404, detail="Comparative metrics not generated yet.")
     with open(metrics_file, "r", encoding="utf-8") as f:
@@ -83,7 +86,7 @@ def get_summary_metrics():
 
 @app.get("/api/queries")
 def get_benchmark_queries():
-    benchmark_file = Path("data/benchmark/gold_benchmark.json")
+    benchmark_file = PROJECT_ROOT / "data" / "benchmark" / "gold_benchmark.json"
     if not benchmark_file.exists():
         raise HTTPException(status_code=404, detail="Benchmark queries file not found.")
     with open(benchmark_file, "r", encoding="utf-8") as f:
@@ -100,7 +103,7 @@ def get_document_source(doc_id: str):
             detail=f"Invalid document identifier format: '{clean_id}'. Expected pattern: '^[A-Z0-9-]+$'."
         )
 
-    corpus_dir = Path("data/corpus").resolve()
+    corpus_dir = (PROJECT_ROOT / "data" / "corpus").resolve()
     doc_path = (corpus_dir / f"{clean_id}.md").resolve()
 
     if not doc_path.is_relative_to(corpus_dir):
