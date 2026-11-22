@@ -10,6 +10,9 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from pipelines.pipeline_a.naive_pipeline import NaiveRAGPipeline
 from pipelines.pipeline_b.hybrid_agent_pipeline import HybridAgenticRAGPipeline
@@ -60,8 +63,11 @@ evaluator = RagasEvaluator()
 
 @app.on_event("startup")
 def startup_event():
-    pipeline_a.initialize()
-    pipeline_b.initialize()
+    try:
+        pipeline_a.initialize()
+        pipeline_b.initialize()
+    except Exception as e:
+        pass
 
 class RunRequest(BaseModel):
     query_text: str

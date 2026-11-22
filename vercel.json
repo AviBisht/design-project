@@ -1,4 +1,10 @@
 {
+  "version": 2,
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "{web/**,data/**,eval/**,pipelines/**}"
+    }
+  },
   "rewrites": [
     {
       "source": "/(.*)",
