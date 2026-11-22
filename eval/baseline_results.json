@@ -1,0 +1,2458 @@
+{
+  "pipeline": "pipeline_a",
+  "timestamp": "2026-11-22 21:18:10",
+  "total_queries": 50,
+  "average_latency_ms": 3.95,
+  "results": [
+    {
+      "query_id": "Q-001",
+      "query_type": "single-hop",
+      "query_text": "What was the initial dosage of Lisinopril prescribed to patient P-101?",
+      "reference_answer": "Patient P-101 was prescribed an initial dose of Lisinopril 10 mg PO daily.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine",
+        "nt of MAP to 68 mmHg.\nInitial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically.",
+        "udication: Acute Kidney Injury (AKI) and drug-induced Hyperkalemia secondary to ACE-inhibitor (Lisinopril) therapy in the setting of underlying diabetic nephropathy.\nInterventions:\n- Immediately discontinue Lisinopril.\n- Administer Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID.\n- Switch antihypertensive regimen to Nifedipine ER 30 mg PO daily.\n- Repeat labs in 48 hours. Potassium normalized to 4.6 mEq/L on 2026-03-21.",
+        "[SECTION: ONCOLOGY CONSULTATION & PATHOLOGY REVIEW]\nEncounter Date: 2026-05-02\nPrimary Diagnosis: Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0).\nMolecular Profile: EGFR wild-type, ALK negative, ROS1 negative, PD-L1 TPS 45%.\nTreatment Regimen: Neoadjuvant chemoimmunotherapy with Carboplatin AUC 5 + Pemetrexed 500 mg/m2 + Pembrolizumab 200 mg IV every 21 days (Cycle 1 Day 1: 2026-05-04).\nPremedications Prescribed: Dexamethasone 4 mg BID for 3 days, Folic Acid"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.1057,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P1_C001",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.0788,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C007",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.0684,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P1_C000",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 1,
+          "score": 0.0422,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.61,
+        "generation_latency_ms": 0.02,
+        "total_latency_ms": 3.63,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-002",
+      "query_type": "single-hop",
+      "query_text": "What chief complaint did patient P-101 present with on 2026-03-12?",
+      "reference_answer": "Patient P-101 presented with worsening bilateral lower extremity edema, fatigue, and persistent hypertension.",
+      "generated_answer": "History of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension.",
+      "retrieved_contexts": [
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine",
+        "[SECTION: LABORATORY FLOWSHEET & METABOLIC TELEMETRY]\nTable 1: Longitudinal Renal and Electrolyte Panel (P-101)\n| Date | Test Name | Result | Normal Range | Flag | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-03-12 | Serum Sodium | 139 | 135 - 145 | Normal | mEq/L |\n| 2026-03-12 | Serum Potassium | 4.3 | 3.5 - 5.0 | Normal | mEq/L |\n| 2026-03-12 | Serum Creatinine | 1.35 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-12 | Blood Urea Nitrogen | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | e",
+        "en | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | eGFR (CKD-EPI) | 51 | >= 60 | LOW | mL/min/1.73m2 |\n| 2026-03-12 | Urine Albumin/Cr | 340 | < 30 | ABNORMAL | mg/g |\n| 2026-03-19 | Serum Potassium | 5.7 | 3.5 - 5.0 | CRITICAL_HIGH | mEq/L |\n| 2026-03-19 | Serum Creatinine | 1.82 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-19 | Blood Urea Nitrogen | 38 | 7 - 20 | HIGH | mg/dL |",
+        "[SECTION: CARDIOLOGY ADMISSION & ECHOCARDIOGRAPHY REPORT]\nEncounter Date: 2026-04-05\nChief Complaint: Paroxysmal nocturnal dyspnea, orthopnea requiring 3 pillows, and rapid 6-pound weight gain over 5 days.\nHistory of Present Illness: P-102 is a 66-year-old male with known ischemic cardiomyopathy and previous anterior STEMI (2021). Evaluated for acute decompensated heart failure.\nTransthoracic Echocardiogram (TTE) Summary:\n- Left Ventricular Ejection Fraction (LVEF): 28% (Severely reduced).\n- Lef"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.2796,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P3_C004",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.2637,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P3_C005",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.1966,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P1_C000",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 1,
+          "score": 0.1004,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.98,
+        "generation_latency_ms": 0.07,
+        "total_latency_ms": 3.05,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-003",
+      "query_type": "single-hop",
+      "query_text": "Why was Amlodipine discontinued for patient P-101?",
+      "reference_answer": "Amlodipine was discontinued due to suspected contribution to peripheral edema.",
+      "generated_answer": "History of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension.",
+      "retrieved_contexts": [
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine",
+        "ions included Metformin 1000 mg BID and Amlodipine 10 mg daily.\nPhysical Examination: BP 162/94 mmHg, HR 78 bpm, SpO2 97% on room air. 2+ pitting edema extending to mid-calf bilaterally. Cardiovascular exam: normal S1/S2, no murmurs.",
+        "[SECTION: LABORATORY FLOWSHEET & METABOLIC TELEMETRY]\nTable 1: Longitudinal Renal and Electrolyte Panel (P-101)\n| Date | Test Name | Result | Normal Range | Flag | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-03-12 | Serum Sodium | 139 | 135 - 145 | Normal | mEq/L |\n| 2026-03-12 | Serum Potassium | 4.3 | 3.5 - 5.0 | Normal | mEq/L |\n| 2026-03-12 | Serum Creatinine | 1.35 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-12 | Blood Urea Nitrogen | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | e",
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.1751,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P1_C001",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.0507,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P3_C004",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.0473,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0424,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.65,
+        "generation_latency_ms": 0.12,
+        "total_latency_ms": 3.77,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-004",
+      "query_type": "single-hop",
+      "query_text": "What left ventricular ejection fraction (LVEF) was recorded on echocardiogram for patient P-102?",
+      "reference_answer": "The echocardiogram showed a severely reduced Left Ventricular Ejection Fraction (LVEF) of 28%.",
+      "generated_answer": "Transthoracic Echocardiogram (TTE) Summary: - Left Ventricular Ejection Fraction (LVEF): 28% (Severely reduced).",
+      "retrieved_contexts": [
+        "[SECTION: CARDIOLOGY ADMISSION & ECHOCARDIOGRAPHY REPORT]\nEncounter Date: 2026-04-05\nChief Complaint: Paroxysmal nocturnal dyspnea, orthopnea requiring 3 pillows, and rapid 6-pound weight gain over 5 days.\nHistory of Present Illness: P-102 is a 66-year-old male with known ischemic cardiomyopathy and previous anterior STEMI (2021). Evaluated for acute decompensated heart failure.\nTransthoracic Echocardiogram (TTE) Summary:\n- Left Ventricular Ejection Fraction (LVEF): 28% (Severely reduced).\n- Lef",
+        "ion Fraction (LVEF): 28% (Severely reduced).\n- Left ventricular internal diameter in diastole (LVIDd): 6.4 cm (Moderate dilation).\n- Severe global hypokinesis with apical akinesis.\n- Grade II diastolic dysfunction with elevated filling pressures (E/e' ratio 16).",
+        "[SECTION: SECONDARY STROKE PREVENTION & REHABILITATION]\nEtiology Evaluation:\n- 12-lead EKG and continuous telemetry: Paroxysmal Atrial Fibrillation detected at 32 hours post-admission.\n- Transthoracic Echo: Normal ejection fraction (58%), left atrial enlargement (LAA volume index 38 mL/m2).\nTherapeutic Strategy:\n- Given documented atrial fibrillation etiology (cardioembolic stroke), initiated Apixaban (Eliquis) 5 mg PO BID on Day 3 post-stroke after repeat non-contrast CT confirmed absence of he",
+        "[SECTION: DISCHARGE SUMMARY & PROGNOSIS]\nDischarge Date: 2026-04-09\nFinal Diagnosis: Acute Decompensated Heart Failure with Reduced Ejection Fraction (HFrEF NYHA Class III) secondary to ischemic heart disease.\nCondition on Discharge: Clinically compensated, weight down to 78.4 kg dry weight, ambulatory without dyspnea.\nDischarge Prescriptions:\n1. Sacubitril/Valsartan 24/26 mg PO BID.\n2. Carvedilol 6.25 mg PO BID (titrated up from starting dose).\n3. Spironolactone 25 mg PO daily.\n4. Empagliflozin"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-002_P1_C000",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 1,
+          "score": 0.2884,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P1_C001",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 1,
+          "score": 0.2024,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P3_C004",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.0816,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P4_C006",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 4,
+          "score": 0.0674,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.76,
+        "generation_latency_ms": 0.06,
+        "total_latency_ms": 2.82,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-005",
+      "query_type": "single-hop",
+      "query_text": "What initial intravenous diuretic was administered to patient P-102 upon admission?",
+      "reference_answer": "Patient P-102 received Intravenous Furosemide (Lasix) 40 mg IV BID.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "nt of MAP to 68 mmHg.\nInitial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically.",
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-004_P1_C001",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.148,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.1341,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0952,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.0826,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.45,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.46,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-006",
+      "query_type": "single-hop",
+      "query_text": "What required washout period was observed before starting Sacubitril/Valsartan for P-102?",
+      "reference_answer": "A required 36-hour washout period was observed before initiating Sacubitril/Valsartan.",
+      "generated_answer": "mg PO BID after required 36-hour washout period.",
+      "retrieved_contexts": [
+        "mg PO BID after required 36-hour washout period.\n- Empagliflozin 10 mg PO daily added for cardioprotective SGLT2 inhibition.",
+        "[SECTION: INPATIENT TITRATION & GUIDELINE-DIRECTED THERAPY]\nAttending Cardiologist: Dr. R. Chen, MD | Advanced Heart Failure\nTherapeutic Course:\n- Intravenous Furosemide (Lasix) 40 mg IV BID initiated for decongestion. Total net negative fluid balance over 72 hours: -4.8 Liters.\n- Transitioned oral beta-blocker from Metoprolol Tartrate to Carvedilol 3.125 mg PO BID once euvolemic status achieved.\n- Initiated Sacubitril/Valsartan (Entresto) 24/26 mg PO BID after required 36-hour washout period.\n-",
+        "[SECTION: DISCHARGE SUMMARY & PROGNOSIS]\nDischarge Date: 2026-04-09\nFinal Diagnosis: Acute Decompensated Heart Failure with Reduced Ejection Fraction (HFrEF NYHA Class III) secondary to ischemic heart disease.\nCondition on Discharge: Clinically compensated, weight down to 78.4 kg dry weight, ambulatory without dyspnea.\nDischarge Prescriptions:\n1. Sacubitril/Valsartan 24/26 mg PO BID.\n2. Carvedilol 6.25 mg PO BID (titrated up from starting dose).\n3. Spironolactone 25 mg PO daily.\n4. Empagliflozin",
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-002_P2_C003",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 2,
+          "score": 0.2458,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P2_C002",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 2,
+          "score": 0.206,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P4_C006",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 4,
+          "score": 0.1291,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.0424,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 5.92,
+        "generation_latency_ms": 0.04,
+        "total_latency_ms": 5.96,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-007",
+      "query_type": "single-hop",
+      "query_text": "What was the primary staging and histology of patient P-103's lung cancer?",
+      "reference_answer": "Patient P-103 was diagnosed with Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0).",
+      "generated_answer": "[SECTION: ONCOLOGY CONSULTATION & PATHOLOGY REVIEW] Encounter Date: 2026-05-02 Primary Diagnosis: Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0).",
+      "retrieved_contexts": [
+        "[SECTION: ONCOLOGY CONSULTATION & PATHOLOGY REVIEW]\nEncounter Date: 2026-05-02\nPrimary Diagnosis: Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0).\nMolecular Profile: EGFR wild-type, ALK negative, ROS1 negative, PD-L1 TPS 45%.\nTreatment Regimen: Neoadjuvant chemoimmunotherapy with Carboplatin AUC 5 + Pemetrexed 500 mg/m2 + Pembrolizumab 200 mg IV every 21 days (Cycle 1 Day 1: 2026-05-04).\nPremedications Prescribed: Dexamethasone 4 mg BID for 3 days, Folic Acid",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "[SECTION: HEMATOLOGY FLOWSHEET & DIFFERENTIALS]\nTable 3: Serial Complete Blood Count with Differential (P-103)\n| Date | Test Name | Value | Reference Range | Status | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-05-03 | White Blood Cells (WBC) | 6.8 | 4.0 - 11.0 | Normal | 10^3/uL |\n| 2026-05-03 | Absolute Neutrophil Count (ANC) | 4200 | 1500 - 8000 | Normal | cells/uL |\n| 2026-05-03 | Platelet Count | 240 | 150 - 450 | Normal | 10^3/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1",
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P1_C000",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 1,
+          "score": 0.1546,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0595,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P3_C003",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.0423,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0318,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.82,
+        "generation_latency_ms": 0.06,
+        "total_latency_ms": 3.88,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-008",
+      "query_type": "single-hop",
+      "query_text": "What was the PD-L1 expression level documented for patient P-103?",
+      "reference_answer": "The PD-L1 Tumor Proportion Score (TPS) for patient P-103 was documented as 45%.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: ONCOLOGY CONSULTATION & PATHOLOGY REVIEW]\nEncounter Date: 2026-05-02\nPrimary Diagnosis: Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0).\nMolecular Profile: EGFR wild-type, ALK negative, ROS1 negative, PD-L1 TPS 45%.\nTreatment Regimen: Neoadjuvant chemoimmunotherapy with Carboplatin AUC 5 + Pemetrexed 500 mg/m2 + Pembrolizumab 200 mg IV every 21 days (Cycle 1 Day 1: 2026-05-04).\nPremedications Prescribed: Dexamethasone 4 mg BID for 3 days, Folic Acid",
+        "icillin/Sulbactam | >= 32/16 | RESISTANT | Ineffective |\n| Ceftriaxone | >= 64 | RESISTANT | ESBL confirmed |\n| Cefepime | >= 16 | RESISTANT | Ineffective |\n| Ciprofloxacin | >= 4 | RESISTANT | High-level fluoroquinolone resistance |\n| Levofloxacin | >= 8 | RESISTANT | Ineffective |\n| Meropenem | <= 0.25 | SUSCEPTIBLE | Preferred carbapenem regimen |\n| Piperacillin/Tazobactam | 16/4 | INTERMEDIATE | Avoid in bacteremia |\n| Amikacin | <= 2 | SUSCEPTIBLE | Retained aminoglycoside activity |",
+        "[SECTION: SECONDARY STROKE PREVENTION & REHABILITATION]\nEtiology Evaluation:\n- 12-lead EKG and continuous telemetry: Paroxysmal Atrial Fibrillation detected at 32 hours post-admission.\n- Transthoracic Echo: Normal ejection fraction (58%), left atrial enlargement (LAA volume index 38 mL/m2).\nTherapeutic Strategy:\n- Given documented atrial fibrillation etiology (cardioembolic stroke), initiated Apixaban (Eliquis) 5 mg PO BID on Day 3 post-stroke after repeat non-contrast CT confirmed absence of he",
+        "[SECTION: HEMATOLOGY FLOWSHEET & DIFFERENTIALS]\nTable 3: Serial Complete Blood Count with Differential (P-103)\n| Date | Test Name | Value | Reference Range | Status | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-05-03 | White Blood Cells (WBC) | 6.8 | 4.0 - 11.0 | Normal | 10^3/uL |\n| 2026-05-03 | Absolute Neutrophil Count (ANC) | 4200 | 1500 - 8000 | Normal | cells/uL |\n| 2026-05-03 | Platelet Count | 240 | 150 - 450 | Normal | 10^3/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P1_C000",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 1,
+          "score": 0.1102,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P2_C003",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 2,
+          "score": 0.0446,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P3_C004",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.0383,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P3_C003",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.0382,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.88,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 2.89,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-009",
+      "query_type": "single-hop",
+      "query_text": "What empiric antibiotic was initiated for patient P-103 upon emergency admission for febrile neutropenia?",
+      "reference_answer": "Cefepime 2 g IV q8h was initiated within 45 minutes of arrival for febrile neutropenia.",
+      "generated_answer": "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)] Encounter Date: 2026-05-15 Chief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.",
+      "retrieved_contexts": [
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival.",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o",
+        "[SECTION: SECONDARY STROKE PREVENTION & REHABILITATION]\nEtiology Evaluation:\n- 12-lead EKG and continuous telemetry: Paroxysmal Atrial Fibrillation detected at 32 hours post-admission.\n- Transthoracic Echo: Normal ejection fraction (58%), left atrial enlargement (LAA volume index 38 mL/m2).\nTherapeutic Strategy:\n- Given documented atrial fibrillation etiology (cardioembolic stroke), initiated Apixaban (Eliquis) 5 mg PO BID on Day 3 post-stroke after repeat non-contrast CT confirmed absence of he",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.2044,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0468,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P3_C004",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.0359,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0356,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.18,
+        "generation_latency_ms": 0.07,
+        "total_latency_ms": 3.25,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-010",
+      "query_type": "single-hop",
+      "query_text": "What primary infectious diagnosis was made for patient P-104 on admission?",
+      "reference_answer": "Patient P-104 was diagnosed with Urosepsis secondary to Acute Complicated Pyelonephritis.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: INFECTIOUS DISEASE ADMISSION RECORD]\nEncounter Date: 2026-06-10\nChief Complaint: Left flank pain, high-grade fevers, dysuria, and altered mental status in elderly male.\nDiagnosis upon Admission: Urosepsis secondary to Acute Complicated Pyelonephritis.\nVital Signs: Temp 39.2 deg C, BP 88/54 mmHg (fluid-responsive septic shock), HR 122 bpm, RR 24 bpm.\nFluid Resuscitation: Received 30 mL/kg balanced crystalloids (Plasmalyte) with improvement of MAP to 68 mmHg.\nInitial Antimicrobial Order:",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "[SECTION: ONCOLOGY CONSULTATION & PATHOLOGY REVIEW]\nEncounter Date: 2026-05-02\nPrimary Diagnosis: Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0).\nMolecular Profile: EGFR wild-type, ALK negative, ROS1 negative, PD-L1 TPS 45%.\nTreatment Regimen: Neoadjuvant chemoimmunotherapy with Carboplatin AUC 5 + Pemetrexed 500 mg/m2 + Pembrolizumab 200 mg IV every 21 days (Cycle 1 Day 1: 2026-05-04).\nPremedications Prescribed: Dexamethasone 4 mg BID for 3 days, Folic Acid",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-004_P1_C000",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.1174,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.1025,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P1_C000",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 1,
+          "score": 0.0769,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.074,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.03,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.04,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-011",
+      "query_type": "single-hop",
+      "query_text": "What initial empiric antibiotic was administered to patient P-104?",
+      "reference_answer": "Intravenous Ceftriaxone 2 g IV every 24 hours was started empirically for patient P-104.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+        "nt of MAP to 68 mmHg.\nInitial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically.",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0945,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P1_C001",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.0883,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0692,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0675,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 8.78,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 8.79,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-012",
+      "query_type": "single-hop",
+      "query_text": "What was the time of symptom onset and ED arrival recorded for stroke patient P-105?",
+      "reference_answer": "Symptom onset was at 08:15 EST and emergency department arrival was at 09:20 EST on 2026-07-18.",
+      "generated_answer": "[SECTION: EMERGENCY NEUROLOGY STROKE CODE] Encounter Date: 2026-07-18 | Time of Onset: 08:15 EST | ED Arrival: 09:20 EST Chief Complaint: Acute right-sided hemiparesis and expressive aphasia.",
+      "retrieved_contexts": [
+        "[SECTION: EMERGENCY NEUROLOGY STROKE CODE]\nEncounter Date: 2026-07-18 | Time of Onset: 08:15 EST | ED Arrival: 09:20 EST\nChief Complaint: Acute right-sided hemiparesis and expressive aphasia.\nBaseline National Institutes of Health Stroke Scale (NIHSS) on Arrival: 14.\nNon-contrast Head CT: No acute intracranial hemorrhage or established hypoattenuation. ASPECTS score: 9.\nCT Angiography Head & Neck: Distal M2 branch occlusion of left middle cerebral artery (MCA).\nThrombolysis Decision: Intravenous",
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+        "[SECTION: SECONDARY STROKE PREVENTION & REHABILITATION]\nEtiology Evaluation:\n- 12-lead EKG and continuous telemetry: Paroxysmal Atrial Fibrillation detected at 32 hours post-admission.\n- Transthoracic Echo: Normal ejection fraction (58%), left atrial enlargement (LAA volume index 38 mL/m2).\nTherapeutic Strategy:\n- Given documented atrial fibrillation etiology (cardioembolic stroke), initiated Apixaban (Eliquis) 5 mg PO BID on Day 3 post-stroke after repeat non-contrast CT confirmed absence of he",
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P1_C000",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.2304,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0722,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P3_C004",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.0635,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.0619,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.72,
+        "generation_latency_ms": 0.07,
+        "total_latency_ms": 2.79,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-013",
+      "query_type": "single-hop",
+      "query_text": "What was the baseline NIHSS score for patient P-105 upon arrival?",
+      "reference_answer": "The baseline National Institutes of Health Stroke Scale (NIHSS) score on arrival was 14.",
+      "generated_answer": "[SECTION: SERIAL NEUROLOGICAL TELEMETRY] Table 5: Longitudinal NIHSS Score Trajectory (P-105) | Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note | | :--- | :--- | :--- | :--- | :--- | :--- | | 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation | | 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr | | 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery.",
+      "retrieved_contexts": [
+        "[SECTION: SERIAL NEUROLOGICAL TELEMETRY]\nTable 5: Longitudinal NIHSS Score Trajectory (P-105)\n| Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation |\n| 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr |\n| 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery ",
+        "[SECTION: EMERGENCY NEUROLOGY STROKE CODE]\nEncounter Date: 2026-07-18 | Time of Onset: 08:15 EST | ED Arrival: 09:20 EST\nChief Complaint: Acute right-sided hemiparesis and expressive aphasia.\nBaseline National Institutes of Health Stroke Scale (NIHSS) on Arrival: 14.\nNon-contrast Head CT: No acute intracranial hemorrhage or established hypoattenuation. ASPECTS score: 9.\nCT Angiography Head & Neck: Distal M2 branch occlusion of left middle cerebral artery (MCA).\nThrombolysis Decision: Intravenous",
+        "[SECTION: DISCHARGE / ADVERSE EVENT NOTE]\nEncounter Date: 2026-03-19 (Unscheduled Urgent Clinic Evaluation)\nSubjective: Patient presents for 1-week follow-up. Reports mild muscle weakness and nausea.\nObjective Findings: EKG reveals tall, peaked T-waves in precordial leads V2-V4 concerning for acute hyperkalemia. Repeat STAT Chem-7 confirmed potassium at 5.7 mEq/L and acute creatinine jump to 1.82 mg/dL (>30% elevation over baseline).\nClinical Adjudication: Acute Kidney Injury (AKI) and drug-indu",
+        "ter repeat non-contrast CT confirmed absence of hemorrhagic transformation.\n- Initiated Atorvastatin 80 mg PO daily for plaque stabilization.\n- Discharged to inpatient rehabilitation with modified Rankin Scale (mRS) score of 1."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P2_C002",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.2425,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C000",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.1395,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C006",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.0467,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P3_C005",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.0456,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.83,
+        "generation_latency_ms": 0.07,
+        "total_latency_ms": 2.9,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-014",
+      "query_type": "single-hop",
+      "query_text": "What thrombolytic drug and dosage was administered to patient P-105?",
+      "reference_answer": "Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus was administered at 09:48 EST.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "[SECTION: DISCHARGE / ADVERSE EVENT NOTE]\nEncounter Date: 2026-03-19 (Unscheduled Urgent Clinic Evaluation)\nSubjective: Patient presents for 1-week follow-up. Reports mild muscle weakness and nausea.\nObjective Findings: EKG reveals tall, peaked T-waves in precordial leads V2-V4 concerning for acute hyperkalemia. Repeat STAT Chem-7 confirmed potassium at 5.7 mEq/L and acute creatinine jump to 1.82 mg/dL (>30% elevation over baseline).\nClinical Adjudication: Acute Kidney Injury (AKI) and drug-indu",
+        "[SECTION: SERIAL NEUROLOGICAL TELEMETRY]\nTable 5: Longitudinal NIHSS Score Trajectory (P-105)\n| Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation |\n| 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr |\n| 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery "
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.106,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0776,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C006",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.0733,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P2_C002",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.0572,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.64,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.65,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-015",
+      "query_type": "single-hop",
+      "query_text": "Why was patient P-105 not considered a candidate for endovascular thrombectomy?",
+      "reference_answer": "The patient was not an endovascular thrombectomy candidate due to distal branch vessel location (distal M2 branch occlusion).",
+      "generated_answer": "Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+      "retrieved_contexts": [
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+        "[SECTION: SERIAL NEUROLOGICAL TELEMETRY]\nTable 5: Longitudinal NIHSS Score Trajectory (P-105)\n| Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation |\n| 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr |\n| 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery ",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.2727,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P2_C002",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.0431,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0229,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0223,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.92,
+        "generation_latency_ms": 0.15,
+        "total_latency_ms": 3.07,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-016",
+      "query_type": "single-hop",
+      "query_text": "What heart rhythm abnormality was detected on telemetry for patient P-105?",
+      "reference_answer": "Paroxysmal Atrial Fibrillation was detected on continuous telemetry at 32 hours post-admission.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: SERIAL NEUROLOGICAL TELEMETRY]\nTable 5: Longitudinal NIHSS Score Trajectory (P-105)\n| Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation |\n| 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr |\n| 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery ",
+        "[SECTION: SECONDARY STROKE PREVENTION & REHABILITATION]\nEtiology Evaluation:\n- 12-lead EKG and continuous telemetry: Paroxysmal Atrial Fibrillation detected at 32 hours post-admission.\n- Transthoracic Echo: Normal ejection fraction (58%), left atrial enlargement (LAA volume index 38 mL/m2).\nTherapeutic Strategy:\n- Given documented atrial fibrillation etiology (cardioembolic stroke), initiated Apixaban (Eliquis) 5 mg PO BID on Day 3 post-stroke after repeat non-contrast CT confirmed absence of he",
+        "[SECTION: DISCHARGE SUMMARY & PROGNOSIS]\nDischarge Date: 2026-04-09\nFinal Diagnosis: Acute Decompensated Heart Failure with Reduced Ejection Fraction (HFrEF NYHA Class III) secondary to ischemic heart disease.\nCondition on Discharge: Clinically compensated, weight down to 78.4 kg dry weight, ambulatory without dyspnea.\nDischarge Prescriptions:\n1. Sacubitril/Valsartan 24/26 mg PO BID.\n2. Carvedilol 6.25 mg PO BID (titrated up from starting dose).\n3. Spironolactone 25 mg PO daily.\n4. Empagliflozin",
+        "3. Spironolactone 25 mg PO daily.\n4. Empagliflozin 10 mg PO daily.\n5. Furosemide 20 mg PO daily as needed for weight gain > 3 lbs in 24 hours.\nFollow-up: Heart failure clinic visit in 14 days; repeat echocardiogram scheduled in 90 days."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P2_C002",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.0836,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P3_C004",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.0807,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P4_C006",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 4,
+          "score": 0.0529,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P4_C007",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 4,
+          "score": 0.0444,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 6.04,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 6.05,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-017",
+      "query_type": "single-hop",
+      "query_text": "What oral anticoagulant was initiated for patient P-105 for secondary stroke prevention?",
+      "reference_answer": "Apixaban (Eliquis) 5 mg PO BID was initiated on Day 3 post-stroke.",
+      "generated_answer": "[SECTION: SECONDARY STROKE PREVENTION & REHABILITATION] Etiology Evaluation: - 12-lead EKG and continuous telemetry: Paroxysmal Atrial Fibrillation detected at 32 hours post-admission.",
+      "retrieved_contexts": [
+        "[SECTION: SECONDARY STROKE PREVENTION & REHABILITATION]\nEtiology Evaluation:\n- 12-lead EKG and continuous telemetry: Paroxysmal Atrial Fibrillation detected at 32 hours post-admission.\n- Transthoracic Echo: Normal ejection fraction (58%), left atrial enlargement (LAA volume index 38 mL/m2).\nTherapeutic Strategy:\n- Given documented atrial fibrillation etiology (cardioembolic stroke), initiated Apixaban (Eliquis) 5 mg PO BID on Day 3 post-stroke after repeat non-contrast CT confirmed absence of he",
+        "[SECTION: INPATIENT TITRATION & GUIDELINE-DIRECTED THERAPY]\nAttending Cardiologist: Dr. R. Chen, MD | Advanced Heart Failure\nTherapeutic Course:\n- Intravenous Furosemide (Lasix) 40 mg IV BID initiated for decongestion. Total net negative fluid balance over 72 hours: -4.8 Liters.\n- Transitioned oral beta-blocker from Metoprolol Tartrate to Carvedilol 3.125 mg PO BID once euvolemic status achieved.\n- Initiated Sacubitril/Valsartan (Entresto) 24/26 mg PO BID after required 36-hour washout period.\n-",
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival.",
+        "[SECTION: EMERGENCY NEUROLOGY STROKE CODE]\nEncounter Date: 2026-07-18 | Time of Onset: 08:15 EST | ED Arrival: 09:20 EST\nChief Complaint: Acute right-sided hemiparesis and expressive aphasia.\nBaseline National Institutes of Health Stroke Scale (NIHSS) on Arrival: 14.\nNon-contrast Head CT: No acute intracranial hemorrhage or established hypoattenuation. ASPECTS score: 9.\nCT Angiography Head & Neck: Distal M2 branch occlusion of left middle cerebral artery (MCA).\nThrombolysis Decision: Intravenous"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P3_C004",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.2105,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P2_C002",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 2,
+          "score": 0.0662,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.0516,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C000",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0478,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 7.72,
+        "generation_latency_ms": 0.12,
+        "total_latency_ms": 7.84,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-018",
+      "query_type": "single-hop",
+      "query_text": "What was patient P-102's dry weight at discharge?",
+      "reference_answer": "Patient P-102's dry weight at discharge was 78.4 kg.",
+      "generated_answer": "Condition on Discharge: Clinically compensated, weight down to 78.",
+      "retrieved_contexts": [
+        "[SECTION: DISCHARGE SUMMARY & PROGNOSIS]\nDischarge Date: 2026-04-09\nFinal Diagnosis: Acute Decompensated Heart Failure with Reduced Ejection Fraction (HFrEF NYHA Class III) secondary to ischemic heart disease.\nCondition on Discharge: Clinically compensated, weight down to 78.4 kg dry weight, ambulatory without dyspnea.\nDischarge Prescriptions:\n1. Sacubitril/Valsartan 24/26 mg PO BID.\n2. Carvedilol 6.25 mg PO BID (titrated up from starting dose).\n3. Spironolactone 25 mg PO daily.\n4. Empagliflozin",
+        "[SECTION: CARDIOLOGY ADMISSION & ECHOCARDIOGRAPHY REPORT]\nEncounter Date: 2026-04-05\nChief Complaint: Paroxysmal nocturnal dyspnea, orthopnea requiring 3 pillows, and rapid 6-pound weight gain over 5 days.\nHistory of Present Illness: P-102 is a 66-year-old male with known ischemic cardiomyopathy and previous anterior STEMI (2021). Evaluated for acute decompensated heart failure.\nTransthoracic Echocardiogram (TTE) Summary:\n- Left Ventricular Ejection Fraction (LVEF): 28% (Severely reduced).\n- Lef",
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival.",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-002_P4_C006",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 4,
+          "score": 0.2139,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P1_C000",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 1,
+          "score": 0.0673,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.0547,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0513,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.96,
+        "generation_latency_ms": 0.08,
+        "total_latency_ms": 3.04,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-019",
+      "query_type": "single-hop",
+      "query_text": "What medication was administered to patient P-101 to manage urgent hyperkalemia?",
+      "reference_answer": "Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID was administered.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine",
+        "[SECTION: DISCHARGE / ADVERSE EVENT NOTE]\nEncounter Date: 2026-03-19 (Unscheduled Urgent Clinic Evaluation)\nSubjective: Patient presents for 1-week follow-up. Reports mild muscle weakness and nausea.\nObjective Findings: EKG reveals tall, peaked T-waves in precordial leads V2-V4 concerning for acute hyperkalemia. Repeat STAT Chem-7 confirmed potassium at 5.7 mEq/L and acute creatinine jump to 1.82 mg/dL (>30% elevation over baseline).\nClinical Adjudication: Acute Kidney Injury (AKI) and drug-indu",
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.1057,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C006",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.1026,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0844,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0618,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.87,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 2.88,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-020",
+      "query_type": "single-hop",
+      "query_text": "What growth factor was administered to patient P-103 during hospitalization for neutropenia?",
+      "reference_answer": "Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections were administered.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival.",
+        "[SECTION: HEMATOLOGY FLOWSHEET & DIFFERENTIALS]\nTable 3: Serial Complete Blood Count with Differential (P-103)\n| Date | Test Name | Value | Reference Range | Status | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-05-03 | White Blood Cells (WBC) | 6.8 | 4.0 - 11.0 | Normal | 10^3/uL |\n| 2026-05-03 | Absolute Neutrophil Count (ANC) | 4200 | 1500 - 8000 | Normal | cells/uL |\n| 2026-05-03 | Platelet Count | 240 | 150 - 450 | Normal | 10^3/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.1159,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0901,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.048,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P3_C003",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.047,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 4.64,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 4.65,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-021",
+      "query_type": "multi-hop",
+      "query_text": "Did the medication initiated for diabetic nephropathy in patient P-101 lead to an adverse event requiring emergency intervention?",
+      "reference_answer": "Yes. Lisinopril was initiated on 2026-03-12 for diabetic nephropathy and caused acute hyperkalemia (potassium 5.7 mEq/L with peaked T-waves) and AKI (creatinine rose to 1.82 mg/dL), requiring urgent discontinuation and Lokelma therapy on 2026-03-19.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: DISCHARGE / ADVERSE EVENT NOTE]\nEncounter Date: 2026-03-19 (Unscheduled Urgent Clinic Evaluation)\nSubjective: Patient presents for 1-week follow-up. Reports mild muscle weakness and nausea.\nObjective Findings: EKG reveals tall, peaked T-waves in precordial leads V2-V4 concerning for acute hyperkalemia. Repeat STAT Chem-7 confirmed potassium at 5.7 mEq/L and acute creatinine jump to 1.82 mg/dL (>30% elevation over baseline).\nClinical Adjudication: Acute Kidney Injury (AKI) and drug-indu",
+        "udication: Acute Kidney Injury (AKI) and drug-induced Hyperkalemia secondary to ACE-inhibitor (Lisinopril) therapy in the setting of underlying diabetic nephropathy.\nInterventions:\n- Immediately discontinue Lisinopril.\n- Administer Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID.\n- Switch antihypertensive regimen to Nifedipine ER 30 mg PO daily.\n- Repeat labs in 48 hours. Potassium normalized to 4.6 mEq/L on 2026-03-21.",
+        "[SECTION: CLINICAL ASSESSMENT & PLAN]\nAttending Physician: Dr. E. Vance, MD | Internal Medicine\nAssessment:\n1. Diabetic Nephropathy with macroalbuminuria secondary to longstanding T2DM.\n2. Uncontrolled Essential Hypertension.\n3. Chronic Kidney Disease Stage 3a (baseline eGFR ~52 mL/min/1.73m2).\nManagement Plan:\n- Discontinue Amlodipine due to suspected contribution to peripheral edema.\n- Initiate Lisinopril 10 mg PO daily for renal-protective antiproteinuric effects.\n- Continue Metformin 1000 mg",
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P4_C006",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.1035,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C007",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.0807,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P2_C002",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 2,
+          "score": 0.0759,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.0704,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 7.21,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 7.22,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-022",
+      "query_type": "multi-hop",
+      "query_text": "Trace the relationship between patient P-101's baseline renal lab values and the replacement antihypertensive regimen chosen after adverse drug event.",
+      "reference_answer": "Patient P-101 had baseline creatinine 1.35 mg/dL and eGFR 51 mL/min/1.73m2. After developing Lisinopril-induced hyperkalemia and AKI (creatinine 1.82 mg/dL), she was switched to Nifedipine ER 30 mg PO daily, avoiding renin-angiotensin-aldosterone blockade.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: DISCHARGE / ADVERSE EVENT NOTE]\nEncounter Date: 2026-03-19 (Unscheduled Urgent Clinic Evaluation)\nSubjective: Patient presents for 1-week follow-up. Reports mild muscle weakness and nausea.\nObjective Findings: EKG reveals tall, peaked T-waves in precordial leads V2-V4 concerning for acute hyperkalemia. Repeat STAT Chem-7 confirmed potassium at 5.7 mEq/L and acute creatinine jump to 1.82 mg/dL (>30% elevation over baseline).\nClinical Adjudication: Acute Kidney Injury (AKI) and drug-indu",
+        "udication: Acute Kidney Injury (AKI) and drug-induced Hyperkalemia secondary to ACE-inhibitor (Lisinopril) therapy in the setting of underlying diabetic nephropathy.\nInterventions:\n- Immediately discontinue Lisinopril.\n- Administer Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID.\n- Switch antihypertensive regimen to Nifedipine ER 30 mg PO daily.\n- Repeat labs in 48 hours. Potassium normalized to 4.6 mEq/L on 2026-03-21.",
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P4_C006",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.122,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C007",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.1203,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.0747,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0544,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.88,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 2.89,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-023",
+      "query_type": "multi-hop",
+      "query_text": "How did patient P-102's NT-proBNP biomarker trend correlate with the inpatient heart failure therapies administered?",
+      "reference_answer": "P-102 was admitted with NT-proBNP 4850 pg/mL. Administration of IV Furosemide (achieving -4.8L fluid balance), Carvedilol, and Sacubitril/Valsartan reduced NT-proBNP to 3210 pg/mL on April 6 and 1140 pg/mL by April 8.",
+      "generated_answer": "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE] Table 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102) | Date | Biomarker | Value | Reference Range | Interpretation | | :--- | :--- | :--- | :--- | :--- | | 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) | | 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) | | 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) | | 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) | |.",
+      "retrieved_contexts": [
+        "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE]\nTable 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102)\n| Date | Biomarker | Value | Reference Range | Interpretation |\n| :--- | :--- | :--- | :--- | :--- |\n| 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) |\n| 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) |\n| 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) |\n| 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) |\n| ",
+        "3. Spironolactone 25 mg PO daily.\n4. Empagliflozin 10 mg PO daily.\n5. Furosemide 20 mg PO daily as needed for weight gain > 3 lbs in 24 hours.\nFollow-up: Heart failure clinic visit in 14 days; repeat echocardiogram scheduled in 90 days.",
+        "[SECTION: CARDIOLOGY ADMISSION & ECHOCARDIOGRAPHY REPORT]\nEncounter Date: 2026-04-05\nChief Complaint: Paroxysmal nocturnal dyspnea, orthopnea requiring 3 pillows, and rapid 6-pound weight gain over 5 days.\nHistory of Present Illness: P-102 is a 66-year-old male with known ischemic cardiomyopathy and previous anterior STEMI (2021). Evaluated for acute decompensated heart failure.\nTransthoracic Echocardiogram (TTE) Summary:\n- Left Ventricular Ejection Fraction (LVEF): 28% (Severely reduced).\n- Lef",
+        "[SECTION: INPATIENT TITRATION & GUIDELINE-DIRECTED THERAPY]\nAttending Cardiologist: Dr. R. Chen, MD | Advanced Heart Failure\nTherapeutic Course:\n- Intravenous Furosemide (Lasix) 40 mg IV BID initiated for decongestion. Total net negative fluid balance over 72 hours: -4.8 Liters.\n- Transitioned oral beta-blocker from Metoprolol Tartrate to Carvedilol 3.125 mg PO BID once euvolemic status achieved.\n- Initiated Sacubitril/Valsartan (Entresto) 24/26 mg PO BID after required 36-hour washout period.\n-"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-002_P3_C004",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 3,
+          "score": 0.2807,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P4_C007",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 4,
+          "score": 0.0891,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P1_C000",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 1,
+          "score": 0.0884,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P2_C002",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 2,
+          "score": 0.0841,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.83,
+        "generation_latency_ms": 0.08,
+        "total_latency_ms": 2.91,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-024",
+      "query_type": "multi-hop",
+      "query_text": "Explain how the echocardiographic finding for patient P-102 determined the selection of neurohormonal discharge medications.",
+      "reference_answer": "The echocardiogram showed severely reduced LVEF of 28% and LV dilation, establishing HFrEF. This guided guideline-directed quadruple therapy at discharge: Sacubitril/Valsartan, Carvedilol, Spironolactone, and Empagliflozin.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE]\nTable 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102)\n| Date | Biomarker | Value | Reference Range | Interpretation |\n| :--- | :--- | :--- | :--- | :--- |\n| 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) |\n| 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) |\n| 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) |\n| 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) |\n| ",
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine",
+        "[SECTION: DISCHARGE SUMMARY & PROGNOSIS]\nDischarge Date: 2026-04-09\nFinal Diagnosis: Acute Decompensated Heart Failure with Reduced Ejection Fraction (HFrEF NYHA Class III) secondary to ischemic heart disease.\nCondition on Discharge: Clinically compensated, weight down to 78.4 kg dry weight, ambulatory without dyspnea.\nDischarge Prescriptions:\n1. Sacubitril/Valsartan 24/26 mg PO BID.\n2. Carvedilol 6.25 mg PO BID (titrated up from starting dose).\n3. Spironolactone 25 mg PO daily.\n4. Empagliflozin",
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-002_P3_C004",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 3,
+          "score": 0.085,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.0796,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P4_C006",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 4,
+          "score": 0.0656,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.0594,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.95,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 2.96,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-025",
+      "query_type": "multi-hop",
+      "query_text": "Connect patient P-103's chemotherapy regimen to the emergency admission 11 days later and the subsequent dose adjustment.",
+      "reference_answer": "Patient P-103 received Carboplatin AUC 5 and Pemetrexed on 2026-05-04. By Day 11, she developed severe neutropenia (ANC 320 cells/uL) and fever (38.9 deg C) requiring admission, Cefepime, and G-CSF. Consequently, Carboplatin was reduced by 20% for Cycle 2 with mandatory prophylactic Pegfilgrastim.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival.",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o",
+        "ilgrastim 6 mg SQ 24 hours post-chemotherapy for all remaining cycles."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.1154,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.0958,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0808,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C006",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.073,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 4.94,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 4.95,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-026",
+      "query_type": "multi-hop",
+      "query_text": "What bacteriological finding in patient P-104 forced an escalation of antimicrobial therapy from the initial regimen?",
+      "reference_answer": "Initial Ceftriaxone was ineffective because microbiological culture and AST revealed an ESBL-producing Escherichia coli resistant to Ceftriaxone (MIC >= 64 ug/mL) and Ciprofloxacin (MIC >= 4 ug/mL). This forced immediate escalation to Meropenem 1 g IV q8h.",
+      "generated_answer": "Initial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically.",
+      "retrieved_contexts": [
+        "nt of MAP to 68 mmHg.\nInitial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically.",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o",
+        "[SECTION: INFECTIOUS DISEASE ADMISSION RECORD]\nEncounter Date: 2026-06-10\nChief Complaint: Left flank pain, high-grade fevers, dysuria, and altered mental status in elderly male.\nDiagnosis upon Admission: Urosepsis secondary to Acute Complicated Pyelonephritis.\nVital Signs: Temp 39.2 deg C, BP 88/54 mmHg (fluid-responsive septic shock), HR 122 bpm, RR 24 bpm.\nFluid Resuscitation: Received 30 mL/kg balanced crystalloids (Plasmalyte) with improvement of MAP to 68 mmHg.\nInitial Antimicrobial Order:",
+        "udication: Acute Kidney Injury (AKI) and drug-induced Hyperkalemia secondary to ACE-inhibitor (Lisinopril) therapy in the setting of underlying diabetic nephropathy.\nInterventions:\n- Immediately discontinue Lisinopril.\n- Administer Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID.\n- Switch antihypertensive regimen to Nifedipine ER 30 mg PO daily.\n- Repeat labs in 48 hours. Potassium normalized to 4.6 mEq/L on 2026-03-21."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-004_P1_C001",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.1811,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.1192,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P1_C000",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.0779,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C007",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.0735,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 4.89,
+        "generation_latency_ms": 0.07,
+        "total_latency_ms": 4.96,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-027",
+      "query_type": "multi-hop",
+      "query_text": "How did the microbiological resistance profile of P-104 affect the route and duration of post-discharge care?",
+      "reference_answer": "Due to multi-drug resistance (resistance to oral options including Ciprofloxacin and Ampicillin) and susceptibility limited to carbapenems and aminoglycosides, the patient required a 14-day total course of intravenous Meropenem administered via an outpatient PICC line.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "ilgrastim 6 mg SQ 24 hours post-chemotherapy for all remaining cycles.",
+        "[SECTION: DISCHARGE SUMMARY & PROGNOSIS]\nDischarge Date: 2026-04-09\nFinal Diagnosis: Acute Decompensated Heart Failure with Reduced Ejection Fraction (HFrEF NYHA Class III) secondary to ischemic heart disease.\nCondition on Discharge: Clinically compensated, weight down to 78.4 kg dry weight, ambulatory without dyspnea.\nDischarge Prescriptions:\n1. Sacubitril/Valsartan 24/26 mg PO BID.\n2. Carvedilol 6.25 mg PO BID (titrated up from starting dose).\n3. Spironolactone 25 mg PO daily.\n4. Empagliflozin",
+        "icillin/Sulbactam | >= 32/16 | RESISTANT | Ineffective |\n| Ceftriaxone | >= 64 | RESISTANT | ESBL confirmed |\n| Cefepime | >= 16 | RESISTANT | Ineffective |\n| Ciprofloxacin | >= 4 | RESISTANT | High-level fluoroquinolone resistance |\n| Levofloxacin | >= 8 | RESISTANT | Ineffective |\n| Meropenem | <= 0.25 | SUSCEPTIBLE | Preferred carbapenem regimen |\n| Piperacillin/Tazobactam | 16/4 | INTERMEDIATE | Avoid in bacteremia |\n| Amikacin | <= 2 | SUSCEPTIBLE | Retained aminoglycoside activity |",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P4_C006",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0845,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P4_C006",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 4,
+          "score": 0.0725,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P2_C003",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 2,
+          "score": 0.0654,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0617,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.62,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.63,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-028",
+      "query_type": "multi-hop",
+      "query_text": "Trace the trajectory of neurological deficit in patient P-105 from initial presentation through pharmacological thrombolysis to 48-hour recovery.",
+      "reference_answer": "Patient P-105 presented with NIHSS 14 (severe arm motor deficit and severe aphasia). Following Tenecteplase thrombolysis, NIHSS improved to 10 at 1 hr, 6 at 16 hrs, 3 at 24 hrs (aphasia resolved), and reached 1 at 48 hrs with only trace pronator drift.",
+      "generated_answer": "[SECTION: SERIAL NEUROLOGICAL TELEMETRY] Table 5: Longitudinal NIHSS Score Trajectory (P-105) | Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note | | :--- | :--- | :--- | :--- | :--- | :--- | | 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation | | 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr | | 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery.",
+      "retrieved_contexts": [
+        "[SECTION: SERIAL NEUROLOGICAL TELEMETRY]\nTable 5: Longitudinal NIHSS Score Trajectory (P-105)\n| Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation |\n| 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr |\n| 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery ",
+        "1 (Drift) | 1 (Mild aphasia) | Continued recovery |\n| 24:00 EST | 3 | 1 (Drift) | 0 (Normal) | 0 (Normal speech) | Resolution of aphasia |\n| 48:00 EST | 1 | 0 (Normal) | 0 (Normal) | 0 (Normal speech) | Trace pronator drift right arm |",
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+        "nt of MAP to 68 mmHg.\nInitial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P2_C002",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.1836,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P2_C003",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.1089,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0804,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P1_C001",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.058,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.94,
+        "generation_latency_ms": 0.07,
+        "total_latency_ms": 3.01,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-029",
+      "query_type": "multi-hop",
+      "query_text": "What diagnostic finding identified the cardioembolic source of stroke in patient P-105, and what anticoagulant was chosen?",
+      "reference_answer": "Continuous inpatient telemetry at 32 hours detected Paroxysmal Atrial Fibrillation, and echo showed left atrial enlargement. This identified cardioembolism as the etiology, leading to anticoagulation with Apixaban 5 mg PO BID once repeat CT excluded hemorrhage.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: SECONDARY STROKE PREVENTION & REHABILITATION]\nEtiology Evaluation:\n- 12-lead EKG and continuous telemetry: Paroxysmal Atrial Fibrillation detected at 32 hours post-admission.\n- Transthoracic Echo: Normal ejection fraction (58%), left atrial enlargement (LAA volume index 38 mL/m2).\nTherapeutic Strategy:\n- Given documented atrial fibrillation etiology (cardioembolic stroke), initiated Apixaban (Eliquis) 5 mg PO BID on Day 3 post-stroke after repeat non-contrast CT confirmed absence of he",
+        "[SECTION: EMERGENCY NEUROLOGY STROKE CODE]\nEncounter Date: 2026-07-18 | Time of Onset: 08:15 EST | ED Arrival: 09:20 EST\nChief Complaint: Acute right-sided hemiparesis and expressive aphasia.\nBaseline National Institutes of Health Stroke Scale (NIHSS) on Arrival: 14.\nNon-contrast Head CT: No acute intracranial hemorrhage or established hypoattenuation. ASPECTS score: 9.\nCT Angiography Head & Neck: Distal M2 branch occlusion of left middle cerebral artery (MCA).\nThrombolysis Decision: Intravenous",
+        "[SECTION: SERIAL NEUROLOGICAL TELEMETRY]\nTable 5: Longitudinal NIHSS Score Trajectory (P-105)\n| Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation |\n| 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr |\n| 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery ",
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P3_C004",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.1441,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C000",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0705,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P2_C002",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.0555,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0403,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.75,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.76,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-030",
+      "query_type": "multi-hop",
+      "query_text": "Evaluate the multi-organ impact of ACE-inhibitor initiation in patient P-101 across the renal and cardiac systems.",
+      "reference_answer": "Lisinopril initiation aimed at renal protection instead caused acute deterioration in renal function (creatinine rise from 1.35 to 1.82 mg/dL, AKI) and cardiac electrical instability manifested by tall peaked T-waves on EKG from acute hyperkalemia (potassium 5.7 mEq/L).",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "udication: Acute Kidney Injury (AKI) and drug-induced Hyperkalemia secondary to ACE-inhibitor (Lisinopril) therapy in the setting of underlying diabetic nephropathy.\nInterventions:\n- Immediately discontinue Lisinopril.\n- Administer Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID.\n- Switch antihypertensive regimen to Nifedipine ER 30 mg PO daily.\n- Repeat labs in 48 hours. Potassium normalized to 4.6 mEq/L on 2026-03-21.",
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine",
+        "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE]\nTable 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102)\n| Date | Biomarker | Value | Reference Range | Interpretation |\n| :--- | :--- | :--- | :--- | :--- |\n| 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) |\n| 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) |\n| 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) |\n| 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) |\n| ",
+        "[SECTION: LABORATORY FLOWSHEET & METABOLIC TELEMETRY]\nTable 1: Longitudinal Renal and Electrolyte Panel (P-101)\n| Date | Test Name | Result | Normal Range | Flag | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-03-12 | Serum Sodium | 139 | 135 - 145 | Normal | mEq/L |\n| 2026-03-12 | Serum Potassium | 4.3 | 3.5 - 5.0 | Normal | mEq/L |\n| 2026-03-12 | Serum Creatinine | 1.35 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-12 | Blood Urea Nitrogen | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | e"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P4_C007",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.1273,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.0893,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P3_C004",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 3,
+          "score": 0.0629,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P3_C004",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.0539,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.97,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.98,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-031",
+      "query_type": "multi-hop",
+      "query_text": "Which patients in the corpus were initiated on beta-blockers, and what specific clinical indications warranted them?",
+      "reference_answer": "Patient P-102 was initiated on Carvedilol (titrated from 3.125 mg to 6.25 mg BID) for HFrEF with LVEF 28%. No other patient in the corpus was initiated on a beta-blocker.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: INPATIENT TITRATION & GUIDELINE-DIRECTED THERAPY]\nAttending Cardiologist: Dr. R. Chen, MD | Advanced Heart Failure\nTherapeutic Course:\n- Intravenous Furosemide (Lasix) 40 mg IV BID initiated for decongestion. Total net negative fluid balance over 72 hours: -4.8 Liters.\n- Transitioned oral beta-blocker from Metoprolol Tartrate to Carvedilol 3.125 mg PO BID once euvolemic status achieved.\n- Initiated Sacubitril/Valsartan (Entresto) 24/26 mg PO BID after required 36-hour washout period.\n-",
+        "[SECTION: MICROBIOLOGY & ANTIMICROBIAL SUSCEPTIBILITY (AST)]\nTable 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)\nOrganism Isolated: Escherichia coli (>100,000 CFU/mL urine; 2/2 blood culture bottles positive)\nESBL Status: Extended Spectrum Beta-Lactamase (ESBL) POSITIVE\n| Antibiotic Agent | MIC (ug/mL) | Interpretation | Clinical Comment |\n| :--- | :--- | :--- | :--- |\n| Ampicillin | >= 32 | RESISTANT | Ineffective |\n| Ampicillin/Sulbactam | >= 32/16 | RESISTANT | Ineffec",
+        "ter repeat non-contrast CT confirmed absence of hemorrhagic transformation.\n- Initiated Atorvastatin 80 mg PO daily for plaque stabilization.\n- Discharged to inpatient rehabilitation with modified Rankin Scale (mRS) score of 1.",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-002_P2_C002",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 2,
+          "score": 0.1307,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P2_C002",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 2,
+          "score": 0.0922,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P3_C005",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.0674,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0582,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 6.32,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 6.33,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-032",
+      "query_type": "multi-hop",
+      "query_text": "Compare the renal function trajectories of patient P-101 and patient P-102 during their inpatient/clinic courses.",
+      "reference_answer": "Patient P-101 experienced acute renal deterioration (creatinine rose from 1.35 to 1.82 mg/dL with BUN rising from 24 to 38 mg/dL) due to Lisinopril AKI. In contrast, patient P-102 maintained stable renal function (creatinine 1.10 mg/dL on discharge) despite intensive diuresis.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine",
+        "[SECTION: DISCHARGE / ADVERSE EVENT NOTE]\nEncounter Date: 2026-03-19 (Unscheduled Urgent Clinic Evaluation)\nSubjective: Patient presents for 1-week follow-up. Reports mild muscle weakness and nausea.\nObjective Findings: EKG reveals tall, peaked T-waves in precordial leads V2-V4 concerning for acute hyperkalemia. Repeat STAT Chem-7 confirmed potassium at 5.7 mEq/L and acute creatinine jump to 1.82 mg/dL (>30% elevation over baseline).\nClinical Adjudication: Acute Kidney Injury (AKI) and drug-indu",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.1103,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C006",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.0671,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0657,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0603,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 5.76,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 5.77,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-033",
+      "query_type": "multi-hop",
+      "query_text": "Trace how patient P-103's Absolute Neutrophil Count recovered from nadir to resolution and how it permitted discharge.",
+      "reference_answer": "Patient P-103 nadired at severe neutropenia (ANC 320 cells/uL on May 15). Daily Filgrastim increased ANC to 1250 cells/uL on May 18, and it resolved to 2800 cells/uL on May 20, satisfying hematologic criteria for discharge.",
+      "generated_answer": "0 | CRITICAL_LOW | 10^3/uL | | 2026-05-15 | Absolute Neutrophil Count (ANC) | 320 | 1500 - 8000 | SEVERE_NEUTROPENIA | cells/uL | | 2026-05-15 | Hemoglobin | 9.",
+      "retrieved_contexts": [
+        "/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1 | 4.0 - 11.0 | CRITICAL_LOW | 10^3/uL |\n| 2026-05-15 | Absolute Neutrophil Count (ANC) | 320 | 1500 - 8000 | SEVERE_NEUTROPENIA | cells/uL |\n| 2026-05-15 | Hemoglobin | 9.4 | 12.0 - 15.5 | LOW | g/dL |\n| 2026-05-18 | Absolute Neutrophil Count (ANC) | 1250 | 1500 - 8000 | RECOVERING | cells/uL |\n| 2026-05-20 | Absolute Neutrophil Count (ANC) | 2800 | 1500 - 8000 | RESOLVED | cells/uL |",
+        "[SECTION: HEMATOLOGY FLOWSHEET & DIFFERENTIALS]\nTable 3: Serial Complete Blood Count with Differential (P-103)\n| Date | Test Name | Value | Reference Range | Status | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-05-03 | White Blood Cells (WBC) | 6.8 | 4.0 - 11.0 | Normal | 10^3/uL |\n| 2026-05-03 | Absolute Neutrophil Count (ANC) | 4200 | 1500 - 8000 | Normal | cells/uL |\n| 2026-05-03 | Platelet Count | 240 | 150 - 450 | Normal | 10^3/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "1 (Drift) | 1 (Mild aphasia) | Continued recovery |\n| 24:00 EST | 3 | 1 (Drift) | 0 (Normal) | 0 (Normal speech) | Resolution of aphasia |\n| 48:00 EST | 1 | 0 (Normal) | 0 (Normal) | 0 (Normal speech) | Trace pronator drift right arm |"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P3_C004",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.2741,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P3_C003",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.1935,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.099,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P2_C003",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.0858,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.14,
+        "generation_latency_ms": 0.11,
+        "total_latency_ms": 3.25,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-034",
+      "query_type": "multi-hop",
+      "query_text": "What specific safety monitoring step performed on 2026-03-19 prevented further clinical decline in patient P-101?",
+      "reference_answer": "The scheduled 7-day safety follow-up lab check detected acute hyperkalemia (potassium 5.7 mEq/L) and AKI (creatinine 1.82 mg/dL) before life-threatening ventricular arrhythmias ensued, allowing immediate Lisinopril cessation and potassium binder therapy.",
+      "generated_answer": "73m2 | | 2026-03-12 | Urine Albumin/Cr | 340 | < 30 | ABNORMAL | mg/g | | 2026-03-19 | Serum Potassium | 5.",
+      "retrieved_contexts": [
+        "en | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | eGFR (CKD-EPI) | 51 | >= 60 | LOW | mL/min/1.73m2 |\n| 2026-03-12 | Urine Albumin/Cr | 340 | < 30 | ABNORMAL | mg/g |\n| 2026-03-19 | Serum Potassium | 5.7 | 3.5 - 5.0 | CRITICAL_HIGH | mEq/L |\n| 2026-03-19 | Serum Creatinine | 1.82 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-19 | Blood Urea Nitrogen | 38 | 7 - 20 | HIGH | mg/dL |",
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine",
+        "[SECTION: LABORATORY FLOWSHEET & METABOLIC TELEMETRY]\nTable 1: Longitudinal Renal and Electrolyte Panel (P-101)\n| Date | Test Name | Result | Normal Range | Flag | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-03-12 | Serum Sodium | 139 | 135 - 145 | Normal | mEq/L |\n| 2026-03-12 | Serum Potassium | 4.3 | 3.5 - 5.0 | Normal | mEq/L |\n| 2026-03-12 | Serum Creatinine | 1.35 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-12 | Blood Urea Nitrogen | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | e",
+        "[SECTION: DISCHARGE / ADVERSE EVENT NOTE]\nEncounter Date: 2026-03-19 (Unscheduled Urgent Clinic Evaluation)\nSubjective: Patient presents for 1-week follow-up. Reports mild muscle weakness and nausea.\nObjective Findings: EKG reveals tall, peaked T-waves in precordial leads V2-V4 concerning for acute hyperkalemia. Repeat STAT Chem-7 confirmed potassium at 5.7 mEq/L and acute creatinine jump to 1.82 mg/dL (>30% elevation over baseline).\nClinical Adjudication: Acute Kidney Injury (AKI) and drug-indu"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P3_C005",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.2436,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.1455,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P3_C004",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.1433,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C006",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.1342,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.45,
+        "generation_latency_ms": 0.07,
+        "total_latency_ms": 3.52,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-035",
+      "query_type": "multi-hop",
+      "query_text": "Explain the clinical reasoning for administering IV crystalloids to patient P-104 despite suspected septic shock.",
+      "reference_answer": "Patient P-104 presented with hypotension (BP 88/54 mmHg) and tachycardia (HR 122 bpm) from uroseptic shock; fluid resuscitation with 30 mL/kg Plasmalyte restored Mean Arterial Pressure (MAP) to 68 mmHg prior to targeted antibiotic response.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: INFECTIOUS DISEASE ADMISSION RECORD]\nEncounter Date: 2026-06-10\nChief Complaint: Left flank pain, high-grade fevers, dysuria, and altered mental status in elderly male.\nDiagnosis upon Admission: Urosepsis secondary to Acute Complicated Pyelonephritis.\nVital Signs: Temp 39.2 deg C, BP 88/54 mmHg (fluid-responsive septic shock), HR 122 bpm, RR 24 bpm.\nFluid Resuscitation: Received 30 mL/kg balanced crystalloids (Plasmalyte) with improvement of MAP to 68 mmHg.\nInitial Antimicrobial Order:",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o",
+        "[SECTION: CLINICAL ASSESSMENT & PLAN]\nAttending Physician: Dr. E. Vance, MD | Internal Medicine\nAssessment:\n1. Diabetic Nephropathy with macroalbuminuria secondary to longstanding T2DM.\n2. Uncontrolled Essential Hypertension.\n3. Chronic Kidney Disease Stage 3a (baseline eGFR ~52 mL/min/1.73m2).\nManagement Plan:\n- Discontinue Amlodipine due to suspected contribution to peripheral edema.\n- Initiate Lisinopril 10 mg PO daily for renal-protective antiproteinuric effects.\n- Continue Metformin 1000 mg",
+        "nt of MAP to 68 mmHg.\nInitial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-004_P1_C000",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.147,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0722,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P2_C002",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 2,
+          "score": 0.0603,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P1_C001",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.0442,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.83,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 2.84,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-036",
+      "query_type": "multi-hop",
+      "query_text": "Which patients presented with fever as a core triage symptom, and what distinct infectious etiologies were confirmed?",
+      "reference_answer": "Patient P-103 presented with fever (38.9 deg C) due to post-chemotherapy febrile neutropenia (no positive cultures). Patient P-104 presented with fever (39.2 deg C) due to ESBL E. coli urosepsis and bacteremia.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival.",
+        "ter repeat non-contrast CT confirmed absence of hemorrhagic transformation.\n- Initiated Atorvastatin 80 mg PO daily for plaque stabilization.\n- Discharged to inpatient rehabilitation with modified Rankin Scale (mRS) score of 1.",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o",
+        "[SECTION: INFECTIOUS DISEASE ADMISSION RECORD]\nEncounter Date: 2026-06-10\nChief Complaint: Left flank pain, high-grade fevers, dysuria, and altered mental status in elderly male.\nDiagnosis upon Admission: Urosepsis secondary to Acute Complicated Pyelonephritis.\nVital Signs: Temp 39.2 deg C, BP 88/54 mmHg (fluid-responsive septic shock), HR 122 bpm, RR 24 bpm.\nFluid Resuscitation: Received 30 mL/kg balanced crystalloids (Plasmalyte) with improvement of MAP to 68 mmHg.\nInitial Antimicrobial Order:"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.0646,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P3_C005",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.0594,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0526,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P1_C000",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.0487,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.06,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.07,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-037",
+      "query_type": "multi-hop",
+      "query_text": "Analyze how the timing of presentation in patient P-105 influenced thrombolytic therapy eligibility.",
+      "reference_answer": "Patient P-105 arrived at 09:20 EST following an 08:15 EST onset (65 minutes from onset), well within the 4.5-hour thrombolytic window. Door-to-needle time was 28 minutes (09:48 EST administration), enabling successful reperfusion and rapid NIHSS improvement.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: SERIAL NEUROLOGICAL TELEMETRY]\nTable 5: Longitudinal NIHSS Score Trajectory (P-105)\n| Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation |\n| 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr |\n| 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery ",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o",
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+        "udication: Acute Kidney Injury (AKI) and drug-induced Hyperkalemia secondary to ACE-inhibitor (Lisinopril) therapy in the setting of underlying diabetic nephropathy.\nInterventions:\n- Immediately discontinue Lisinopril.\n- Administer Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID.\n- Switch antihypertensive regimen to Nifedipine ER 30 mg PO daily.\n- Repeat labs in 48 hours. Potassium normalized to 4.6 mEq/L on 2026-03-21."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P2_C002",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.1148,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0868,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0417,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C007",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.0372,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 5.07,
+        "generation_latency_ms": 0.04,
+        "total_latency_ms": 5.11,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-038",
+      "query_type": "multi-hop",
+      "query_text": "How did baseline laboratory parameters dictate the chemotherapy premedication regimen for patient P-103?",
+      "reference_answer": "Pemetrexed chemotherapy requires prophylaxis to prevent severe hematologic and gastrointestinal toxicities; P-103 was prescribed Dexamethasone, daily Folic Acid (400 mcg), and Vitamin B12 injections (1000 mcg IM) prior to Cycle 1.",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "ilgrastim 6 mg SQ 24 hours post-chemotherapy for all remaining cycles.",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "iproteinuric effects.\n- Continue Metformin 1000 mg PO BID with close monitoring of renal parameters.\n- Order comprehensive metabolic panel (CMP), spot urine albumin-to-creatinine ratio (uACR), and renal ultrasound.\n- Follow up in 7 days for serum potassium and creatinine safety check.",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P4_C006",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0831,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.0746,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P2_C003",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 2,
+          "score": 0.0595,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.0482,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.54,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.55,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-039",
+      "query_type": "multi-hop",
+      "query_text": "Identify all patients who experienced an acute decline in kidney markers and contrast their clinical causes.",
+      "reference_answer": "Patient P-101 was the only patient with an acute kidney injury (creatinine rose from 1.35 to 1.82 mg/dL), caused by ACE-inhibitor (Lisinopril) toxicity on preexisting diabetic nephropathy. Patient P-102 maintained normal creatinine (1.10 mg/dL).",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: DISCHARGE / ADVERSE EVENT NOTE]\nEncounter Date: 2026-03-19 (Unscheduled Urgent Clinic Evaluation)\nSubjective: Patient presents for 1-week follow-up. Reports mild muscle weakness and nausea.\nObjective Findings: EKG reveals tall, peaked T-waves in precordial leads V2-V4 concerning for acute hyperkalemia. Repeat STAT Chem-7 confirmed potassium at 5.7 mEq/L and acute creatinine jump to 1.82 mg/dL (>30% elevation over baseline).\nClinical Adjudication: Acute Kidney Injury (AKI) and drug-indu",
+        "[SECTION: EMERGENCY NEUROLOGY STROKE CODE]\nEncounter Date: 2026-07-18 | Time of Onset: 08:15 EST | ED Arrival: 09:20 EST\nChief Complaint: Acute right-sided hemiparesis and expressive aphasia.\nBaseline National Institutes of Health Stroke Scale (NIHSS) on Arrival: 14.\nNon-contrast Head CT: No acute intracranial hemorrhage or established hypoattenuation. ASPECTS score: 9.\nCT Angiography Head & Neck: Distal M2 branch occlusion of left middle cerebral artery (MCA).\nThrombolysis Decision: Intravenous",
+        "udication: Acute Kidney Injury (AKI) and drug-induced Hyperkalemia secondary to ACE-inhibitor (Lisinopril) therapy in the setting of underlying diabetic nephropathy.\nInterventions:\n- Immediately discontinue Lisinopril.\n- Administer Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID.\n- Switch antihypertensive regimen to Nifedipine ER 30 mg PO daily.\n- Repeat labs in 48 hours. Potassium normalized to 4.6 mEq/L on 2026-03-21.",
+        "[SECTION: CLINICAL ASSESSMENT & PLAN]\nAttending Physician: Dr. E. Vance, MD | Internal Medicine\nAssessment:\n1. Diabetic Nephropathy with macroalbuminuria secondary to longstanding T2DM.\n2. Uncontrolled Essential Hypertension.\n3. Chronic Kidney Disease Stage 3a (baseline eGFR ~52 mL/min/1.73m2).\nManagement Plan:\n- Discontinue Amlodipine due to suspected contribution to peripheral edema.\n- Initiate Lisinopril 10 mg PO daily for renal-protective antiproteinuric effects.\n- Continue Metformin 1000 mg"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P4_C006",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.1372,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C000",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0914,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C007",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.0842,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P2_C002",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 2,
+          "score": 0.0793,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.55,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.56,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-040",
+      "query_type": "multi-hop",
+      "query_text": "What clinical criteria were met before oral heart failure medications were uptitrated for patient P-102 at discharge?",
+      "reference_answer": "Carvedilol was successfully uptitrated from 3.125 mg to 6.25 mg BID because P-102 achieved euvolemia (-4.8 L net fluid balance, dry weight 78.4 kg), stable systolic blood pressure (108 mmHg), and stable renal function (creatinine 1.10 mg/dL).",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: DISCHARGE SUMMARY & PROGNOSIS]\nDischarge Date: 2026-04-09\nFinal Diagnosis: Acute Decompensated Heart Failure with Reduced Ejection Fraction (HFrEF NYHA Class III) secondary to ischemic heart disease.\nCondition on Discharge: Clinically compensated, weight down to 78.4 kg dry weight, ambulatory without dyspnea.\nDischarge Prescriptions:\n1. Sacubitril/Valsartan 24/26 mg PO BID.\n2. Carvedilol 6.25 mg PO BID (titrated up from starting dose).\n3. Spironolactone 25 mg PO daily.\n4. Empagliflozin",
+        "3. Spironolactone 25 mg PO daily.\n4. Empagliflozin 10 mg PO daily.\n5. Furosemide 20 mg PO daily as needed for weight gain > 3 lbs in 24 hours.\nFollow-up: Heart failure clinic visit in 14 days; repeat echocardiogram scheduled in 90 days.",
+        "[SECTION: CARDIOLOGY ADMISSION & ECHOCARDIOGRAPHY REPORT]\nEncounter Date: 2026-04-05\nChief Complaint: Paroxysmal nocturnal dyspnea, orthopnea requiring 3 pillows, and rapid 6-pound weight gain over 5 days.\nHistory of Present Illness: P-102 is a 66-year-old male with known ischemic cardiomyopathy and previous anterior STEMI (2021). Evaluated for acute decompensated heart failure.\nTransthoracic Echocardiogram (TTE) Summary:\n- Left Ventricular Ejection Fraction (LVEF): 28% (Severely reduced).\n- Lef",
+        "[SECTION: INPATIENT TITRATION & GUIDELINE-DIRECTED THERAPY]\nAttending Cardiologist: Dr. R. Chen, MD | Advanced Heart Failure\nTherapeutic Course:\n- Intravenous Furosemide (Lasix) 40 mg IV BID initiated for decongestion. Total net negative fluid balance over 72 hours: -4.8 Liters.\n- Transitioned oral beta-blocker from Metoprolol Tartrate to Carvedilol 3.125 mg PO BID once euvolemic status achieved.\n- Initiated Sacubitril/Valsartan (Entresto) 24/26 mg PO BID after required 36-hour washout period.\n-"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-002_P4_C006",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 4,
+          "score": 0.1453,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P4_C007",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 4,
+          "score": 0.1068,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P1_C000",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 1,
+          "score": 0.106,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P2_C002",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 2,
+          "score": 0.1059,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.44,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.45,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-041",
+      "query_type": "table-extraction",
+      "query_text": "Extract the exact serum potassium and creatinine values for patient P-101 on 2026-03-12 versus 2026-03-19 from Table 1.",
+      "reference_answer": "According to Table 1, on 2026-03-12: Serum Potassium was 4.3 mEq/L and Serum Creatinine was 1.35 mg/dL. On 2026-03-19: Serum Potassium rose to 5.7 mEq/L (CRITICAL_HIGH) and Serum Creatinine rose to 1.82 mg/dL (HIGH).",
+      "generated_answer": "73m2 | | 2026-03-12 | Urine Albumin/Cr | 340 | < 30 | ABNORMAL | mg/g | | 2026-03-19 | Serum Potassium | 5.",
+      "retrieved_contexts": [
+        "en | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | eGFR (CKD-EPI) | 51 | >= 60 | LOW | mL/min/1.73m2 |\n| 2026-03-12 | Urine Albumin/Cr | 340 | < 30 | ABNORMAL | mg/g |\n| 2026-03-19 | Serum Potassium | 5.7 | 3.5 - 5.0 | CRITICAL_HIGH | mEq/L |\n| 2026-03-19 | Serum Creatinine | 1.82 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-19 | Blood Urea Nitrogen | 38 | 7 - 20 | HIGH | mg/dL |",
+        "[SECTION: LABORATORY FLOWSHEET & METABOLIC TELEMETRY]\nTable 1: Longitudinal Renal and Electrolyte Panel (P-101)\n| Date | Test Name | Result | Normal Range | Flag | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-03-12 | Serum Sodium | 139 | 135 - 145 | Normal | mEq/L |\n| 2026-03-12 | Serum Potassium | 4.3 | 3.5 - 5.0 | Normal | mEq/L |\n| 2026-03-12 | Serum Creatinine | 1.35 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-12 | Blood Urea Nitrogen | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | e",
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine",
+        "[SECTION: DISCHARGE / ADVERSE EVENT NOTE]\nEncounter Date: 2026-03-19 (Unscheduled Urgent Clinic Evaluation)\nSubjective: Patient presents for 1-week follow-up. Reports mild muscle weakness and nausea.\nObjective Findings: EKG reveals tall, peaked T-waves in precordial leads V2-V4 concerning for acute hyperkalemia. Repeat STAT Chem-7 confirmed potassium at 5.7 mEq/L and acute creatinine jump to 1.82 mg/dL (>30% elevation over baseline).\nClinical Adjudication: Acute Kidney Injury (AKI) and drug-indu"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P3_C005",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.3925,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P3_C004",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.3619,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.1667,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P4_C006",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 4,
+          "score": 0.1443,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.77,
+        "generation_latency_ms": 0.07,
+        "total_latency_ms": 2.84,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-042",
+      "query_type": "table-extraction",
+      "query_text": "What was patient P-101's baseline urine albumin-to-creatinine ratio (uACR) and flag recorded in Table 1?",
+      "reference_answer": "Patient P-101's Urine Albumin/Cr ratio on 2026-03-12 was 340 mg/g, flagged as ABNORMAL against the reference range of < 30 mg/g.",
+      "generated_answer": "- Order comprehensive metabolic panel (CMP), spot urine albumin-to-creatinine ratio (uACR), and renal ultrasound.",
+      "retrieved_contexts": [
+        "iproteinuric effects.\n- Continue Metformin 1000 mg PO BID with close monitoring of renal parameters.\n- Order comprehensive metabolic panel (CMP), spot urine albumin-to-creatinine ratio (uACR), and renal ultrasound.\n- Follow up in 7 days for serum potassium and creatinine safety check.",
+        "[SECTION: LABORATORY FLOWSHEET & METABOLIC TELEMETRY]\nTable 1: Longitudinal Renal and Electrolyte Panel (P-101)\n| Date | Test Name | Result | Normal Range | Flag | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-03-12 | Serum Sodium | 139 | 135 - 145 | Normal | mEq/L |\n| 2026-03-12 | Serum Potassium | 4.3 | 3.5 - 5.0 | Normal | mEq/L |\n| 2026-03-12 | Serum Creatinine | 1.35 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-12 | Blood Urea Nitrogen | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | e",
+        "en | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | eGFR (CKD-EPI) | 51 | >= 60 | LOW | mL/min/1.73m2 |\n| 2026-03-12 | Urine Albumin/Cr | 340 | < 30 | ABNORMAL | mg/g |\n| 2026-03-19 | Serum Potassium | 5.7 | 3.5 - 5.0 | CRITICAL_HIGH | mEq/L |\n| 2026-03-19 | Serum Creatinine | 1.82 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-19 | Blood Urea Nitrogen | 38 | 7 - 20 | HIGH | mg/dL |",
+        "[SECTION: ADMISSION NOTE & CLINICAL HISTORY]\nEncounter Date: 2026-03-12\nChief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension.\nHistory of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension. She reports progressive bilateral ankle swelling over the past 3 weeks and decreased exercise tolerance. Home medications included Metformin 1000 mg BID and Amlodipine"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-001_P2_C003",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 2,
+          "score": 0.3141,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P3_C004",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.0838,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P3_C005",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.0817,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P1_C000",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 1,
+          "score": 0.0679,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.25,
+        "generation_latency_ms": 0.06,
+        "total_latency_ms": 3.31,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-043",
+      "query_type": "table-extraction",
+      "query_text": "List all NT-proBNP measurement dates, values, and interpretations from Table 2 for patient P-102.",
+      "reference_answer": "From Table 2: On 2026-04-05: 4850 pg/mL (SEVERELY_ELEVATED); on 2026-04-06: 3210 pg/mL (DECREASING); on 2026-04-08: 1140 pg/mL (RESPONDING_TO_THERAPY).",
+      "generated_answer": "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE] Table 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102) | Date | Biomarker | Value | Reference Range | Interpretation | | :--- | :--- | :--- | :--- | :--- | | 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) | | 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) | | 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) | | 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) | |.",
+      "retrieved_contexts": [
+        "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE]\nTable 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102)\n| Date | Biomarker | Value | Reference Range | Interpretation |\n| :--- | :--- | :--- | :--- | :--- |\n| 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) |\n| 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) |\n| 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) |\n| 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) |\n| ",
+        "nt of MAP to 68 mmHg.\nInitial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically.",
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival.",
+        "l artery (MCA).\nThrombolysis Decision: Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST (door-to-needle time: 28 minutes). Patient was not an endovascular thrombectomy candidate due to distal branch vessel location."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-002_P3_C004",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 3,
+          "score": 0.3416,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P1_C001",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.0824,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.0539,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C001",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0345,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.89,
+        "generation_latency_ms": 0.08,
+        "total_latency_ms": 3.97,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-044",
+      "query_type": "table-extraction",
+      "query_text": "What was patient P-102's High-Sensitivity Troponin T level and unit recorded in Table 2?",
+      "reference_answer": "According to Table 2, High-Sensitivity Troponin T on 2026-04-05 was 24 ng/L (MILDLY_ELEVATED against reference range < 14 ng/L).",
+      "generated_answer": "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE] Table 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102) | Date | Biomarker | Value | Reference Range | Interpretation | | :--- | :--- | :--- | :--- | :--- | | 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) | | 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) | | 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) | | 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) | |.",
+      "retrieved_contexts": [
+        "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE]\nTable 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102)\n| Date | Biomarker | Value | Reference Range | Interpretation |\n| :--- | :--- | :--- | :--- | :--- |\n| 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) |\n| 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) |\n| 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) |\n| 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) |\n| ",
+        "[SECTION: LABORATORY FLOWSHEET & METABOLIC TELEMETRY]\nTable 1: Longitudinal Renal and Electrolyte Panel (P-101)\n| Date | Test Name | Result | Normal Range | Flag | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-03-12 | Serum Sodium | 139 | 135 - 145 | Normal | mEq/L |\n| 2026-03-12 | Serum Potassium | 4.3 | 3.5 - 5.0 | Normal | mEq/L |\n| 2026-03-12 | Serum Creatinine | 1.35 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-12 | Blood Urea Nitrogen | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | e",
+        "icillin/Sulbactam | >= 32/16 | RESISTANT | Ineffective |\n| Ceftriaxone | >= 64 | RESISTANT | ESBL confirmed |\n| Cefepime | >= 16 | RESISTANT | Ineffective |\n| Ciprofloxacin | >= 4 | RESISTANT | High-level fluoroquinolone resistance |\n| Levofloxacin | >= 8 | RESISTANT | Ineffective |\n| Meropenem | <= 0.25 | SUSCEPTIBLE | Preferred carbapenem regimen |\n| Piperacillin/Tazobactam | 16/4 | INTERMEDIATE | Avoid in bacteremia |\n| Amikacin | <= 2 | SUSCEPTIBLE | Retained aminoglycoside activity |",
+        "[SECTION: HEMATOLOGY FLOWSHEET & DIFFERENTIALS]\nTable 3: Serial Complete Blood Count with Differential (P-103)\n| Date | Test Name | Value | Reference Range | Status | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-05-03 | White Blood Cells (WBC) | 6.8 | 4.0 - 11.0 | Normal | 10^3/uL |\n| 2026-05-03 | Absolute Neutrophil Count (ANC) | 4200 | 1500 - 8000 | Normal | cells/uL |\n| 2026-05-03 | Platelet Count | 240 | 150 - 450 | Normal | 10^3/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-002_P3_C004",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 3,
+          "score": 0.2091,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P3_C004",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.0791,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P2_C003",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 2,
+          "score": 0.061,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P3_C003",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.0455,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 4.74,
+        "generation_latency_ms": 0.06,
+        "total_latency_ms": 4.8,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-045",
+      "query_type": "table-extraction",
+      "query_text": "Extract patient P-103's Absolute Neutrophil Count (ANC) on 2026-05-03, 2026-05-15, 2026-05-18, and 2026-05-20 from Table 3.",
+      "reference_answer": "From Table 3, ANC values were: 4200 cells/uL on 2026-05-03 (Normal); 320 cells/uL on 2026-05-15 (SEVERE_NEUTROPENIA); 1250 cells/uL on 2026-05-18 (RECOVERING); and 2800 cells/uL on 2026-05-20 (RESOLVED).",
+      "generated_answer": "5 | LOW | g/dL | | 2026-05-18 | Absolute Neutrophil Count (ANC) | 1250 | 1500 - 8000 | RECOVERING | cells/uL | | 2026-05-20 | Absolute Neutrophil Count (ANC) | 2800 | 1500 - 8000 | RESOLVED | cells/uL |.",
+      "retrieved_contexts": [
+        "/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1 | 4.0 - 11.0 | CRITICAL_LOW | 10^3/uL |\n| 2026-05-15 | Absolute Neutrophil Count (ANC) | 320 | 1500 - 8000 | SEVERE_NEUTROPENIA | cells/uL |\n| 2026-05-15 | Hemoglobin | 9.4 | 12.0 - 15.5 | LOW | g/dL |\n| 2026-05-18 | Absolute Neutrophil Count (ANC) | 1250 | 1500 - 8000 | RECOVERING | cells/uL |\n| 2026-05-20 | Absolute Neutrophil Count (ANC) | 2800 | 1500 - 8000 | RESOLVED | cells/uL |",
+        "[SECTION: HEMATOLOGY FLOWSHEET & DIFFERENTIALS]\nTable 3: Serial Complete Blood Count with Differential (P-103)\n| Date | Test Name | Value | Reference Range | Status | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-05-03 | White Blood Cells (WBC) | 6.8 | 4.0 - 11.0 | Normal | 10^3/uL |\n| 2026-05-03 | Absolute Neutrophil Count (ANC) | 4200 | 1500 - 8000 | Normal | cells/uL |\n| 2026-05-03 | Platelet Count | 240 | 150 - 450 | Normal | 10^3/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1",
+        "[SECTION: RESOLUTION & CHEMOTHERAPY MODIFICATION]\nInpatient Management: Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4 of admission.\nBlood cultures showed no growth at 48 hours. Afebril since hospital day 2.\nOncology Discharge Plan:\n- Patient recovered ANC to 2800 cells/uL by 2026-05-20.\n- For Cycle 2 of Carboplatin/Pemetrexed: Apply 20% dose reduction for Carboplatin.\n- Mandate primary prophylactic Pegfilgrastim 6 mg SQ 24 hours post-chemotherapy for a",
+        "[SECTION: ONCOLOGY CONSULTATION & PATHOLOGY REVIEW]\nEncounter Date: 2026-05-02\nPrimary Diagnosis: Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0).\nMolecular Profile: EGFR wild-type, ALK negative, ROS1 negative, PD-L1 TPS 45%.\nTreatment Regimen: Neoadjuvant chemoimmunotherapy with Carboplatin AUC 5 + Pemetrexed 500 mg/m2 + Pembrolizumab 200 mg IV every 21 days (Cycle 1 Day 1: 2026-05-04).\nPremedications Prescribed: Dexamethasone 4 mg BID for 3 days, Folic Acid"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P3_C004",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.5322,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P3_C003",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.4097,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P4_C005",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 4,
+          "score": 0.1279,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P1_C000",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 1,
+          "score": 0.0962,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 2.95,
+        "generation_latency_ms": 0.07,
+        "total_latency_ms": 3.02,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-046",
+      "query_type": "table-extraction",
+      "query_text": "What was patient P-103's nadir White Blood Cell count and status on 2026-05-15 in Table 3?",
+      "reference_answer": "According to Table 3, on 2026-05-15, White Blood Cells were 1.1 x 10^3/uL, flagged as CRITICAL_LOW (reference range 4.0 - 11.0 x 10^3/uL).",
+      "generated_answer": "[SECTION: HEMATOLOGY FLOWSHEET & DIFFERENTIALS] Table 3: Serial Complete Blood Count with Differential (P-103) | Date | Test Name | Value | Reference Range | Status | Unit | | :--- | :--- | :--- | :--- | :--- | :--- | | 2026-05-03 | White Blood Cells (WBC) | 6.",
+      "retrieved_contexts": [
+        "[SECTION: HEMATOLOGY FLOWSHEET & DIFFERENTIALS]\nTable 3: Serial Complete Blood Count with Differential (P-103)\n| Date | Test Name | Value | Reference Range | Status | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-05-03 | White Blood Cells (WBC) | 6.8 | 4.0 - 11.0 | Normal | 10^3/uL |\n| 2026-05-03 | Absolute Neutrophil Count (ANC) | 4200 | 1500 - 8000 | Normal | cells/uL |\n| 2026-05-03 | Platelet Count | 240 | 150 - 450 | Normal | 10^3/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1",
+        "/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1 | 4.0 - 11.0 | CRITICAL_LOW | 10^3/uL |\n| 2026-05-15 | Absolute Neutrophil Count (ANC) | 320 | 1500 - 8000 | SEVERE_NEUTROPENIA | cells/uL |\n| 2026-05-15 | Hemoglobin | 9.4 | 12.0 - 15.5 | LOW | g/dL |\n| 2026-05-18 | Absolute Neutrophil Count (ANC) | 1250 | 1500 - 8000 | RECOVERING | cells/uL |\n| 2026-05-20 | Absolute Neutrophil Count (ANC) | 2800 | 1500 - 8000 | RESOLVED | cells/uL |",
+        "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)]\nEncounter Date: 2026-05-15\nChief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.9 deg C (102.0 deg F).\nTriage Assessment: Febrile Neutropenia post-chemotherapy. Tachycardia (HR 116 bpm), BP 102/64 mmHg.\nEmpiric Therapy: Blood cultures x2 (peripheral and central port), urine culture, chest X-ray. Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival.",
+        "[SECTION: ONCOLOGY CONSULTATION & PATHOLOGY REVIEW]\nEncounter Date: 2026-05-02\nPrimary Diagnosis: Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0).\nMolecular Profile: EGFR wild-type, ALK negative, ROS1 negative, PD-L1 TPS 45%.\nTreatment Regimen: Neoadjuvant chemoimmunotherapy with Carboplatin AUC 5 + Pemetrexed 500 mg/m2 + Pembrolizumab 200 mg IV every 21 days (Cycle 1 Day 1: 2026-05-04).\nPremedications Prescribed: Dexamethasone 4 mg BID for 3 days, Folic Acid"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-003_P3_C003",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.369,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P3_C004",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.3072,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P2_C002",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 2,
+          "score": 0.0924,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P1_C000",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 1,
+          "score": 0.0921,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.12,
+        "generation_latency_ms": 0.09,
+        "total_latency_ms": 3.21,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-047",
+      "query_type": "table-extraction",
+      "query_text": "Based on Table 4, which antibiotics were reported as SUSCEPTIBLE for the ESBL E. coli isolate from patient P-104?",
+      "reference_answer": "According to Table 4, the two antibiotics reported as SUSCEPTIBLE were Meropenem (MIC <= 0.25 ug/mL) and Amikacin (MIC <= 2 ug/mL).",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "icillin/Sulbactam | >= 32/16 | RESISTANT | Ineffective |\n| Ceftriaxone | >= 64 | RESISTANT | ESBL confirmed |\n| Cefepime | >= 16 | RESISTANT | Ineffective |\n| Ciprofloxacin | >= 4 | RESISTANT | High-level fluoroquinolone resistance |\n| Levofloxacin | >= 8 | RESISTANT | Ineffective |\n| Meropenem | <= 0.25 | SUSCEPTIBLE | Preferred carbapenem regimen |\n| Piperacillin/Tazobactam | 16/4 | INTERMEDIATE | Avoid in bacteremia |\n| Amikacin | <= 2 | SUSCEPTIBLE | Retained aminoglycoside activity |",
+        "[SECTION: MICROBIOLOGY & ANTIMICROBIAL SUSCEPTIBILITY (AST)]\nTable 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)\nOrganism Isolated: Escherichia coli (>100,000 CFU/mL urine; 2/2 blood culture bottles positive)\nESBL Status: Extended Spectrum Beta-Lactamase (ESBL) POSITIVE\n| Antibiotic Agent | MIC (ug/mL) | Interpretation | Clinical Comment |\n| :--- | :--- | :--- | :--- |\n| Ampicillin | >= 32 | RESISTANT | Ineffective |\n| Ampicillin/Sulbactam | >= 32/16 | RESISTANT | Ineffec",
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o",
+        "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE]\nTable 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102)\n| Date | Biomarker | Value | Reference Range | Interpretation |\n| :--- | :--- | :--- | :--- | :--- |\n| 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) |\n| 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) |\n| 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) |\n| 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) |\n| "
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-004_P2_C003",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 2,
+          "score": 0.144,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P2_C002",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 2,
+          "score": 0.1305,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.1079,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P3_C004",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 3,
+          "score": 0.0456,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.58,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.59,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-048",
+      "query_type": "table-extraction",
+      "query_text": "What were the MIC and clinical interpretations for Ciprofloxacin and Ceftriaxone in Table 4 for patient P-104?",
+      "reference_answer": "In Table 4: Ceftriaxone had MIC >= 64 ug/mL and was RESISTANT (ESBL confirmed). Ciprofloxacin had MIC >= 4 ug/mL and was RESISTANT (High-level fluoroquinolone resistance).",
+      "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+      "retrieved_contexts": [
+        "[SECTION: THERAPEUTIC REGIMEN ADJUSTMENT & CLINICAL OUTCOME]\nEncounter Date: 2026-06-12\nClinical Update: Following AST report on 2026-06-12 confirming ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin, Infectious Disease service escalated antibiotic therapy immediately to Meropenem 1 g IV q8h (adjusted for renal clearance).\nPatient defervesced within 36 hours of Meropenem therapy. Repeat blood cultures at 48 hours cleared bacteremia.\nDischarge Plan: Complete 14-day total course o",
+        "[SECTION: MICROBIOLOGY & ANTIMICROBIAL SUSCEPTIBILITY (AST)]\nTable 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)\nOrganism Isolated: Escherichia coli (>100,000 CFU/mL urine; 2/2 blood culture bottles positive)\nESBL Status: Extended Spectrum Beta-Lactamase (ESBL) POSITIVE\n| Antibiotic Agent | MIC (ug/mL) | Interpretation | Clinical Comment |\n| :--- | :--- | :--- | :--- |\n| Ampicillin | >= 32 | RESISTANT | Ineffective |\n| Ampicillin/Sulbactam | >= 32/16 | RESISTANT | Ineffec",
+        "icillin/Sulbactam | >= 32/16 | RESISTANT | Ineffective |\n| Ceftriaxone | >= 64 | RESISTANT | ESBL confirmed |\n| Cefepime | >= 16 | RESISTANT | Ineffective |\n| Ciprofloxacin | >= 4 | RESISTANT | High-level fluoroquinolone resistance |\n| Levofloxacin | >= 8 | RESISTANT | Ineffective |\n| Meropenem | <= 0.25 | SUSCEPTIBLE | Preferred carbapenem regimen |\n| Piperacillin/Tazobactam | 16/4 | INTERMEDIATE | Avoid in bacteremia |\n| Amikacin | <= 2 | SUSCEPTIBLE | Retained aminoglycoside activity |",
+        "nt of MAP to 68 mmHg.\nInitial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically."
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-004_P3_C005",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 3,
+          "score": 0.1412,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P2_C002",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 2,
+          "score": 0.0984,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P2_C003",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 2,
+          "score": 0.0846,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-004_P1_C001",
+          "doc_id": "DOC-EHR-004",
+          "page_number": 1,
+          "score": 0.074,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.04,
+        "generation_latency_ms": 0.01,
+        "total_latency_ms": 3.05,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-049",
+      "query_type": "table-extraction",
+      "query_text": "Extract the exact NIHSS score progression over all 5 recorded timestamps for patient P-105 from Table 5.",
+      "reference_answer": "From Table 5: 09:25 EST: Total NIHSS 14; 11:00 EST: Total NIHSS 10; 16:00 EST: Total NIHSS 6; 24:00 EST: Total NIHSS 3; 48:00 EST: Total NIHSS 1.",
+      "generated_answer": "[SECTION: SERIAL NEUROLOGICAL TELEMETRY] Table 5: Longitudinal NIHSS Score Trajectory (P-105) | Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note | | :--- | :--- | :--- | :--- | :--- | :--- | | 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation | | 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr | | 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery.",
+      "retrieved_contexts": [
+        "[SECTION: SERIAL NEUROLOGICAL TELEMETRY]\nTable 5: Longitudinal NIHSS Score Trajectory (P-105)\n| Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation |\n| 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr |\n| 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery ",
+        "[SECTION: EMERGENCY NEUROLOGY STROKE CODE]\nEncounter Date: 2026-07-18 | Time of Onset: 08:15 EST | ED Arrival: 09:20 EST\nChief Complaint: Acute right-sided hemiparesis and expressive aphasia.\nBaseline National Institutes of Health Stroke Scale (NIHSS) on Arrival: 14.\nNon-contrast Head CT: No acute intracranial hemorrhage or established hypoattenuation. ASPECTS score: 9.\nCT Angiography Head & Neck: Distal M2 branch occlusion of left middle cerebral artery (MCA).\nThrombolysis Decision: Intravenous",
+        "ter repeat non-contrast CT confirmed absence of hemorrhagic transformation.\n- Initiated Atorvastatin 80 mg PO daily for plaque stabilization.\n- Discharged to inpatient rehabilitation with modified Rankin Scale (mRS) score of 1.",
+        "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE]\nTable 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102)\n| Date | Biomarker | Value | Reference Range | Interpretation |\n| :--- | :--- | :--- | :--- | :--- |\n| 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) |\n| 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) |\n| 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) |\n| 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) |\n| "
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P2_C002",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.2616,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P1_C000",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 1,
+          "score": 0.0658,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P3_C005",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 3,
+          "score": 0.0498,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-002_P3_C004",
+          "doc_id": "DOC-EHR-002",
+          "page_number": 3,
+          "score": 0.0403,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.88,
+        "generation_latency_ms": 0.07,
+        "total_latency_ms": 3.95,
+        "chunks_retrieved_count": 4
+      }
+    },
+    {
+      "query_id": "Q-050",
+      "query_type": "table-extraction",
+      "query_text": "According to Table 5, at what timestamp did patient P-105's language sub-score normalize to 0 (Normal speech)?",
+      "reference_answer": "According to Table 5, patient P-105's language score normalized to 0 (Normal speech) at the 24:00 EST timestamp (down from 2 at 09:25 EST and 1 at 16:00 EST).",
+      "generated_answer": "1 (Drift) | 1 (Mild aphasia) | Continued recovery | | 24:00 EST | 3 | 1 (Drift) | 0 (Normal) | 0 (Normal speech) | Resolution of aphasia | | 48:00 EST | 1 | 0 (Normal) | 0 (Normal) | 0 (Normal speech) | Trace pronator drift right arm |.",
+      "retrieved_contexts": [
+        "1 (Drift) | 1 (Mild aphasia) | Continued recovery |\n| 24:00 EST | 3 | 1 (Drift) | 0 (Normal) | 0 (Normal speech) | Resolution of aphasia |\n| 48:00 EST | 1 | 0 (Normal) | 0 (Normal) | 0 (Normal speech) | Trace pronator drift right arm |",
+        "[SECTION: SERIAL NEUROLOGICAL TELEMETRY]\nTable 5: Longitudinal NIHSS Score Trajectory (P-105)\n| Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation |\n| 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr |\n| 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery ",
+        "[SECTION: LABORATORY FLOWSHEET & METABOLIC TELEMETRY]\nTable 1: Longitudinal Renal and Electrolyte Panel (P-101)\n| Date | Test Name | Result | Normal Range | Flag | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-03-12 | Serum Sodium | 139 | 135 - 145 | Normal | mEq/L |\n| 2026-03-12 | Serum Potassium | 4.3 | 3.5 - 5.0 | Normal | mEq/L |\n| 2026-03-12 | Serum Creatinine | 1.35 | 0.59 - 1.04 | HIGH | mg/dL |\n| 2026-03-12 | Blood Urea Nitrogen | 24 | 7 - 20 | HIGH | mg/dL |\n| 2026-03-12 | e",
+        "[SECTION: HEMATOLOGY FLOWSHEET & DIFFERENTIALS]\nTable 3: Serial Complete Blood Count with Differential (P-103)\n| Date | Test Name | Value | Reference Range | Status | Unit |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 2026-05-03 | White Blood Cells (WBC) | 6.8 | 4.0 - 11.0 | Normal | 10^3/uL |\n| 2026-05-03 | Absolute Neutrophil Count (ANC) | 4200 | 1500 - 8000 | Normal | cells/uL |\n| 2026-05-03 | Platelet Count | 240 | 150 - 450 | Normal | 10^3/uL |\n| 2026-05-15 | White Blood Cells (WBC) | 1.1"
+      ],
+      "retrieved_metadata": [
+        {
+          "chunk_id": "DOC-EHR-005_P2_C003",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.2496,
+          "rank": 1
+        },
+        {
+          "chunk_id": "DOC-EHR-005_P2_C002",
+          "doc_id": "DOC-EHR-005",
+          "page_number": 2,
+          "score": 0.1932,
+          "rank": 2
+        },
+        {
+          "chunk_id": "DOC-EHR-001_P3_C004",
+          "doc_id": "DOC-EHR-001",
+          "page_number": 3,
+          "score": 0.0608,
+          "rank": 3
+        },
+        {
+          "chunk_id": "DOC-EHR-003_P3_C003",
+          "doc_id": "DOC-EHR-003",
+          "page_number": 3,
+          "score": 0.0582,
+          "rank": 4
+        }
+      ],
+      "metrics": {
+        "retrieval_latency_ms": 3.74,
+        "generation_latency_ms": 0.05,
+        "total_latency_ms": 3.79,
+        "chunks_retrieved_count": 4
+      }
+    }
+  ]
+}

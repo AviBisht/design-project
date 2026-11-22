@@ -1,0 +1,66 @@
+# ==============================================================================
+# GITIGNORE: Dual-Pipeline Clinical Intelligence Engine
+# ==============================================================================
+
+# --- Environment & Secret Configuration ---
+.env
+.env.*
+!.env.example
+
+# --- Python Bytecode & Compilation Caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Python Testing & Coverage ---
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Virtual Environments & Package Metadata ---
+venv/
+.venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- IDEs & Developer Tooling ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# --- Operating System Caches ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- Regeneratable Vector-Store Artifacts ---
+# Vector stores are deterministically rebuilt by pipeline initialization
+data/vectorstore_pipeline_a.json
+data/vectorstore_pipeline_b.json
+
+# --- Personal Planning & Workspace Notes ---
+PLAN.md
+
+# --- Application Logs ---
+*.log

@@ -1,0 +1,51 @@
+Query_ID,Query_Type,Query_Text,PipeA_Faithfulness,PipeA_ContextRecall,PipeA_ContextPrecision,PipeA_AnswerRelevancy,PipeB_Faithfulness,PipeB_ContextRecall,PipeB_ContextPrecision,PipeB_AnswerRelevancy,Delta_Faithfulness,Delta_ContextRecall
+Q-001,single-hop,What was the initial dosage of Lisinopril prescribed to patient P-101?,0.0,1.0,0.8333,0.5,1.0,0.0,0.4786,0.5884,1.0,-1.0
+Q-002,single-hop,What chief complaint did patient P-101 present with on 2026-03-12?,1.0,1.0,1.0,0.5833,1.0,1.0,0.4251,0.5735,0.0,0.0
+Q-003,single-hop,Why was Amlodipine discontinued for patient P-101?,1.0,0.0,1.0,0.5622,1.0,1.0,0.45,0.6064,0.0,1.0
+Q-004,single-hop,What left ventricular ejection fraction (LVEF) was recorded on echocardiogram for patient P-102?,1.0,0.0,1.0,0.7056,1.0,1.0,1.0,0.5237,0.0,1.0
+Q-005,single-hop,What initial intravenous diuretic was administered to patient P-102 upon admission?,0.0,0.0,0.5,0.5,1.0,1.0,0.3824,0.5273,1.0,1.0
+Q-006,single-hop,What required washout period was observed before starting Sacubitril/Valsartan for P-102?,1.0,1.0,1.0,0.6165,1.0,1.0,0.4762,0.5396,0.0,0.0
+Q-007,single-hop,What was the primary staging and histology of patient P-103's lung cancer?,1.0,1.0,0.8333,0.5772,1.0,1.0,0.4821,0.5825,0.0,0.0
+Q-008,single-hop,What was the PD-L1 expression level documented for patient P-103?,0.0,1.0,0.0,0.5,1.0,1.0,0.1736,0.5196,1.0,0.0
+Q-009,single-hop,What empiric antibiotic was initiated for patient P-103 upon emergency admission for febrile neutropenia?,1.0,1.0,1.0,0.5,1.0,1.0,0.3099,0.5152,0.0,0.0
+Q-010,single-hop,What primary infectious diagnosis was made for patient P-104 on admission?,0.0,1.0,1.0,0.5,1.0,1.0,0.4266,0.6595,1.0,0.0
+Q-011,single-hop,What initial empiric antibiotic was administered to patient P-104?,0.0,1.0,1.0,0.5,1.0,1.0,0.4867,0.5963,1.0,0.0
+Q-012,single-hop,What was the time of symptom onset and ED arrival recorded for stroke patient P-105?,1.0,0.5,0.75,0.5796,1.0,0.5,0.75,0.6302,0.0,0.0
+Q-013,single-hop,What was the baseline NIHSS score for patient P-105 upon arrival?,1.0,1.0,0.9167,0.6128,1.0,1.0,0.4762,0.6593,0.0,0.0
+Q-014,single-hop,What thrombolytic drug and dosage was administered to patient P-105?,0.0,1.0,1.0,0.5,1.0,1.0,0.1,0.5775,1.0,0.0
+Q-015,single-hop,Why was patient P-105 not considered a candidate for endovascular thrombectomy?,1.0,1.0,1.0,0.7056,1.0,1.0,0.5,0.5775,0.0,0.0
+Q-016,single-hop,What heart rhythm abnormality was detected on telemetry for patient P-105?,0.0,1.0,0.5,0.5,1.0,1.0,0.245,0.5708,1.0,0.0
+Q-017,single-hop,What oral anticoagulant was initiated for patient P-105 for secondary stroke prevention?,1.0,1.0,1.0,0.5,1.0,1.0,1.0,0.605,0.0,0.0
+Q-018,single-hop,What was patient P-102's dry weight at discharge?,1.0,1.0,0.9167,0.6129,1.0,1.0,0.5119,0.5335,0.0,0.0
+Q-019,single-hop,What medication was administered to patient P-101 to manage urgent hyperkalemia?,0.0,0.0,0.0,0.5,1.0,1.0,0.25,0.5991,1.0,1.0
+Q-020,single-hop,What growth factor was administered to patient P-103 during hospitalization for neutropenia?,0.0,1.0,1.0,0.5,1.0,1.0,0.5,0.5174,1.0,0.0
+Q-021,multi-hop,Did the medication initiated for diabetic nephropathy in patient P-101 lead to an adverse event requiring emergency intervention?,0.0,0.75,1.0,0.5,1.0,0.75,0.5595,0.6476,1.0,0.0
+Q-022,multi-hop,Trace the relationship between patient P-101's baseline renal lab values and the replacement antihypertensive regimen chosen after adverse drug event.,0.0,1.0,1.0,0.5243,1.0,1.0,0.5423,0.5094,1.0,0.0
+Q-023,multi-hop,How did patient P-102's NT-proBNP biomarker trend correlate with the inpatient heart failure therapies administered?,1.0,0.6667,0.8056,0.5616,1.0,0.6667,0.8596,0.5622,0.0,0.0
+Q-024,multi-hop,Explain how the echocardiographic finding for patient P-102 determined the selection of neurohormonal discharge medications.,0.0,0.5,0.3333,0.5,1.0,0.0,0.2574,0.5223,1.0,-0.5
+Q-025,multi-hop,Connect patient P-103's chemotherapy regimen to the emergency admission 11 days later and the subsequent dose adjustment.,0.0,0.75,1.0,0.5,1.0,0.75,0.4917,0.5142,1.0,0.0
+Q-026,multi-hop,What bacteriological finding in patient P-104 forced an escalation of antimicrobial therapy from the initial regimen?,1.0,1.0,1.0,0.5562,1.0,1.0,0.3988,0.5337,0.0,0.0
+Q-027,multi-hop,How did the microbiological resistance profile of P-104 affect the route and duration of post-discharge care?,0.0,0.0,0.4167,0.5,1.0,0.5,0.461,0.5155,1.0,0.5
+Q-028,multi-hop,Trace the trajectory of neurological deficit in patient P-105 from initial presentation through pharmacological thrombolysis to 48-hour recovery.,1.0,0.5,1.0,0.5414,1.0,0.75,0.54,0.5318,0.0,0.25
+Q-029,multi-hop,"What diagnostic finding identified the cardioembolic source of stroke in patient P-105, and what anticoagulant was chosen?",0.0,0.6667,1.0,0.5,1.0,1.0,0.7398,0.6224,1.0,0.3333
+Q-030,multi-hop,Evaluate the multi-organ impact of ACE-inhibitor initiation in patient P-101 across the renal and cardiac systems.,0.0,0.6667,0.75,0.5,1.0,1.0,0.2609,0.5557,1.0,0.3333
+Q-031,multi-hop,"Which patients in the corpus were initiated on beta-blockers, and what specific clinical indications warranted them?",0.0,0.0,0.8333,0.5,0.0,0.0,0.4167,0.5,0.0,0.0
+Q-032,multi-hop,Compare the renal function trajectories of patient P-101 and patient P-102 during their inpatient/clinic courses.,0.0,0.5,1.0,0.5,1.0,0.0,0.6492,0.5854,1.0,-0.5
+Q-033,multi-hop,Trace how patient P-103's Absolute Neutrophil Count recovered from nadir to resolution and how it permitted discharge.,1.0,0.6667,1.0,0.5478,1.0,0.6667,0.8523,0.5775,0.0,0.0
+Q-034,multi-hop,What specific safety monitoring step performed on 2026-03-19 prevented further clinical decline in patient P-101?,1.0,0.5,0.8056,0.5945,1.0,0.5,0.4561,0.565,0.0,0.0
+Q-035,multi-hop,Explain the clinical reasoning for administering IV crystalloids to patient P-104 despite suspected septic shock.,0.0,1.0,1.0,0.5,1.0,1.0,0.4998,0.584,1.0,0.0
+Q-036,multi-hop,"Which patients presented with fever as a core triage symptom, and what distinct infectious etiologies were confirmed?",0.0,1.0,0.8056,0.5,1.0,0.0,0.5629,0.5166,1.0,-1.0
+Q-037,multi-hop,Analyze how the timing of presentation in patient P-105 influenced thrombolytic therapy eligibility.,0.0,0.0,1.0,0.5,1.0,0.0,0.4603,0.5253,1.0,0.0
+Q-038,multi-hop,How did baseline laboratory parameters dictate the chemotherapy premedication regimen for patient P-103?,0.0,0.0,0.5,0.53,1.0,0.0,0.4333,0.5163,1.0,0.0
+Q-039,multi-hop,Identify all patients who experienced an acute decline in kidney markers and contrast their clinical causes.,0.0,0.3333,0.8056,0.5,1.0,0.6667,0.5568,0.5437,1.0,0.3334
+Q-040,multi-hop,What clinical criteria were met before oral heart failure medications were uptitrated for patient P-102 at discharge?,0.0,0.3333,0.8056,0.5,1.0,1.0,1.0,0.5327,1.0,0.6667
+Q-041,table-extraction,Extract the exact serum potassium and creatinine values for patient P-101 on 2026-03-12 versus 2026-03-19 from Table 1.,1.0,1.0,0.9167,0.7158,1.0,1.0,0.8135,0.6225,0.0,0.0
+Q-042,table-extraction,What was patient P-101's baseline urine albumin-to-creatinine ratio (uACR) and flag recorded in Table 1?,1.0,1.0,1.0,0.6335,1.0,1.0,0.7835,0.6083,0.0,0.0
+Q-043,table-extraction,"List all NT-proBNP measurement dates, values, and interpretations from Table 2 for patient P-102.",1.0,1.0,1.0,0.5722,1.0,1.0,0.3929,0.5941,0.0,0.0
+Q-044,table-extraction,What was patient P-102's High-Sensitivity Troponin T level and unit recorded in Table 2?,1.0,0.5,0.9167,0.5482,1.0,0.5,0.4429,0.6266,0.0,0.0
+Q-045,table-extraction,"Extract patient P-103's Absolute Neutrophil Count (ANC) on 2026-05-03, 2026-05-15, 2026-05-18, and 2026-05-20 from Table 3.",1.0,1.0,1.0,0.7209,0.75,1.0,0.7929,0.6247,-0.25,0.0
+Q-046,table-extraction,What was patient P-103's nadir White Blood Cell count and status on 2026-05-15 in Table 3?,1.0,1.0,1.0,0.6916,0.75,1.0,0.8357,0.6818,-0.25,0.0
+Q-047,table-extraction,"Based on Table 4, which antibiotics were reported as SUSCEPTIBLE for the ESBL E. coli isolate from patient P-104?",0.0,1.0,1.0,0.53,1.0,1.0,0.6429,0.5533,1.0,0.0
+Q-048,table-extraction,What were the MIC and clinical interpretations for Ciprofloxacin and Ceftriaxone in Table 4 for patient P-104?,0.0,1.0,1.0,0.5,1.0,1.0,0.3869,0.6111,1.0,0.0
+Q-049,table-extraction,Extract the exact NIHSS score progression over all 5 recorded timestamps for patient P-105 from Table 5.,1.0,1.0,1.0,0.5799,1.0,1.0,0.3929,0.631,0.0,0.0
+Q-050,table-extraction,"According to Table 5, at what timestamp did patient P-105's language sub-score normalize to 0 (Normal speech)?",1.0,0.5,1.0,0.579,1.0,0.5,0.5811,0.6942,0.0,0.0

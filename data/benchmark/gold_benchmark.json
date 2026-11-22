@@ -1,0 +1,1600 @@
+{
+  "version": "1.0.0",
+  "description": "Gold-standard clinical evaluation benchmark for dual-pipeline RAG comparison",
+  "total_queries": 50,
+  "queries": [
+    {
+      "query_id": "Q-001",
+      "query_type": "single-hop",
+      "query_text": "What was the initial dosage of Lisinopril prescribed to patient P-101?",
+      "reference_answer": "Patient P-101 was prescribed an initial dose of Lisinopril 10 mg PO daily.",
+      "reference_claims": [
+        "Lisinopril initial dose was 10 mg PO daily."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          2
+        ],
+        "table_id": null,
+        "verbatim_text": "Initiate Lisinopril 10 mg PO daily for renal-protective antiproteinuric effects."
+      },
+      "expected_entities": [
+        "P-101",
+        "Lisinopril",
+        "10 mg"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-101",
+          "predicate": "PRESCRIBED",
+          "object": "Lisinopril"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-002",
+      "query_type": "single-hop",
+      "query_text": "What chief complaint did patient P-101 present with on 2026-03-12?",
+      "reference_answer": "Patient P-101 presented with worsening bilateral lower extremity edema, fatigue, and persistent hypertension.",
+      "reference_claims": [
+        "Chief complaint was worsening bilateral lower extremity edema, fatigue, and persistent hypertension."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Chief Complaint: Worsening bilateral lower extremity edema, fatigue, and persistent hypertension."
+      },
+      "expected_entities": [
+        "P-101",
+        "Edema",
+        "Hypertension"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-101",
+          "predicate": "EXHIBITED_SYMPTOM",
+          "object": "Edema"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-003",
+      "query_type": "single-hop",
+      "query_text": "Why was Amlodipine discontinued for patient P-101?",
+      "reference_answer": "Amlodipine was discontinued due to suspected contribution to peripheral edema.",
+      "reference_claims": [
+        "Amlodipine was discontinued because of suspected peripheral edema contribution."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          2
+        ],
+        "table_id": null,
+        "verbatim_text": "Discontinue Amlodipine due to suspected contribution to peripheral edema."
+      },
+      "expected_entities": [
+        "P-101",
+        "Amlodipine",
+        "Edema"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Amlodipine",
+          "predicate": "CONTRIBUTED_TO",
+          "object": "Edema"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-004",
+      "query_type": "single-hop",
+      "query_text": "What left ventricular ejection fraction (LVEF) was recorded on echocardiogram for patient P-102?",
+      "reference_answer": "The echocardiogram showed a severely reduced Left Ventricular Ejection Fraction (LVEF) of 28%.",
+      "reference_claims": [
+        "LVEF was measured at 28%, indicating severe reduction."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-002",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Left Ventricular Ejection Fraction (LVEF): 28% (Severely reduced)."
+      },
+      "expected_entities": [
+        "P-102",
+        "LVEF",
+        "28%"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-102",
+          "predicate": "MEASURED_LVEF",
+          "object": "28%"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-005",
+      "query_type": "single-hop",
+      "query_text": "What initial intravenous diuretic was administered to patient P-102 upon admission?",
+      "reference_answer": "Patient P-102 received Intravenous Furosemide (Lasix) 40 mg IV BID.",
+      "reference_claims": [
+        "Initial intravenous diuretic was Furosemide 40 mg IV BID."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-002",
+        "page_numbers": [
+          2
+        ],
+        "table_id": null,
+        "verbatim_text": "Intravenous Furosemide (Lasix) 40 mg IV BID initiated for decongestion."
+      },
+      "expected_entities": [
+        "P-102",
+        "Furosemide",
+        "40 mg IV BID"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-102",
+          "predicate": "PRESCRIBED",
+          "object": "Furosemide"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-006",
+      "query_type": "single-hop",
+      "query_text": "What required washout period was observed before starting Sacubitril/Valsartan for P-102?",
+      "reference_answer": "A required 36-hour washout period was observed before initiating Sacubitril/Valsartan.",
+      "reference_claims": [
+        "A 36-hour washout period was observed prior to starting Sacubitril/Valsartan."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-002",
+        "page_numbers": [
+          2
+        ],
+        "table_id": null,
+        "verbatim_text": "Initiated Sacubitril/Valsartan (Entresto) 24/26 mg PO BID after required 36-hour washout period."
+      },
+      "expected_entities": [
+        "P-102",
+        "Sacubitril/Valsartan",
+        "36-hour washout"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Sacubitril/Valsartan",
+          "predicate": "REQUIRES_WASHOUT",
+          "object": "36-hour"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-007",
+      "query_type": "single-hop",
+      "query_text": "What was the primary staging and histology of patient P-103's lung cancer?",
+      "reference_answer": "Patient P-103 was diagnosed with Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0).",
+      "reference_claims": [
+        "Histology was adenocarcinoma of the right upper lobe.",
+        "Stage was IIIA (cT2aN2M0)."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-003",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0)."
+      },
+      "expected_entities": [
+        "P-103",
+        "Non-Small Cell Lung Cancer",
+        "Stage IIIA"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-103",
+          "predicate": "DIAGNOSED_WITH",
+          "object": "NSCLC"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-008",
+      "query_type": "single-hop",
+      "query_text": "What was the PD-L1 expression level documented for patient P-103?",
+      "reference_answer": "The PD-L1 Tumor Proportion Score (TPS) for patient P-103 was documented as 45%.",
+      "reference_claims": [
+        "PD-L1 TPS was 45%."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-003",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "PD-L1 TPS 45%."
+      },
+      "expected_entities": [
+        "P-103",
+        "PD-L1",
+        "45%"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-103",
+          "predicate": "BIOMARKER_PDL1",
+          "object": "45%"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-009",
+      "query_type": "single-hop",
+      "query_text": "What empiric antibiotic was initiated for patient P-103 upon emergency admission for febrile neutropenia?",
+      "reference_answer": "Cefepime 2 g IV q8h was initiated within 45 minutes of arrival for febrile neutropenia.",
+      "reference_claims": [
+        "Empiric antibiotic was Cefepime 2 g IV q8h."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-003",
+        "page_numbers": [
+          2
+        ],
+        "table_id": null,
+        "verbatim_text": "Immediate infusion of Cefepime 2 g IV q8h initiated within 45 minutes of arrival."
+      },
+      "expected_entities": [
+        "P-103",
+        "Cefepime",
+        "Febrile Neutropenia"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-103",
+          "predicate": "PRESCRIBED",
+          "object": "Cefepime"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-010",
+      "query_type": "single-hop",
+      "query_text": "What primary infectious diagnosis was made for patient P-104 on admission?",
+      "reference_answer": "Patient P-104 was diagnosed with Urosepsis secondary to Acute Complicated Pyelonephritis.",
+      "reference_claims": [
+        "Diagnosis was urosepsis secondary to acute complicated pyelonephritis."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-004",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Diagnosis upon Admission: Urosepsis secondary to Acute Complicated Pyelonephritis."
+      },
+      "expected_entities": [
+        "P-104",
+        "Urosepsis",
+        "Pyelonephritis"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-104",
+          "predicate": "DIAGNOSED_WITH",
+          "object": "Urosepsis"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-011",
+      "query_type": "single-hop",
+      "query_text": "What initial empiric antibiotic was administered to patient P-104?",
+      "reference_answer": "Intravenous Ceftriaxone 2 g IV every 24 hours was started empirically for patient P-104.",
+      "reference_claims": [
+        "Empiric antibiotic was Ceftriaxone 2 g IV q24h."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-004",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Initial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically."
+      },
+      "expected_entities": [
+        "P-104",
+        "Ceftriaxone",
+        "2 g IV"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-104",
+          "predicate": "PRESCRIBED",
+          "object": "Ceftriaxone"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-012",
+      "query_type": "single-hop",
+      "query_text": "What was the time of symptom onset and ED arrival recorded for stroke patient P-105?",
+      "reference_answer": "Symptom onset was at 08:15 EST and emergency department arrival was at 09:20 EST on 2026-07-18.",
+      "reference_claims": [
+        "Symptom onset was 08:15 EST.",
+        "ED arrival was 09:20 EST."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Encounter Date: 2026-07-18 | Time of Onset: 08:15 EST | ED Arrival: 09:20 EST"
+      },
+      "expected_entities": [
+        "P-105",
+        "Stroke Onset",
+        "08:15 EST"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-105",
+          "predicate": "STROKE_ONSET",
+          "object": "08:15 EST"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-013",
+      "query_type": "single-hop",
+      "query_text": "What was the baseline NIHSS score for patient P-105 upon arrival?",
+      "reference_answer": "The baseline National Institutes of Health Stroke Scale (NIHSS) score on arrival was 14.",
+      "reference_claims": [
+        "Baseline NIHSS score was 14."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Baseline National Institutes of Health Stroke Scale (NIHSS) on Arrival: 14."
+      },
+      "expected_entities": [
+        "P-105",
+        "NIHSS",
+        "14"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-105",
+          "predicate": "MEASURED_NIHSS",
+          "object": "14"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-014",
+      "query_type": "single-hop",
+      "query_text": "What thrombolytic drug and dosage was administered to patient P-105?",
+      "reference_answer": "Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus was administered at 09:48 EST.",
+      "reference_claims": [
+        "Tenecteplase 0.25 mg/kg bolus was administered at 09:48 EST."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Intravenous Tenecteplase (TNK-tPA) 0.25 mg/kg bolus administered at 09:48 EST"
+      },
+      "expected_entities": [
+        "P-105",
+        "Tenecteplase",
+        "0.25 mg/kg"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-105",
+          "predicate": "ADMINISTERED",
+          "object": "Tenecteplase"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-015",
+      "query_type": "single-hop",
+      "query_text": "Why was patient P-105 not considered a candidate for endovascular thrombectomy?",
+      "reference_answer": "The patient was not an endovascular thrombectomy candidate due to distal branch vessel location (distal M2 branch occlusion).",
+      "reference_claims": [
+        "Patient was ineligible for thrombectomy due to distal M2 branch vessel location."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Patient was not an endovascular thrombectomy candidate due to distal branch vessel location."
+      },
+      "expected_entities": [
+        "P-105",
+        "Thrombectomy",
+        "M2 occlusion"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Thrombectomy",
+          "predicate": "CONTRAINDICATED_BY",
+          "object": "Distal M2 Occlusion"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-016",
+      "query_type": "single-hop",
+      "query_text": "What heart rhythm abnormality was detected on telemetry for patient P-105?",
+      "reference_answer": "Paroxysmal Atrial Fibrillation was detected on continuous telemetry at 32 hours post-admission.",
+      "reference_claims": [
+        "Paroxysmal atrial fibrillation was detected 32 hours post-admission."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          3
+        ],
+        "table_id": null,
+        "verbatim_text": "Paroxysmal Atrial Fibrillation detected at 32 hours post-admission."
+      },
+      "expected_entities": [
+        "P-105",
+        "Atrial Fibrillation"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-105",
+          "predicate": "DIAGNOSED_WITH",
+          "object": "Atrial Fibrillation"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-017",
+      "query_type": "single-hop",
+      "query_text": "What oral anticoagulant was initiated for patient P-105 for secondary stroke prevention?",
+      "reference_answer": "Apixaban (Eliquis) 5 mg PO BID was initiated on Day 3 post-stroke.",
+      "reference_claims": [
+        "Oral anticoagulant initiated was Apixaban 5 mg PO BID."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          3
+        ],
+        "table_id": null,
+        "verbatim_text": "initiated Apixaban (Eliquis) 5 mg PO BID on Day 3 post-stroke"
+      },
+      "expected_entities": [
+        "P-105",
+        "Apixaban",
+        "5 mg PO BID"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-105",
+          "predicate": "PRESCRIBED",
+          "object": "Apixaban"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-018",
+      "query_type": "single-hop",
+      "query_text": "What was patient P-102's dry weight at discharge?",
+      "reference_answer": "Patient P-102's dry weight at discharge was 78.4 kg.",
+      "reference_claims": [
+        "Discharge dry weight was 78.4 kg."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-002",
+        "page_numbers": [
+          4
+        ],
+        "table_id": null,
+        "verbatim_text": "weight down to 78.4 kg dry weight, ambulatory without dyspnea."
+      },
+      "expected_entities": [
+        "P-102",
+        "78.4 kg"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-102",
+          "predicate": "MEASURED_WEIGHT",
+          "object": "78.4 kg"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-019",
+      "query_type": "single-hop",
+      "query_text": "What medication was administered to patient P-101 to manage urgent hyperkalemia?",
+      "reference_answer": "Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID was administered.",
+      "reference_claims": [
+        "Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID was given for hyperkalemia."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          4
+        ],
+        "table_id": null,
+        "verbatim_text": "Administer Sodium Zirconium Cyclosilicate (Lokelma) 10 g PO TID."
+      },
+      "expected_entities": [
+        "P-101",
+        "Lokelma",
+        "10 g PO TID"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-101",
+          "predicate": "PRESCRIBED",
+          "object": "Lokelma"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-020",
+      "query_type": "single-hop",
+      "query_text": "What growth factor was administered to patient P-103 during hospitalization for neutropenia?",
+      "reference_answer": "Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections were administered.",
+      "reference_claims": [
+        "Filgrastim 300 mcg SQ daily was given."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-003",
+        "page_numbers": [
+          4
+        ],
+        "table_id": null,
+        "verbatim_text": "Daily Filgrastim (G-CSF) 300 mcg subcutaneous injections administered from Day 1 to Day 4"
+      },
+      "expected_entities": [
+        "P-103",
+        "Filgrastim",
+        "300 mcg SQ"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-103",
+          "predicate": "PRESCRIBED",
+          "object": "Filgrastim"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-021",
+      "query_type": "multi-hop",
+      "query_text": "Did the medication initiated for diabetic nephropathy in patient P-101 lead to an adverse event requiring emergency intervention?",
+      "reference_answer": "Yes. Lisinopril was initiated on 2026-03-12 for diabetic nephropathy and caused acute hyperkalemia (potassium 5.7 mEq/L with peaked T-waves) and AKI (creatinine rose to 1.82 mg/dL), requiring urgent discontinuation and Lokelma therapy on 2026-03-19.",
+      "reference_claims": [
+        "Lisinopril was initiated for diabetic nephropathy on 2026-03-12.",
+        "Lisinopril caused acute hyperkalemia with potassium 5.7 mEq/L.",
+        "Lisinopril caused acute kidney injury with creatinine rising to 1.82 mg/dL.",
+        "Lisinopril was discontinued and Lokelma was administered."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          2,
+          3,
+          4
+        ],
+        "table_id": null,
+        "verbatim_text": "Initiate Lisinopril ... Acute Kidney Injury (AKI) and drug-induced Hyperkalemia secondary to ACE-inhibitor (Lisinopril)"
+      },
+      "expected_entities": [
+        "P-101",
+        "Lisinopril",
+        "Hyperkalemia",
+        "AKI",
+        "Lokelma"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-101",
+          "predicate": "PRESCRIBED",
+          "object": "Lisinopril"
+        },
+        {
+          "subject": "Lisinopril",
+          "predicate": "CAUSED_ADVERSE_EVENT",
+          "object": "Hyperkalemia"
+        },
+        {
+          "subject": "Hyperkalemia",
+          "predicate": "TREATED_WITH",
+          "object": "Lokelma"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-022",
+      "query_type": "multi-hop",
+      "query_text": "Trace the relationship between patient P-101's baseline renal lab values and the replacement antihypertensive regimen chosen after adverse drug event.",
+      "reference_answer": "Patient P-101 had baseline creatinine 1.35 mg/dL and eGFR 51 mL/min/1.73m2. After developing Lisinopril-induced hyperkalemia and AKI (creatinine 1.82 mg/dL), she was switched to Nifedipine ER 30 mg PO daily, avoiding renin-angiotensin-aldosterone blockade.",
+      "reference_claims": [
+        "Baseline creatinine was 1.35 mg/dL with eGFR 51 mL/min/1.73m2.",
+        "Lisinopril induced AKI and hyperkalemia.",
+        "Antihypertensive regimen was changed to Nifedipine ER 30 mg PO daily."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          2,
+          3,
+          4
+        ],
+        "table_id": "Table 1",
+        "verbatim_text": "eGFR 51 ... Switch antihypertensive regimen to Nifedipine ER 30 mg PO daily"
+      },
+      "expected_entities": [
+        "P-101",
+        "Creatinine",
+        "Lisinopril",
+        "Nifedipine ER"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-101",
+          "predicate": "BASELINE_LAB",
+          "object": "Creatinine"
+        },
+        {
+          "subject": "P-101",
+          "predicate": "SWITCHED_TO",
+          "object": "Nifedipine ER"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-023",
+      "query_type": "multi-hop",
+      "query_text": "How did patient P-102's NT-proBNP biomarker trend correlate with the inpatient heart failure therapies administered?",
+      "reference_answer": "P-102 was admitted with NT-proBNP 4850 pg/mL. Administration of IV Furosemide (achieving -4.8L fluid balance), Carvedilol, and Sacubitril/Valsartan reduced NT-proBNP to 3210 pg/mL on April 6 and 1140 pg/mL by April 8.",
+      "reference_claims": [
+        "Admission NT-proBNP was 4850 pg/mL.",
+        "Inpatient treatment with IV Furosemide, Carvedilol, and Sacubitril/Valsartan produced net negative 4.8L fluid balance.",
+        "NT-proBNP decreased to 1140 pg/mL by April 8."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-002",
+        "page_numbers": [
+          2,
+          3
+        ],
+        "table_id": "Table 2",
+        "verbatim_text": "Total net negative fluid balance over 72 hours: -4.8 Liters ... NT-proBNP 4850 to 1140"
+      },
+      "expected_entities": [
+        "P-102",
+        "NT-proBNP",
+        "Furosemide",
+        "Sacubitril/Valsartan"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-102",
+          "predicate": "BIOMARKER_TREND",
+          "object": "NT-proBNP"
+        },
+        {
+          "subject": "Furosemide",
+          "predicate": "REDUCED_BIOMARKER",
+          "object": "NT-proBNP"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-024",
+      "query_type": "multi-hop",
+      "query_text": "Explain how the echocardiographic finding for patient P-102 determined the selection of neurohormonal discharge medications.",
+      "reference_answer": "The echocardiogram showed severely reduced LVEF of 28% and LV dilation, establishing HFrEF. This guided guideline-directed quadruple therapy at discharge: Sacubitril/Valsartan, Carvedilol, Spironolactone, and Empagliflozin.",
+      "reference_claims": [
+        "Echocardiogram established LVEF of 28% (HFrEF).",
+        "Finding prompted discharge quadruple medical therapy with Sacubitril/Valsartan, Carvedilol, Spironolactone, and Empagliflozin."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-002",
+        "page_numbers": [
+          1,
+          4
+        ],
+        "table_id": null,
+        "verbatim_text": "LVEF: 28% ... Discharge Prescriptions: Sacubitril/Valsartan, Carvedilol, Spironolactone, Empagliflozin"
+      },
+      "expected_entities": [
+        "P-102",
+        "LVEF 28%",
+        "Quadruple Therapy"
+      ],
+      "expected_relations": [
+        {
+          "subject": "LVEF 28%",
+          "predicate": "INDICATED_REGIMEN",
+          "object": "Sacubitril/Valsartan"
+        },
+        {
+          "subject": "LVEF 28%",
+          "predicate": "INDICATED_REGIMEN",
+          "object": "Carvedilol"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-025",
+      "query_type": "multi-hop",
+      "query_text": "Connect patient P-103's chemotherapy regimen to the emergency admission 11 days later and the subsequent dose adjustment.",
+      "reference_answer": "Patient P-103 received Carboplatin AUC 5 and Pemetrexed on 2026-05-04. By Day 11, she developed severe neutropenia (ANC 320 cells/uL) and fever (38.9 deg C) requiring admission, Cefepime, and G-CSF. Consequently, Carboplatin was reduced by 20% for Cycle 2 with mandatory prophylactic Pegfilgrastim.",
+      "reference_claims": [
+        "Carboplatin and Pemetrexed were given on 2026-05-04.",
+        "Patient developed febrile neutropenia on Day 11 with ANC 320 cells/uL.",
+        "Carboplatin was dose-reduced by 20% for Cycle 2.",
+        "Prophylactic Pegfilgrastim was added for subsequent cycles."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-003",
+        "page_numbers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "table_id": "Table 3",
+        "verbatim_text": "Carboplatin AUC 5 ... Febrile Neutropenia ... 20% dose reduction for Carboplatin"
+      },
+      "expected_entities": [
+        "P-103",
+        "Carboplatin",
+        "Febrile Neutropenia",
+        "Dose Reduction"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Carboplatin",
+          "predicate": "INDUCED",
+          "object": "Febrile Neutropenia"
+        },
+        {
+          "subject": "Febrile Neutropenia",
+          "predicate": "RESULTED_IN",
+          "object": "Dose Reduction"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-026",
+      "query_type": "multi-hop",
+      "query_text": "What bacteriological finding in patient P-104 forced an escalation of antimicrobial therapy from the initial regimen?",
+      "reference_answer": "Initial Ceftriaxone was ineffective because microbiological culture and AST revealed an ESBL-producing Escherichia coli resistant to Ceftriaxone (MIC >= 64 ug/mL) and Ciprofloxacin (MIC >= 4 ug/mL). This forced immediate escalation to Meropenem 1 g IV q8h.",
+      "reference_claims": [
+        "Initial therapy was Ceftriaxone.",
+        "Blood and urine cultures grew ESBL-producing E. coli resistant to Ceftriaxone and Ciprofloxacin.",
+        "Therapy was escalated to Meropenem 1 g IV q8h."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-004",
+        "page_numbers": [
+          1,
+          2,
+          3
+        ],
+        "table_id": "Table 4",
+        "verbatim_text": "Ceftriaxone >= 64 RESISTANT ... escalated antibiotic therapy immediately to Meropenem"
+      },
+      "expected_entities": [
+        "P-104",
+        "Ceftriaxone",
+        "ESBL E. coli",
+        "Meropenem"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Ceftriaxone",
+          "predicate": "RESISTED_BY",
+          "object": "ESBL E. coli"
+        },
+        {
+          "subject": "ESBL E. coli",
+          "predicate": "INDICATED",
+          "object": "Meropenem"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-027",
+      "query_type": "multi-hop",
+      "query_text": "How did the microbiological resistance profile of P-104 affect the route and duration of post-discharge care?",
+      "reference_answer": "Due to multi-drug resistance (resistance to oral options including Ciprofloxacin and Ampicillin) and susceptibility limited to carbapenems and aminoglycosides, the patient required a 14-day total course of intravenous Meropenem administered via an outpatient PICC line.",
+      "reference_claims": [
+        "Oral fluoroquinolones were resistant on AST.",
+        "Patient required completion of 14-day IV Meropenem at home via PICC line."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-004",
+        "page_numbers": [
+          2,
+          3
+        ],
+        "table_id": "Table 4",
+        "verbatim_text": "Complete 14-day total course of intravenous Meropenem via peripherally inserted central catheter (PICC)"
+      },
+      "expected_entities": [
+        "P-104",
+        "ESBL E. coli",
+        "Meropenem PICC 14-day"
+      ],
+      "expected_relations": [
+        {
+          "subject": "ESBL E. coli",
+          "predicate": "REQUIRED_ROUTE",
+          "object": "PICC Meropenem"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-028",
+      "query_type": "multi-hop",
+      "query_text": "Trace the trajectory of neurological deficit in patient P-105 from initial presentation through pharmacological thrombolysis to 48-hour recovery.",
+      "reference_answer": "Patient P-105 presented with NIHSS 14 (severe arm motor deficit and severe aphasia). Following Tenecteplase thrombolysis, NIHSS improved to 10 at 1 hr, 6 at 16 hrs, 3 at 24 hrs (aphasia resolved), and reached 1 at 48 hrs with only trace pronator drift.",
+      "reference_claims": [
+        "Baseline NIHSS was 14 with severe aphasia and motor arm deficit.",
+        "Tenecteplase was administered at 09:48 EST.",
+        "NIHSS improved progressively to 10, 6, 3, and finally 1 at 48 hours.",
+        "Aphasia resolved completely by 24 hours."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          1,
+          2
+        ],
+        "table_id": "Table 5",
+        "verbatim_text": "Baseline NIHSS 14 ... Post-thrombolysis 1 hr NIHSS 10 ... 48:00 EST NIHSS 1"
+      },
+      "expected_entities": [
+        "P-105",
+        "Tenecteplase",
+        "NIHSS 14 to 1"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Tenecteplase",
+          "predicate": "IMPROVED_DEFICIT",
+          "object": "NIHSS 14 to 1"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-029",
+      "query_type": "multi-hop",
+      "query_text": "What diagnostic finding identified the cardioembolic source of stroke in patient P-105, and what anticoagulant was chosen?",
+      "reference_answer": "Continuous inpatient telemetry at 32 hours detected Paroxysmal Atrial Fibrillation, and echo showed left atrial enlargement. This identified cardioembolism as the etiology, leading to anticoagulation with Apixaban 5 mg PO BID once repeat CT excluded hemorrhage.",
+      "reference_claims": [
+        "Continuous telemetry detected paroxysmal atrial fibrillation at 32 hours.",
+        "Repeat head CT ruled out hemorrhagic transformation.",
+        "Apixaban 5 mg PO BID was started for secondary cardioembolic prevention."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          1,
+          3
+        ],
+        "table_id": null,
+        "verbatim_text": "Paroxysmal Atrial Fibrillation detected at 32 hours ... initiated Apixaban (Eliquis) 5 mg PO BID"
+      },
+      "expected_entities": [
+        "P-105",
+        "Atrial Fibrillation",
+        "Apixaban"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Atrial Fibrillation",
+          "predicate": "IDENTIFIED_AS_ETIOLOGY",
+          "object": "Cardioembolic Stroke"
+        },
+        {
+          "subject": "Cardioembolic Stroke",
+          "predicate": "INDICATED",
+          "object": "Apixaban"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-030",
+      "query_type": "multi-hop",
+      "query_text": "Evaluate the multi-organ impact of ACE-inhibitor initiation in patient P-101 across the renal and cardiac systems.",
+      "reference_answer": "Lisinopril initiation aimed at renal protection instead caused acute deterioration in renal function (creatinine rise from 1.35 to 1.82 mg/dL, AKI) and cardiac electrical instability manifested by tall peaked T-waves on EKG from acute hyperkalemia (potassium 5.7 mEq/L).",
+      "reference_claims": [
+        "Lisinopril caused acute renal failure with creatinine jumping to 1.82 mg/dL.",
+        "Lisinopril induced severe hyperkalemia of 5.7 mEq/L.",
+        "Cardiac manifestation included peaked T-waves in precordial leads V2-V4 on EKG."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          2,
+          3,
+          4
+        ],
+        "table_id": "Table 1",
+        "verbatim_text": "EKG reveals tall, peaked T-waves ... potassium at 5.7 mEq/L and acute creatinine jump to 1.82 mg/dL"
+      },
+      "expected_entities": [
+        "P-101",
+        "Lisinopril",
+        "Creatinine 1.82",
+        "Peaked T-waves"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Lisinopril",
+          "predicate": "CAUSED_RENAL_INJURY",
+          "object": "Creatinine 1.82"
+        },
+        {
+          "subject": "Lisinopril",
+          "predicate": "CAUSED_CARDIAC_RISK",
+          "object": "Peaked T-waves"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-031",
+      "query_type": "multi-hop",
+      "query_text": "Which patients in the corpus were initiated on beta-blockers, and what specific clinical indications warranted them?",
+      "reference_answer": "Patient P-102 was initiated on Carvedilol (titrated from 3.125 mg to 6.25 mg BID) for HFrEF with LVEF 28%. No other patient in the corpus was initiated on a beta-blocker.",
+      "reference_claims": [
+        "Patient P-102 was prescribed Carvedilol.",
+        "Indication was heart failure with reduced ejection fraction (LVEF 28%)."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-002",
+        "page_numbers": [
+          2,
+          4
+        ],
+        "table_id": null,
+        "verbatim_text": "Transitioned oral beta-blocker from Metoprolol Tartrate to Carvedilol 3.125 mg PO BID ... LVEF: 28%"
+      },
+      "expected_entities": [
+        "P-102",
+        "Carvedilol",
+        "HFrEF"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-102",
+          "predicate": "PRESCRIBED",
+          "object": "Carvedilol"
+        },
+        {
+          "subject": "Carvedilol",
+          "predicate": "INDICATED_FOR",
+          "object": "HFrEF"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-032",
+      "query_type": "multi-hop",
+      "query_text": "Compare the renal function trajectories of patient P-101 and patient P-102 during their inpatient/clinic courses.",
+      "reference_answer": "Patient P-101 experienced acute renal deterioration (creatinine rose from 1.35 to 1.82 mg/dL with BUN rising from 24 to 38 mg/dL) due to Lisinopril AKI. In contrast, patient P-102 maintained stable renal function (creatinine 1.10 mg/dL on discharge) despite intensive diuresis.",
+      "reference_claims": [
+        "P-101 creatinine increased from 1.35 to 1.82 mg/dL.",
+        "P-102 creatinine remained stable at 1.10 mg/dL despite aggressive diuresis."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001, DOC-EHR-002",
+        "page_numbers": [
+          3,
+          3
+        ],
+        "table_id": "Table 1, Table 2",
+        "verbatim_text": "P-101 Creatinine 1.82 mg/dL ... P-102 Serum Creatinine 1.10 mg/dL STABLE"
+      },
+      "expected_entities": [
+        "P-101",
+        "P-102",
+        "Creatinine Comparison"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-101",
+          "predicate": "HAD_AKI",
+          "object": "Creatinine 1.82"
+        },
+        {
+          "subject": "P-102",
+          "predicate": "MAINTAINED_STABILITY",
+          "object": "Creatinine 1.10"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-033",
+      "query_type": "multi-hop",
+      "query_text": "Trace how patient P-103's Absolute Neutrophil Count recovered from nadir to resolution and how it permitted discharge.",
+      "reference_answer": "Patient P-103 nadired at severe neutropenia (ANC 320 cells/uL on May 15). Daily Filgrastim increased ANC to 1250 cells/uL on May 18, and it resolved to 2800 cells/uL on May 20, satisfying hematologic criteria for discharge.",
+      "reference_claims": [
+        "ANC nadired at 320 cells/uL on May 15.",
+        "ANC recovered to 1250 cells/uL on May 18 after Filgrastim.",
+        "ANC normalized to 2800 cells/uL on May 20 permitting discharge."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-003",
+        "page_numbers": [
+          3,
+          4
+        ],
+        "table_id": "Table 3",
+        "verbatim_text": "ANC 320 SEVERE_NEUTROPENIA ... ANC 2800 RESOLVED"
+      },
+      "expected_entities": [
+        "P-103",
+        "ANC 320 to 2800",
+        "Filgrastim"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Filgrastim",
+          "predicate": "ACCELERATED_RECOVERY",
+          "object": "ANC 2800"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-034",
+      "query_type": "multi-hop",
+      "query_text": "What specific safety monitoring step performed on 2026-03-19 prevented further clinical decline in patient P-101?",
+      "reference_answer": "The scheduled 7-day safety follow-up lab check detected acute hyperkalemia (potassium 5.7 mEq/L) and AKI (creatinine 1.82 mg/dL) before life-threatening ventricular arrhythmias ensued, allowing immediate Lisinopril cessation and potassium binder therapy.",
+      "reference_claims": [
+        "Scheduled 7-day lab follow-up detected hyperkalemia at 5.7 mEq/L.",
+        "Follow-up enabled early discontinuation of Lisinopril and administration of Lokelma."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          2,
+          3,
+          4
+        ],
+        "table_id": "Table 1",
+        "verbatim_text": "Follow up in 7 days for serum potassium and creatinine safety check ... Potassium 5.7 mEq/L"
+      },
+      "expected_entities": [
+        "P-101",
+        "Safety Monitoring",
+        "Potassium 5.7"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Safety Monitoring",
+          "predicate": "PREVENTED_COMPLICATION",
+          "object": "Hyperkalemic Arrhythmia"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-035",
+      "query_type": "multi-hop",
+      "query_text": "Explain the clinical reasoning for administering IV crystalloids to patient P-104 despite suspected septic shock.",
+      "reference_answer": "Patient P-104 presented with hypotension (BP 88/54 mmHg) and tachycardia (HR 122 bpm) from uroseptic shock; fluid resuscitation with 30 mL/kg Plasmalyte restored Mean Arterial Pressure (MAP) to 68 mmHg prior to targeted antibiotic response.",
+      "reference_claims": [
+        "Patient had septic shock with BP 88/54 mmHg.",
+        "Fluid resuscitation with 30 mL/kg balanced crystalloids restored MAP to 68 mmHg."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-004",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Received 30 mL/kg balanced crystalloids (Plasmalyte) with improvement of MAP to 68 mmHg."
+      },
+      "expected_entities": [
+        "P-104",
+        "Septic Shock",
+        "Crystalloids",
+        "MAP 68"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Plasmalyte",
+          "predicate": "RESTORED_HEMODYNAMICS",
+          "object": "MAP 68"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-036",
+      "query_type": "multi-hop",
+      "query_text": "Which patients presented with fever as a core triage symptom, and what distinct infectious etiologies were confirmed?",
+      "reference_answer": "Patient P-103 presented with fever (38.9 deg C) due to post-chemotherapy febrile neutropenia (no positive cultures). Patient P-104 presented with fever (39.2 deg C) due to ESBL E. coli urosepsis and bacteremia.",
+      "reference_claims": [
+        "P-103 had fever of 38.9 deg C due to febrile neutropenia without bacteremia.",
+        "P-104 had fever of 39.2 deg C due to ESBL E. coli pyelonephritis and bacteremia."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-003, DOC-EHR-004",
+        "page_numbers": [
+          2,
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "P-103: oral temperature spike to 38.9 deg C ... P-104: Temp 39.2 deg C ... ESBL E. coli"
+      },
+      "expected_entities": [
+        "P-103",
+        "P-104",
+        "Fever Etiologies"
+      ],
+      "expected_relations": [
+        {
+          "subject": "P-103",
+          "predicate": "FEVER_FROM",
+          "object": "Neutropenia"
+        },
+        {
+          "subject": "P-104",
+          "predicate": "FEVER_FROM",
+          "object": "ESBL Bacteremia"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-037",
+      "query_type": "multi-hop",
+      "query_text": "Analyze how the timing of presentation in patient P-105 influenced thrombolytic therapy eligibility.",
+      "reference_answer": "Patient P-105 arrived at 09:20 EST following an 08:15 EST onset (65 minutes from onset), well within the 4.5-hour thrombolytic window. Door-to-needle time was 28 minutes (09:48 EST administration), enabling successful reperfusion and rapid NIHSS improvement.",
+      "reference_claims": [
+        "Symptom onset was 08:15 EST and ED arrival was 09:20 EST.",
+        "Arrival was well within the 4.5-hour intravenous thrombolysis window.",
+        "Door-to-needle time of 28 minutes enabled prompt Tenecteplase delivery."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Time of Onset: 08:15 EST | ED Arrival: 09:20 EST ... door-to-needle time: 28 minutes"
+      },
+      "expected_entities": [
+        "P-105",
+        "Thrombolysis Window",
+        "Door-to-needle 28m"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Prompt Arrival",
+          "predicate": "ENABLED",
+          "object": "Tenecteplase"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-038",
+      "query_type": "multi-hop",
+      "query_text": "How did baseline laboratory parameters dictate the chemotherapy premedication regimen for patient P-103?",
+      "reference_answer": "Pemetrexed chemotherapy requires prophylaxis to prevent severe hematologic and gastrointestinal toxicities; P-103 was prescribed Dexamethasone, daily Folic Acid (400 mcg), and Vitamin B12 injections (1000 mcg IM) prior to Cycle 1.",
+      "reference_claims": [
+        "Pemetrexed requires vitamin supplementation to prevent toxicity.",
+        "Premedications included Dexamethasone, Folic Acid 400 mcg daily, and Vitamin B12 1000 mcg IM."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-003",
+        "page_numbers": [
+          1
+        ],
+        "table_id": null,
+        "verbatim_text": "Premedications Prescribed: Dexamethasone 4 mg BID for 3 days, Folic Acid 400 mcg daily, Vitamin B12 1000 mcg IM"
+      },
+      "expected_entities": [
+        "P-103",
+        "Pemetrexed",
+        "Folic Acid",
+        "Vitamin B12"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Pemetrexed",
+          "predicate": "MANDATED",
+          "object": "Folic Acid"
+        },
+        {
+          "subject": "Pemetrexed",
+          "predicate": "MANDATED",
+          "object": "Vitamin B12"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-039",
+      "query_type": "multi-hop",
+      "query_text": "Identify all patients who experienced an acute decline in kidney markers and contrast their clinical causes.",
+      "reference_answer": "Patient P-101 was the only patient with an acute kidney injury (creatinine rose from 1.35 to 1.82 mg/dL), caused by ACE-inhibitor (Lisinopril) toxicity on preexisting diabetic nephropathy. Patient P-102 maintained normal creatinine (1.10 mg/dL).",
+      "reference_claims": [
+        "Patient P-101 experienced acute renal decline with creatinine climbing to 1.82 mg/dL.",
+        "Cause was Lisinopril toxicity in diabetic nephropathy.",
+        "Patient P-102 maintained stable creatinine."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          3,
+          4
+        ],
+        "table_id": "Table 1",
+        "verbatim_text": "P-101: acute creatinine jump to 1.82 mg/dL ... Acute Kidney Injury (AKI) secondary to ACE-inhibitor"
+      },
+      "expected_entities": [
+        "P-101",
+        "Creatinine 1.82",
+        "Lisinopril AKI"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Lisinopril",
+          "predicate": "CAUSED",
+          "object": "AKI"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-040",
+      "query_type": "multi-hop",
+      "query_text": "What clinical criteria were met before oral heart failure medications were uptitrated for patient P-102 at discharge?",
+      "reference_answer": "Carvedilol was successfully uptitrated from 3.125 mg to 6.25 mg BID because P-102 achieved euvolemia (-4.8 L net fluid balance, dry weight 78.4 kg), stable systolic blood pressure (108 mmHg), and stable renal function (creatinine 1.10 mg/dL).",
+      "reference_claims": [
+        "Patient achieved euvolemic dry weight of 78.4 kg.",
+        "Systolic BP was stable at 108 mmHg.",
+        "Serum creatinine remained stable at 1.10 mg/dL."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-002",
+        "page_numbers": [
+          2,
+          3,
+          4
+        ],
+        "table_id": "Table 2",
+        "verbatim_text": "Carvedilol 6.25 mg PO BID (titrated up) ... SBP 108 ... Cr 1.10 ... dry weight 78.4 kg"
+      },
+      "expected_entities": [
+        "P-102",
+        "Carvedilol Uptitration",
+        "Euvolemia"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Euvolemia",
+          "predicate": "PERMITTED",
+          "object": "Carvedilol Uptitration"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-041",
+      "query_type": "table-extraction",
+      "query_text": "Extract the exact serum potassium and creatinine values for patient P-101 on 2026-03-12 versus 2026-03-19 from Table 1.",
+      "reference_answer": "According to Table 1, on 2026-03-12: Serum Potassium was 4.3 mEq/L and Serum Creatinine was 1.35 mg/dL. On 2026-03-19: Serum Potassium rose to 5.7 mEq/L (CRITICAL_HIGH) and Serum Creatinine rose to 1.82 mg/dL (HIGH).",
+      "reference_claims": [
+        "On 2026-03-12, potassium was 4.3 mEq/L and creatinine was 1.35 mg/dL.",
+        "On 2026-03-19, potassium was 5.7 mEq/L (CRITICAL_HIGH) and creatinine was 1.82 mg/dL (HIGH)."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          3
+        ],
+        "table_id": "Table 1",
+        "verbatim_text": "2026-03-12 Potassium 4.3 ... 2026-03-19 Potassium 5.7 ... 2026-03-19 Creatinine 1.82"
+      },
+      "expected_entities": [
+        "Table 1",
+        "Potassium",
+        "Creatinine"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Table 1",
+          "predicate": "CONTAINS_ROW",
+          "object": "2026-03-19 Potassium 5.7"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-042",
+      "query_type": "table-extraction",
+      "query_text": "What was patient P-101's baseline urine albumin-to-creatinine ratio (uACR) and flag recorded in Table 1?",
+      "reference_answer": "Patient P-101's Urine Albumin/Cr ratio on 2026-03-12 was 340 mg/g, flagged as ABNORMAL against the reference range of < 30 mg/g.",
+      "reference_claims": [
+        "Urine Albumin/Cr was 340 mg/g.",
+        "Reference range was < 30 mg/g and flag was ABNORMAL."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-001",
+        "page_numbers": [
+          3
+        ],
+        "table_id": "Table 1",
+        "verbatim_text": "2026-03-12 | Urine Albumin/Cr | 340 | < 30 | ABNORMAL | mg/g"
+      },
+      "expected_entities": [
+        "Table 1",
+        "uACR 340"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Table 1",
+          "predicate": "CONTAINS_ROW",
+          "object": "uACR 340"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-043",
+      "query_type": "table-extraction",
+      "query_text": "List all NT-proBNP measurement dates, values, and interpretations from Table 2 for patient P-102.",
+      "reference_answer": "From Table 2: On 2026-04-05: 4850 pg/mL (SEVERELY_ELEVATED); on 2026-04-06: 3210 pg/mL (DECREASING); on 2026-04-08: 1140 pg/mL (RESPONDING_TO_THERAPY).",
+      "reference_claims": [
+        "2026-04-05 NT-proBNP was 4850 pg/mL (SEVERELY_ELEVATED).",
+        "2026-04-06 NT-proBNP was 3210 pg/mL (DECREASING).",
+        "2026-04-08 NT-proBNP was 1140 pg/mL (RESPONDING_TO_THERAPY)."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-002",
+        "page_numbers": [
+          3
+        ],
+        "table_id": "Table 2",
+        "verbatim_text": "4850 SEVERELY_ELEVATED ... 3210 DECREASING ... 1140 RESPONDING_TO_THERAPY"
+      },
+      "expected_entities": [
+        "Table 2",
+        "NT-proBNP values"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Table 2",
+          "predicate": "CONTAINS_ROW",
+          "object": "NT-proBNP 4850"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-044",
+      "query_type": "table-extraction",
+      "query_text": "What was patient P-102's High-Sensitivity Troponin T level and unit recorded in Table 2?",
+      "reference_answer": "According to Table 2, High-Sensitivity Troponin T on 2026-04-05 was 24 ng/L (MILDLY_ELEVATED against reference range < 14 ng/L).",
+      "reference_claims": [
+        "High-Sensitivity Troponin T was 24 ng/L.",
+        "Value was flagged as MILDLY_ELEVATED against normal < 14 ng/L."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-002",
+        "page_numbers": [
+          3
+        ],
+        "table_id": "Table 2",
+        "verbatim_text": "2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L)"
+      },
+      "expected_entities": [
+        "Table 2",
+        "Troponin T 24 ng/L"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Table 2",
+          "predicate": "CONTAINS_ROW",
+          "object": "Troponin T 24"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-045",
+      "query_type": "table-extraction",
+      "query_text": "Extract patient P-103's Absolute Neutrophil Count (ANC) on 2026-05-03, 2026-05-15, 2026-05-18, and 2026-05-20 from Table 3.",
+      "reference_answer": "From Table 3, ANC values were: 4200 cells/uL on 2026-05-03 (Normal); 320 cells/uL on 2026-05-15 (SEVERE_NEUTROPENIA); 1250 cells/uL on 2026-05-18 (RECOVERING); and 2800 cells/uL on 2026-05-20 (RESOLVED).",
+      "reference_claims": [
+        "2026-05-03 ANC was 4200 cells/uL (Normal).",
+        "2026-05-15 ANC was 320 cells/uL (SEVERE_NEUTROPENIA).",
+        "2026-05-18 ANC was 1250 cells/uL (RECOVERING).",
+        "2026-05-20 ANC was 2800 cells/uL (RESOLVED)."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-003",
+        "page_numbers": [
+          3
+        ],
+        "table_id": "Table 3",
+        "verbatim_text": "ANC 4200 ... ANC 320 ... ANC 1250 ... ANC 2800"
+      },
+      "expected_entities": [
+        "Table 3",
+        "ANC trajectory"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Table 3",
+          "predicate": "CONTAINS_ROW",
+          "object": "ANC 320"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-046",
+      "query_type": "table-extraction",
+      "query_text": "What was patient P-103's nadir White Blood Cell count and status on 2026-05-15 in Table 3?",
+      "reference_answer": "According to Table 3, on 2026-05-15, White Blood Cells were 1.1 x 10^3/uL, flagged as CRITICAL_LOW (reference range 4.0 - 11.0 x 10^3/uL).",
+      "reference_claims": [
+        "White Blood Cells count was 1.1 x 10^3/uL.",
+        "Flag was CRITICAL_LOW with reference range 4.0 - 11.0 x 10^3/uL."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-003",
+        "page_numbers": [
+          3
+        ],
+        "table_id": "Table 3",
+        "verbatim_text": "2026-05-15 | White Blood Cells (WBC) | 1.1 | 4.0 - 11.0 | CRITICAL_LOW | 10^3/uL"
+      },
+      "expected_entities": [
+        "Table 3",
+        "WBC 1.1"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Table 3",
+          "predicate": "CONTAINS_ROW",
+          "object": "WBC 1.1"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-047",
+      "query_type": "table-extraction",
+      "query_text": "Based on Table 4, which antibiotics were reported as SUSCEPTIBLE for the ESBL E. coli isolate from patient P-104?",
+      "reference_answer": "According to Table 4, the two antibiotics reported as SUSCEPTIBLE were Meropenem (MIC <= 0.25 ug/mL) and Amikacin (MIC <= 2 ug/mL).",
+      "reference_claims": [
+        "Meropenem was SUSCEPTIBLE with MIC <= 0.25 ug/mL.",
+        "Amikacin was SUSCEPTIBLE with MIC <= 2 ug/mL."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-004",
+        "page_numbers": [
+          2
+        ],
+        "table_id": "Table 4",
+        "verbatim_text": "Meropenem <= 0.25 SUSCEPTIBLE ... Amikacin <= 2 SUSCEPTIBLE"
+      },
+      "expected_entities": [
+        "Table 4",
+        "Meropenem",
+        "Amikacin"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Table 4",
+          "predicate": "CONTAINS_ROW",
+          "object": "Meropenem SUSCEPTIBLE"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-048",
+      "query_type": "table-extraction",
+      "query_text": "What were the MIC and clinical interpretations for Ciprofloxacin and Ceftriaxone in Table 4 for patient P-104?",
+      "reference_answer": "In Table 4: Ceftriaxone had MIC >= 64 ug/mL and was RESISTANT (ESBL confirmed). Ciprofloxacin had MIC >= 4 ug/mL and was RESISTANT (High-level fluoroquinolone resistance).",
+      "reference_claims": [
+        "Ceftriaxone MIC was >= 64 ug/mL, interpreted as RESISTANT.",
+        "Ciprofloxacin MIC was >= 4 ug/mL, interpreted as RESISTANT."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-004",
+        "page_numbers": [
+          2
+        ],
+        "table_id": "Table 4",
+        "verbatim_text": "Ceftriaxone >= 64 RESISTANT ... Ciprofloxacin >= 4 RESISTANT"
+      },
+      "expected_entities": [
+        "Table 4",
+        "Ceftriaxone",
+        "Ciprofloxacin"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Table 4",
+          "predicate": "CONTAINS_ROW",
+          "object": "Ceftriaxone RESISTANT"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-049",
+      "query_type": "table-extraction",
+      "query_text": "Extract the exact NIHSS score progression over all 5 recorded timestamps for patient P-105 from Table 5.",
+      "reference_answer": "From Table 5: 09:25 EST: Total NIHSS 14; 11:00 EST: Total NIHSS 10; 16:00 EST: Total NIHSS 6; 24:00 EST: Total NIHSS 3; 48:00 EST: Total NIHSS 1.",
+      "reference_claims": [
+        "09:25 EST total score was 14.",
+        "11:00 EST total score was 10.",
+        "16:00 EST total score was 6.",
+        "24:00 EST total score was 3.",
+        "48:00 EST total score was 1."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          2
+        ],
+        "table_id": "Table 5",
+        "verbatim_text": "09:25 EST 14 ... 11:00 EST 10 ... 16:00 EST 6 ... 24:00 EST 3 ... 48:00 EST 1"
+      },
+      "expected_entities": [
+        "Table 5",
+        "NIHSS progression"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Table 5",
+          "predicate": "CONTAINS_ROW",
+          "object": "NIHSS 14 to 1"
+        }
+      ]
+    },
+    {
+      "query_id": "Q-050",
+      "query_type": "table-extraction",
+      "query_text": "According to Table 5, at what timestamp did patient P-105's language sub-score normalize to 0 (Normal speech)?",
+      "reference_answer": "According to Table 5, patient P-105's language score normalized to 0 (Normal speech) at the 24:00 EST timestamp (down from 2 at 09:25 EST and 1 at 16:00 EST).",
+      "reference_claims": [
+        "Language score reached 0 (Normal speech) at 24:00 EST.",
+        "Prior scores were 2 at 09:25 EST and 1 at 11:00/16:00 EST."
+      ],
+      "provenance": {
+        "doc_id": "DOC-EHR-005",
+        "page_numbers": [
+          2
+        ],
+        "table_id": "Table 5",
+        "verbatim_text": "24:00 EST | 3 | 1 (Drift) | 0 (Normal) | 0 (Normal speech) | Resolution of aphasia"
+      },
+      "expected_entities": [
+        "Table 5",
+        "Language Score 0"
+      ],
+      "expected_relations": [
+        {
+          "subject": "Table 5",
+          "predicate": "CONTAINS_ROW",
+          "object": "Language Score 0 at 24:00"
+        }
+      ]
+    }
+  ]
+}

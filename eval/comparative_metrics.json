@@ -1,0 +1,1709 @@
+{
+  "summary": {
+    "overall": {
+      "pipeline_a": {
+        "faithfulness": 0.48,
+        "context_recall": 0.7067,
+        "context_precision": 0.8589,
+        "answer_relevancy": 0.5497
+      },
+      "pipeline_b": {
+        "faithfulness": 0.97,
+        "context_recall": 0.775,
+        "context_precision": 0.5298,
+        "answer_relevancy": 0.5742
+      }
+    },
+    "single_hop": {
+      "pipeline_a": {
+        "faithfulness": 0.55,
+        "context_recall": 0.775,
+        "context_precision": 0.8125,
+        "answer_relevancy": 0.5528
+      },
+      "pipeline_b": {
+        "faithfulness": 1.0,
+        "context_recall": 0.925,
+        "context_precision": 0.4712,
+        "answer_relevancy": 0.5751
+      }
+    },
+    "multi_hop": {
+      "pipeline_a": {
+        "faithfulness": 0.25,
+        "context_recall": 0.5417,
+        "context_precision": 0.8431,
+        "answer_relevancy": 0.5178
+      },
+      "pipeline_b": {
+        "faithfulness": 0.95,
+        "context_recall": 0.5625,
+        "context_precision": 0.5499,
+        "answer_relevancy": 0.5481
+      }
+    },
+    "table_extraction": {
+      "pipeline_a": {
+        "faithfulness": 0.8,
+        "context_recall": 0.9,
+        "context_precision": 0.9833,
+        "answer_relevancy": 0.6071
+      },
+      "pipeline_b": {
+        "faithfulness": 0.95,
+        "context_recall": 0.9,
+        "context_precision": 0.6065,
+        "answer_relevancy": 0.6248
+      }
+    }
+  },
+  "query_evaluations": [
+    {
+      "query_id": "Q-001",
+      "query_type": "single-hop",
+      "query_text": "What was the initial dosage of Lisinopril prescribed to patient P-101?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 0.8333,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Medication:Lisinopril) -[:INDICATED_FOR]-> (Diagnosis:Diabetic Nephropathy); (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Diabetic Nephropathy); (Medication:Lisinopril) -[:CAUSED_ADVERSE_EVENT]-> (Diagnosis:Hyperkalemia) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.0,
+          "context_precision": 0.4786,
+          "answer_relevancy": 0.5884
+        }
+      }
+    },
+    {
+      "query_id": "Q-002",
+      "query_type": "single-hop",
+      "query_text": "What chief complaint did patient P-101 present with on 2026-03-12?",
+      "pipeline_a": {
+        "generated_answer": "History of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5833
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 1 (Table 1: Longitudinal Renal and Electrolyte Panel (P-101)): Date: 2026-03-12, Test Name: Serum Sodium, Result: 139, Normal Range: 135 - 145, Flag: Normal, Unit: mEq/L [DOC-EHR-001, p.1]",
+        "citations": [
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-001, Table 1, p.3]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.4251,
+          "answer_relevancy": 0.5735
+        }
+      }
+    },
+    {
+      "query_id": "Q-003",
+      "query_type": "single-hop",
+      "query_text": "Why was Amlodipine discontinued for patient P-101?",
+      "pipeline_a": {
+        "generated_answer": "History of Present Illness: Patient P-101 is a 58-year-old female with a 12-year history of Type 2 Diabetes Mellitus and poorly controlled essential hypertension.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5622
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Type 2 Diabetes Mellitus); (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Diabetic Nephropathy); (Medication:Lisinopril) -[:INDICATED_FOR]-> (Diagnosis:Diabetic Nephropathy) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-001, p.4]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.45,
+          "answer_relevancy": 0.6064
+        }
+      }
+    },
+    {
+      "query_id": "Q-004",
+      "query_type": "single-hop",
+      "query_text": "What left ventricular ejection fraction (LVEF) was recorded on echocardiogram for patient P-102?",
+      "pipeline_a": {
+        "generated_answer": "Transthoracic Echocardiogram (TTE) Summary: - Left Ventricular Ejection Fraction (LVEF): 28% (Severely reduced).",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.7056
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-102) -[:DIAGNOSED_WITH]-> (Diagnosis:HFrEF NYHA Class III); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Sacubitril/Valsartan); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Carvedilol) [DOC-EHR-002, p.1]",
+        "citations": [
+          "[DOC-EHR-002, p.1]",
+          "[DOC-EHR-002, p.4]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-002, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5237
+        }
+      }
+    },
+    {
+      "query_id": "Q-005",
+      "query_type": "single-hop",
+      "query_text": "What initial intravenous diuretic was administered to patient P-102 upon admission?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.5,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-102) -[:DIAGNOSED_WITH]-> (Diagnosis:HFrEF NYHA Class III); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Sacubitril/Valsartan); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Carvedilol) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.1]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-002, p.1]",
+          "[DOC-EHR-002, p.2]",
+          "[DOC-EHR-002, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.3824,
+          "answer_relevancy": 0.5273
+        }
+      }
+    },
+    {
+      "query_id": "Q-006",
+      "query_type": "single-hop",
+      "query_text": "What required washout period was observed before starting Sacubitril/Valsartan for P-102?",
+      "pipeline_a": {
+        "generated_answer": "mg PO BID after required 36-hour washout period.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.6165
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Sacubitril/Valsartan); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Carvedilol); (Patient:P-102) -[:DIAGNOSED_WITH]-> (Diagnosis:HFrEF NYHA Class III) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-002, p.2]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-002, p.4]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-002, p.1]",
+          "[DOC-EHR-002, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.4762,
+          "answer_relevancy": 0.5396
+        }
+      }
+    },
+    {
+      "query_id": "Q-007",
+      "query_type": "single-hop",
+      "query_text": "What was the primary staging and histology of patient P-103's lung cancer?",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: ONCOLOGY CONSULTATION & PATHOLOGY REVIEW] Encounter Date: 2026-05-02 Primary Diagnosis: Stage IIIA Non-Small Cell Lung Cancer (Adenocarcinoma of right upper lobe, cT2aN2M0).",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.8333,
+          "answer_relevancy": 0.5772
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-103) -[:DIAGNOSED_WITH]-> (Diagnosis:Stage IIIA NSCLC); (Patient:P-103) -[:PRESCRIBED]-> (Medication:Carboplatin); (Medication:Carboplatin) -[:INDUCED]-> (Diagnosis:Febrile Neutropenia) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.1]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-003, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.4821,
+          "answer_relevancy": 0.5825
+        }
+      }
+    },
+    {
+      "query_id": "Q-008",
+      "query_type": "single-hop",
+      "query_text": "What was the PD-L1 expression level documented for patient P-103?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 0.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 4 (Table 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)): Antibiotic Agent: Ciprofloxacin, MIC (ug/mL): >= 4, Interpretation: RESISTANT, Clinical Comment: High-level fluoroquinolone resistance [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-003, p.1]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.1736,
+          "answer_relevancy": 0.5196
+        }
+      }
+    },
+    {
+      "query_id": "Q-009",
+      "query_type": "single-hop",
+      "query_text": "What empiric antibiotic was initiated for patient P-103 upon emergency admission for febrile neutropenia?",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: EMERGENCY ONCOLOGY ADMISSION (CYCLE 1 DAY 11)] Encounter Date: 2026-05-15 Chief Complaint: Sudden onset chills, rigor, and oral temperature spike to 38.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 3 (Table 3: Serial Complete Blood Count with Differential (P-103)): Date: 2026-05-15, Test Name: Absolute Neutrophil Count (ANC), Value: 320, Reference Range: 1500 - 8000, Status: SEVERE_NEUTROPENIA, Unit: cells/uL [DOC-EHR-003, p.3]",
+        "citations": [
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-003, p.1]",
+          "[DOC-EHR-003, Table 3, p.3]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.3099,
+          "answer_relevancy": 0.5152
+        }
+      }
+    },
+    {
+      "query_id": "Q-010",
+      "query_type": "single-hop",
+      "query_text": "What primary infectious diagnosis was made for patient P-104 on admission?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-104) -[:DIAGNOSED_WITH]-> (Diagnosis:Urosepsis); (Diagnosis:Urosepsis) -[:CAUSED_BY]-> (Microorganism:ESBL Escherichia coli); (Patient:P-104) -[:PRESCRIBED]-> (Medication:Meropenem) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.1]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-004, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.4266,
+          "answer_relevancy": 0.6595
+        }
+      }
+    },
+    {
+      "query_id": "Q-011",
+      "query_type": "single-hop",
+      "query_text": "What initial empiric antibiotic was administered to patient P-104?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-104) -[:DIAGNOSED_WITH]-> (Diagnosis:Urosepsis); (Diagnosis:Urosepsis) -[:CAUSED_BY]-> (Microorganism:ESBL Escherichia coli); (Patient:P-104) -[:PRESCRIBED]-> (Medication:Meropenem) [DOC-EHR-004, p.2]",
+        "citations": [
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-004, p.1]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.4867,
+          "answer_relevancy": 0.5963
+        }
+      }
+    },
+    {
+      "query_id": "Q-012",
+      "query_type": "single-hop",
+      "query_text": "What was the time of symptom onset and ED arrival recorded for stroke patient P-105?",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: EMERGENCY NEUROLOGY STROKE CODE] Encounter Date: 2026-07-18 | Time of Onset: 08:15 EST | ED Arrival: 09:20 EST Chief Complaint: Acute right-sided hemiparesis and expressive aphasia.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.5,
+          "context_precision": 0.75,
+          "answer_relevancy": 0.5796
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-105) -[:DIAGNOSED_WITH]-> (Diagnosis:Acute Ischemic Stroke); (Patient:P-105) -[:ADMINISTERED]-> (Medication:Tenecteplase); (Patient:P-105) -[:DIAGNOSED_WITH]-> (Diagnosis:Paroxysmal Atrial Fibrillation) [DOC-EHR-005, p.1]",
+        "citations": [
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.5,
+          "context_precision": 0.75,
+          "answer_relevancy": 0.6302
+        }
+      }
+    },
+    {
+      "query_id": "Q-013",
+      "query_type": "single-hop",
+      "query_text": "What was the baseline NIHSS score for patient P-105 upon arrival?",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: SERIAL NEUROLOGICAL TELEMETRY] Table 5: Longitudinal NIHSS Score Trajectory (P-105) | Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note | | :--- | :--- | :--- | :--- | :--- | :--- | | 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation | | 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr | | 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.9167,
+          "answer_relevancy": 0.6128
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 5 (Table 5: Longitudinal NIHSS Score Trajectory (P-105)): Timestamp: 09:25 EST, NIHSS Total: 14, Motor Arm Score: 3 (Severe), Motor Leg Score: 2 (Moderate), Language Score: 2 (Severe aphasia), Clinical Note: Baseline presentation [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.4762,
+          "answer_relevancy": 0.6593
+        }
+      }
+    },
+    {
+      "query_id": "Q-014",
+      "query_type": "single-hop",
+      "query_text": "What thrombolytic drug and dosage was administered to patient P-105?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-105) -[:DIAGNOSED_WITH]-> (Diagnosis:Acute Ischemic Stroke); (Diagnosis:Paroxysmal Atrial Fibrillation) -[:IDENTIFIED_AS_ETIOLOGY]-> (Diagnosis:Acute Ischemic Stroke); (Patient:P-105) -[:ADMINISTERED]-> (Medication:Tenecteplase) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.1,
+          "answer_relevancy": 0.5775
+        }
+      }
+    },
+    {
+      "query_id": "Q-015",
+      "query_type": "single-hop",
+      "query_text": "Why was patient P-105 not considered a candidate for endovascular thrombectomy?",
+      "pipeline_a": {
+        "generated_answer": "Patient was not an endovascular thrombectomy candidate due to distal branch vessel location.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.7056
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-105) -[:DIAGNOSED_WITH]-> (Diagnosis:Acute Ischemic Stroke); (Diagnosis:Paroxysmal Atrial Fibrillation) -[:IDENTIFIED_AS_ETIOLOGY]-> (Diagnosis:Acute Ischemic Stroke); (Patient:P-105) -[:ADMINISTERED]-> (Medication:Tenecteplase) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.5,
+          "answer_relevancy": 0.5775
+        }
+      }
+    },
+    {
+      "query_id": "Q-016",
+      "query_type": "single-hop",
+      "query_text": "What heart rhythm abnormality was detected on telemetry for patient P-105?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 0.5,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-105) -[:DIAGNOSED_WITH]-> (Diagnosis:Acute Ischemic Stroke); (Diagnosis:Paroxysmal Atrial Fibrillation) -[:IDENTIFIED_AS_ETIOLOGY]-> (Diagnosis:Acute Ischemic Stroke); (Patient:P-105) -[:ADMINISTERED]-> (Medication:Tenecteplase) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.245,
+          "answer_relevancy": 0.5708
+        }
+      }
+    },
+    {
+      "query_id": "Q-017",
+      "query_type": "single-hop",
+      "query_text": "What oral anticoagulant was initiated for patient P-105 for secondary stroke prevention?",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: SECONDARY STROKE PREVENTION & REHABILITATION] Etiology Evaluation: - 12-lead EKG and continuous telemetry: Paroxysmal Atrial Fibrillation detected at 32 hours post-admission.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-105) -[:DIAGNOSED_WITH]-> (Diagnosis:Acute Ischemic Stroke); (Diagnosis:Paroxysmal Atrial Fibrillation) -[:IDENTIFIED_AS_ETIOLOGY]-> (Diagnosis:Acute Ischemic Stroke); (Patient:P-105) -[:ADMINISTERED]-> (Medication:Tenecteplase) [DOC-EHR-005, p.3]",
+        "citations": [
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-002, p.2]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.605
+        }
+      }
+    },
+    {
+      "query_id": "Q-018",
+      "query_type": "single-hop",
+      "query_text": "What was patient P-102's dry weight at discharge?",
+      "pipeline_a": {
+        "generated_answer": "Condition on Discharge: Clinically compensated, weight down to 78.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.9167,
+          "answer_relevancy": 0.6129
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-102) -[:DIAGNOSED_WITH]-> (Diagnosis:HFrEF NYHA Class III); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Sacubitril/Valsartan); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Carvedilol) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-002, p.4]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-002, p.1]",
+          "[DOC-EHR-002, p.2]",
+          "[DOC-EHR-002, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.5119,
+          "answer_relevancy": 0.5335
+        }
+      }
+    },
+    {
+      "query_id": "Q-019",
+      "query_type": "single-hop",
+      "query_text": "What medication was administered to patient P-101 to manage urgent hyperkalemia?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Type 2 Diabetes Mellitus); (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Diabetic Nephropathy); (Medication:Lisinopril) -[:INDICATED_FOR]-> (Diagnosis:Diabetic Nephropathy) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.25,
+          "answer_relevancy": 0.5991
+        }
+      }
+    },
+    {
+      "query_id": "Q-020",
+      "query_type": "single-hop",
+      "query_text": "What growth factor was administered to patient P-103 during hospitalization for neutropenia?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 3 (Table 3: Serial Complete Blood Count with Differential (P-103)): Date: 2026-05-15, Test Name: Absolute Neutrophil Count (ANC), Value: 320, Reference Range: 1500 - 8000, Status: SEVERE_NEUTROPENIA, Unit: cells/uL [DOC-EHR-003, p.3]",
+        "citations": [
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-003, p.1]",
+          "[DOC-EHR-003, Table 3, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.5,
+          "answer_relevancy": 0.5174
+        }
+      }
+    },
+    {
+      "query_id": "Q-021",
+      "query_type": "multi-hop",
+      "query_text": "Did the medication initiated for diabetic nephropathy in patient P-101 lead to an adverse event requiring emergency intervention?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.75,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Diabetic Nephropathy); (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Type 2 Diabetes Mellitus); (Patient:P-101) -[:PRESCRIBED]-> (Medication:Lisinopril) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-005, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.75,
+          "context_precision": 0.5595,
+          "answer_relevancy": 0.6476
+        }
+      }
+    },
+    {
+      "query_id": "Q-022",
+      "query_type": "multi-hop",
+      "query_text": "Trace the relationship between patient P-101's baseline renal lab values and the replacement antihypertensive regimen chosen after adverse drug event.",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5243
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 5 (Table 5: Longitudinal NIHSS Score Trajectory (P-105)): Timestamp: 09:25 EST, NIHSS Total: 14, Motor Arm Score: 3 (Severe), Motor Leg Score: 2 (Moderate), Language Score: 2 (Severe aphasia), Clinical Note: Baseline presentation [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-005, Table 5, p.2]",
+          "[DOC-EHR-001, Table 1, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.5423,
+          "answer_relevancy": 0.5094
+        }
+      }
+    },
+    {
+      "query_id": "Q-023",
+      "query_type": "multi-hop",
+      "query_text": "How did patient P-102's NT-proBNP biomarker trend correlate with the inpatient heart failure therapies administered?",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE] Table 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102) | Date | Biomarker | Value | Reference Range | Interpretation | | :--- | :--- | :--- | :--- | :--- | | 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) | | 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) | | 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) | | 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) | |.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.6667,
+          "context_precision": 0.8056,
+          "answer_relevancy": 0.5616
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 2 (Table 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102)): Date: 2026-04-05, Biomarker: NT-proBNP, Value: 4850, Reference Range: < 125, Interpretation: SEVERELY_ELEVATED (pg/mL) [DOC-EHR-002, p.3]",
+        "citations": [
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-002, p.4]",
+          "[DOC-EHR-002, p.2]",
+          "[DOC-EHR-002, p.1]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-002, Table 2, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.6667,
+          "context_precision": 0.8596,
+          "answer_relevancy": 0.5622
+        }
+      }
+    },
+    {
+      "query_id": "Q-024",
+      "query_type": "multi-hop",
+      "query_text": "Explain how the echocardiographic finding for patient P-102 determined the selection of neurohormonal discharge medications.",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.5,
+          "context_precision": 0.3333,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-102) -[:DIAGNOSED_WITH]-> (Diagnosis:HFrEF NYHA Class III); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Sacubitril/Valsartan); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Carvedilol) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-002, p.1]",
+          "[DOC-EHR-002, p.2]",
+          "[DOC-EHR-002, Table 2, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.0,
+          "context_precision": 0.2574,
+          "answer_relevancy": 0.5223
+        }
+      }
+    },
+    {
+      "query_id": "Q-025",
+      "query_type": "multi-hop",
+      "query_text": "Connect patient P-103's chemotherapy regimen to the emergency admission 11 days later and the subsequent dose adjustment.",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.75,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 4 (Table 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)): Antibiotic Agent: Meropenem, MIC (ug/mL): <= 0 [DOC-EHR-001, p.3] 25, Interpretation: SUSCEPTIBLE, Clinical Comment: Preferred carbapenem regimen [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-003, p.1]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.75,
+          "context_precision": 0.4917,
+          "answer_relevancy": 0.5142
+        }
+      }
+    },
+    {
+      "query_id": "Q-026",
+      "query_type": "multi-hop",
+      "query_text": "What bacteriological finding in patient P-104 forced an escalation of antimicrobial therapy from the initial regimen?",
+      "pipeline_a": {
+        "generated_answer": "Initial Antimicrobial Order: Intravenous Ceftriaxone 2 g IV every 24 hours started empirically.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5562
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 4 (Table 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)): Antibiotic Agent: Meropenem, MIC (ug/mL): <= 0 [DOC-EHR-001, p.3] 25, Interpretation: SUSCEPTIBLE, Clinical Comment: Preferred carbapenem regimen [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-004, p.1]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.3988,
+          "answer_relevancy": 0.5337
+        }
+      }
+    },
+    {
+      "query_id": "Q-027",
+      "query_type": "multi-hop",
+      "query_text": "How did the microbiological resistance profile of P-104 affect the route and duration of post-discharge care?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.4167,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 4 (Table 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)): Antibiotic Agent: Ciprofloxacin, MIC (ug/mL): >= 4, Interpretation: RESISTANT, Clinical Comment: High-level fluoroquinolone resistance [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-004, p.1]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.5,
+          "context_precision": 0.461,
+          "answer_relevancy": 0.5155
+        }
+      }
+    },
+    {
+      "query_id": "Q-028",
+      "query_type": "multi-hop",
+      "query_text": "Trace the trajectory of neurological deficit in patient P-105 from initial presentation through pharmacological thrombolysis to 48-hour recovery.",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: SERIAL NEUROLOGICAL TELEMETRY] Table 5: Longitudinal NIHSS Score Trajectory (P-105) | Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note | | :--- | :--- | :--- | :--- | :--- | :--- | | 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation | | 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr | | 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.5,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5414
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 5 (Table 5: Longitudinal NIHSS Score Trajectory (P-105)): Timestamp: 09:25 EST, NIHSS Total: 14, Motor Arm Score: 3 (Severe), Motor Leg Score: 2 (Moderate), Language Score: 2 (Severe aphasia), Clinical Note: Baseline presentation [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.75,
+          "context_precision": 0.54,
+          "answer_relevancy": 0.5318
+        }
+      }
+    },
+    {
+      "query_id": "Q-029",
+      "query_type": "multi-hop",
+      "query_text": "What diagnostic finding identified the cardioembolic source of stroke in patient P-105, and what anticoagulant was chosen?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.6667,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-105) -[:DIAGNOSED_WITH]-> (Diagnosis:Acute Ischemic Stroke); (Patient:P-105) -[:ADMINISTERED]-> (Medication:Tenecteplase); (Patient:P-105) -[:DIAGNOSED_WITH]-> (Diagnosis:Paroxysmal Atrial Fibrillation) [DOC-EHR-005, p.3]",
+        "citations": [
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.7398,
+          "answer_relevancy": 0.6224
+        }
+      }
+    },
+    {
+      "query_id": "Q-030",
+      "query_type": "multi-hop",
+      "query_text": "Evaluate the multi-organ impact of ACE-inhibitor initiation in patient P-101 across the renal and cardiac systems.",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.6667,
+          "context_precision": 0.75,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Type 2 Diabetes Mellitus); (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Diabetic Nephropathy); (Medication:Lisinopril) -[:INDICATED_FOR]-> (Diagnosis:Diabetic Nephropathy) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-001, Table 1, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.2609,
+          "answer_relevancy": 0.5557
+        }
+      }
+    },
+    {
+      "query_id": "Q-031",
+      "query_type": "multi-hop",
+      "query_text": "Which patients in the corpus were initiated on beta-blockers, and what specific clinical indications warranted them?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.8333,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "[SECTION: LABORATORY FLOWSHEET & METABOLIC TELEMETRY] [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-002, p.2]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-004, Table 4, p.2]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.4167,
+          "answer_relevancy": 0.5
+        }
+      }
+    },
+    {
+      "query_id": "Q-032",
+      "query_type": "multi-hop",
+      "query_text": "Compare the renal function trajectories of patient P-101 and patient P-102 during their inpatient/clinic courses.",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.5,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Type 2 Diabetes Mellitus); (Patient:P-101) -[:DIAGNOSED_WITH]-> (Diagnosis:Diabetic Nephropathy); (Medication:Lisinopril) -[:INDICATED_FOR]-> (Diagnosis:Diabetic Nephropathy) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-002, p.1]",
+          "[DOC-EHR-001, Table 1, p.3]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.0,
+          "context_precision": 0.6492,
+          "answer_relevancy": 0.5854
+        }
+      }
+    },
+    {
+      "query_id": "Q-033",
+      "query_type": "multi-hop",
+      "query_text": "Trace how patient P-103's Absolute Neutrophil Count recovered from nadir to resolution and how it permitted discharge.",
+      "pipeline_a": {
+        "generated_answer": "0 | CRITICAL_LOW | 10^3/uL | | 2026-05-15 | Absolute Neutrophil Count (ANC) | 320 | 1500 - 8000 | SEVERE_NEUTROPENIA | cells/uL | | 2026-05-15 | Hemoglobin | 9.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.6667,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5478
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 3 (Table 3: Serial Complete Blood Count with Differential (P-103)): Date: 2026-05-03, Test Name: Absolute Neutrophil Count (ANC), Value: 4200, Reference Range: 1500 - 8000, Status: Normal, Unit: cells/uL [DOC-EHR-003, p.3]",
+        "citations": [
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-002, p.4]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-003, p.1]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-003, Table 3, p.3]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.6667,
+          "context_precision": 0.8523,
+          "answer_relevancy": 0.5775
+        }
+      }
+    },
+    {
+      "query_id": "Q-034",
+      "query_type": "multi-hop",
+      "query_text": "What specific safety monitoring step performed on 2026-03-19 prevented further clinical decline in patient P-101?",
+      "pipeline_a": {
+        "generated_answer": "73m2 | | 2026-03-12 | Urine Albumin/Cr | 340 | < 30 | ABNORMAL | mg/g | | 2026-03-19 | Serum Potassium | 5.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.5,
+          "context_precision": 0.8056,
+          "answer_relevancy": 0.5945
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 1 (Table 1: Longitudinal Renal and Electrolyte Panel (P-101)): Date: 2026-03-19, Test Name: Serum Potassium, Result: 5 [DOC-EHR-001, p.3] 7, Normal Range: 3 [DOC-EHR-001, p.3] 0, Flag: CRITICAL_HIGH, Unit: mEq/L [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-001, Table 1, p.3]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.5,
+          "context_precision": 0.4561,
+          "answer_relevancy": 0.565
+        }
+      }
+    },
+    {
+      "query_id": "Q-035",
+      "query_type": "multi-hop",
+      "query_text": "Explain the clinical reasoning for administering IV crystalloids to patient P-104 despite suspected septic shock.",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-104) -[:DIAGNOSED_WITH]-> (Diagnosis:Urosepsis); (Diagnosis:Urosepsis) -[:CAUSED_BY]-> (Microorganism:ESBL Escherichia coli); (Patient:P-104) -[:PRESCRIBED]-> (Medication:Meropenem) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-004, p.1]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-004, Table 4, p.2]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.4998,
+          "answer_relevancy": 0.584
+        }
+      }
+    },
+    {
+      "query_id": "Q-036",
+      "query_type": "multi-hop",
+      "query_text": "Which patients presented with fever as a core triage symptom, and what distinct infectious etiologies were confirmed?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 0.8056,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 4 (Table 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)): Antibiotic Agent: Ceftriaxone, MIC (ug/mL): >= 64, Interpretation: RESISTANT, Clinical Comment: ESBL confirmed [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-004, Table 4, p.2]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.0,
+          "context_precision": 0.5629,
+          "answer_relevancy": 0.5166
+        }
+      }
+    },
+    {
+      "query_id": "Q-037",
+      "query_type": "multi-hop",
+      "query_text": "Analyze how the timing of presentation in patient P-105 influenced thrombolytic therapy eligibility.",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 5 (Table 5: Longitudinal NIHSS Score Trajectory (P-105)): Timestamp: 09:25 EST, NIHSS Total: 14, Motor Arm Score: 3 (Severe), Motor Leg Score: 2 (Moderate), Language Score: 2 (Severe aphasia), Clinical Note: Baseline presentation [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.0,
+          "context_precision": 0.4603,
+          "answer_relevancy": 0.5253
+        }
+      }
+    },
+    {
+      "query_id": "Q-038",
+      "query_type": "multi-hop",
+      "query_text": "How did baseline laboratory parameters dictate the chemotherapy premedication regimen for patient P-103?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.5,
+          "answer_relevancy": 0.53
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 4 (Table 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)): Antibiotic Agent: Meropenem, MIC (ug/mL): <= 0 [DOC-EHR-001, p.3] 25, Interpretation: SUSCEPTIBLE, Clinical Comment: Preferred carbapenem regimen [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-003, p.1]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-004, Table 4, p.2]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.0,
+          "context_precision": 0.4333,
+          "answer_relevancy": 0.5163
+        }
+      }
+    },
+    {
+      "query_id": "Q-039",
+      "query_type": "multi-hop",
+      "query_text": "Identify all patients who experienced an acute decline in kidney markers and contrast their clinical causes.",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.3333,
+          "context_precision": 0.8056,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Medication:Lisinopril) -[:CAUSED_ADVERSE_EVENT]-> (Diagnosis:Acute Kidney Injury); (Medication:Lisinopril) -[:INDICATED_FOR]-> (Diagnosis:Diabetic Nephropathy); (Medication:Lisinopril) -[:CAUSED_ADVERSE_EVENT]-> (Diagnosis:Hyperkalemia) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-004, Table 4, p.2]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.6667,
+          "context_precision": 0.5568,
+          "answer_relevancy": 0.5437
+        }
+      }
+    },
+    {
+      "query_id": "Q-040",
+      "query_type": "multi-hop",
+      "query_text": "What clinical criteria were met before oral heart failure medications were uptitrated for patient P-102 at discharge?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 0.3333,
+          "context_precision": 0.8056,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "Clinical relationship analysis reveals: (Patient:P-102) -[:DIAGNOSED_WITH]-> (Diagnosis:HFrEF NYHA Class III); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Sacubitril/Valsartan); (Diagnosis:HFrEF NYHA Class III) -[:INDICATED_REGIMEN]-> (Medication:Carvedilol) [DOC-EHR-002, p.4]",
+        "citations": [
+          "[DOC-EHR-002, p.4]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-002, p.2]",
+          "[DOC-EHR-002, p.1]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-002, Table 2, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5327
+        }
+      }
+    },
+    {
+      "query_id": "Q-041",
+      "query_type": "table-extraction",
+      "query_text": "Extract the exact serum potassium and creatinine values for patient P-101 on 2026-03-12 versus 2026-03-19 from Table 1.",
+      "pipeline_a": {
+        "generated_answer": "73m2 | | 2026-03-12 | Urine Albumin/Cr | 340 | < 30 | ABNORMAL | mg/g | | 2026-03-19 | Serum Potassium | 5.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.9167,
+          "answer_relevancy": 0.7158
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 1 (Table 1: Longitudinal Renal and Electrolyte Panel (P-101)): Date: 2026-03-12, Test Name: Serum Sodium, Result: 139, Normal Range: 135 - 145, Flag: Normal, Unit: mEq/L [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-001, Table 1, p.3]",
+          "[DOC-EHR-002, Table 2, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.8135,
+          "answer_relevancy": 0.6225
+        }
+      }
+    },
+    {
+      "query_id": "Q-042",
+      "query_type": "table-extraction",
+      "query_text": "What was patient P-101's baseline urine albumin-to-creatinine ratio (uACR) and flag recorded in Table 1?",
+      "pipeline_a": {
+        "generated_answer": "- Order comprehensive metabolic panel (CMP), spot urine albumin-to-creatinine ratio (uACR), and renal ultrasound.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.6335
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 1 (Table 1: Longitudinal Renal and Electrolyte Panel (P-101)): Date: 2026-03-12, Test Name: Urine Albumin/Cr, Result: 340, Normal Range: < 30, Flag: ABNORMAL, Unit: mg/g [DOC-EHR-001, p.2]",
+        "citations": [
+          "[DOC-EHR-001, p.2]",
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-001, p.4]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-001, Table 1, p.3]",
+          "[DOC-EHR-002, Table 2, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.7835,
+          "answer_relevancy": 0.6083
+        }
+      }
+    },
+    {
+      "query_id": "Q-043",
+      "query_type": "table-extraction",
+      "query_text": "List all NT-proBNP measurement dates, values, and interpretations from Table 2 for patient P-102.",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE] Table 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102) | Date | Biomarker | Value | Reference Range | Interpretation | | :--- | :--- | :--- | :--- | :--- | | 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) | | 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) | | 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) | | 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) | |.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5722
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 2 (Table 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102)): Date: 2026-04-05, Biomarker: NT-proBNP, Value: 4850, Reference Range: < 125, Interpretation: SEVERELY_ELEVATED (pg/mL) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-002, p.1]",
+          "[DOC-EHR-002, p.2]",
+          "[DOC-EHR-002, Table 2, p.3]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.3929,
+          "answer_relevancy": 0.5941
+        }
+      }
+    },
+    {
+      "query_id": "Q-044",
+      "query_type": "table-extraction",
+      "query_text": "What was patient P-102's High-Sensitivity Troponin T level and unit recorded in Table 2?",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: BIOMARKER & CARDIAC ENZYME TABLE] Table 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102) | Date | Biomarker | Value | Reference Range | Interpretation | | :--- | :--- | :--- | :--- | :--- | | 2026-04-05 | NT-proBNP | 4850 | < 125 | SEVERELY_ELEVATED (pg/mL) | | 2026-04-05 | High-Sensitivity Troponin T | 24 | < 14 | MILDLY_ELEVATED (ng/L) | | 2026-04-06 | NT-proBNP | 3210 | < 125 | DECREASING (pg/mL) | | 2026-04-08 | NT-proBNP | 1140 | < 125 | RESPONDING_TO_THERAPY (pg/mL) | |.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.5,
+          "context_precision": 0.9167,
+          "answer_relevancy": 0.5482
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 2 (Table 2: Cardiac Telemetry and Neurohormonal Biomarkers (P-102)): Date: 2026-04-05, Biomarker: High-Sensitivity Troponin T, Value: 24, Reference Range: < 14, Interpretation: MILDLY_ELEVATED (ng/L) [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-002, p.1]",
+          "[DOC-EHR-002, p.2]",
+          "[DOC-EHR-002, Table 2, p.3]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.5,
+          "context_precision": 0.4429,
+          "answer_relevancy": 0.6266
+        }
+      }
+    },
+    {
+      "query_id": "Q-045",
+      "query_type": "table-extraction",
+      "query_text": "Extract patient P-103's Absolute Neutrophil Count (ANC) on 2026-05-03, 2026-05-15, 2026-05-18, and 2026-05-20 from Table 3.",
+      "pipeline_a": {
+        "generated_answer": "5 | LOW | g/dL | | 2026-05-18 | Absolute Neutrophil Count (ANC) | 1250 | 1500 - 8000 | RECOVERING | cells/uL | | 2026-05-20 | Absolute Neutrophil Count (ANC) | 2800 | 1500 - 8000 | RESOLVED | cells/uL |.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.7209
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 3 (Table 3: Serial Complete Blood Count with Differential (P-103)): Date: 2026-05-03, Test Name: White Blood Cells (WBC), Value: 6 [DOC-EHR-003, p.3] 8, Reference Range: 4 [DOC-EHR-003, p.3] 0 - 11 [DOC-EHR-003, p.3] 0, Status: Normal, Unit: 10^3/uL [DOC-EHR-003, p.3]",
+        "citations": [
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-003, p.1]",
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-003, Table 3, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 0.75,
+          "context_recall": 1.0,
+          "context_precision": 0.7929,
+          "answer_relevancy": 0.6247
+        }
+      }
+    },
+    {
+      "query_id": "Q-046",
+      "query_type": "table-extraction",
+      "query_text": "What was patient P-103's nadir White Blood Cell count and status on 2026-05-15 in Table 3?",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: HEMATOLOGY FLOWSHEET & DIFFERENTIALS] Table 3: Serial Complete Blood Count with Differential (P-103) | Date | Test Name | Value | Reference Range | Status | Unit | | :--- | :--- | :--- | :--- | :--- | :--- | | 2026-05-03 | White Blood Cells (WBC) | 6.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.6916
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 3 (Table 3: Serial Complete Blood Count with Differential (P-103)): Date: 2026-05-03, Test Name: White Blood Cells (WBC), Value: 6 [DOC-EHR-003, p.3] 8, Reference Range: 4 [DOC-EHR-003, p.3] 0 - 11 [DOC-EHR-003, p.3] 0, Status: Normal, Unit: 10^3/uL [DOC-EHR-003, p.3]",
+        "citations": [
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-003, p.1]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-003, Table 3, p.3]",
+          "[DOC-EHR-001, Table 1, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 0.75,
+          "context_recall": 1.0,
+          "context_precision": 0.8357,
+          "answer_relevancy": 0.6818
+        }
+      }
+    },
+    {
+      "query_id": "Q-047",
+      "query_type": "table-extraction",
+      "query_text": "Based on Table 4, which antibiotics were reported as SUSCEPTIBLE for the ESBL E. coli isolate from patient P-104?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.53
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 4 (Table 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)): Antibiotic Agent: Ceftriaxone, MIC (ug/mL): >= 64, Interpretation: RESISTANT, Clinical Comment: ESBL confirmed [DOC-EHR-004, p.2]",
+        "citations": [
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-004, p.1]",
+          "[DOC-EHR-003, p.4]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-003, p.2]",
+          "[DOC-EHR-004, Table 4, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.6429,
+          "answer_relevancy": 0.5533
+        }
+      }
+    },
+    {
+      "query_id": "Q-048",
+      "query_type": "table-extraction",
+      "query_text": "What were the MIC and clinical interpretations for Ciprofloxacin and Ceftriaxone in Table 4 for patient P-104?",
+      "pipeline_a": {
+        "generated_answer": "Based on the retrieved baseline context, insufficient evidence was found to answer this question.",
+        "metrics": {
+          "faithfulness": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 4 (Table 4: Urine and Blood Culture Antimicrobial Susceptibility Testing (AST)): Antibiotic Agent: Ceftriaxone, MIC (ug/mL): >= 64, Interpretation: RESISTANT, Clinical Comment: ESBL confirmed [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-004, p.2]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-004, p.1]",
+          "[DOC-EHR-004, Table 4, p.2]",
+          "[DOC-EHR-005, Table 5, p.2]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.3869,
+          "answer_relevancy": 0.6111
+        }
+      }
+    },
+    {
+      "query_id": "Q-049",
+      "query_type": "table-extraction",
+      "query_text": "Extract the exact NIHSS score progression over all 5 recorded timestamps for patient P-105 from Table 5.",
+      "pipeline_a": {
+        "generated_answer": "[SECTION: SERIAL NEUROLOGICAL TELEMETRY] Table 5: Longitudinal NIHSS Score Trajectory (P-105) | Timestamp | NIHSS Total | Motor Arm Score | Motor Leg Score | Language Score | Clinical Note | | :--- | :--- | :--- | :--- | :--- | :--- | | 09:25 EST | 14 | 3 (Severe) | 2 (Moderate) | 2 (Severe aphasia) | Baseline presentation | | 11:00 EST | 10 | 2 (Moderate) | 2 (Moderate) | 1 (Mild aphasia) | Post-thrombolysis 1 hr | | 16:00 EST | 6 | 1 (Drift) | 1 (Drift) | 1 (Mild aphasia) | Continued recovery.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.5799
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 5 (Table 5: Longitudinal NIHSS Score Trajectory (P-105)): Timestamp: 16:00 EST, NIHSS Total: 6, Motor Arm Score: 1 (Drift), Motor Leg Score: 1 (Drift), Language Score: 1 (Mild aphasia), Clinical Note: Continued recovery [DOC-EHR-001, p.3]",
+        "citations": [
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, Table 5, p.2]",
+          "[DOC-EHR-003, Table 3, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 1.0,
+          "context_precision": 0.3929,
+          "answer_relevancy": 0.631
+        }
+      }
+    },
+    {
+      "query_id": "Q-050",
+      "query_type": "table-extraction",
+      "query_text": "According to Table 5, at what timestamp did patient P-105's language sub-score normalize to 0 (Normal speech)?",
+      "pipeline_a": {
+        "generated_answer": "1 (Drift) | 1 (Mild aphasia) | Continued recovery | | 24:00 EST | 3 | 1 (Drift) | 0 (Normal) | 0 (Normal speech) | Resolution of aphasia | | 48:00 EST | 1 | 0 (Normal) | 0 (Normal) | 0 (Normal speech) | Trace pronator drift right arm |.",
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.5,
+          "context_precision": 1.0,
+          "answer_relevancy": 0.579
+        }
+      },
+      "pipeline_b": {
+        "generated_answer": "According to Table 5 (Table 5: Longitudinal NIHSS Score Trajectory (P-105)): Timestamp: 24:00 EST, NIHSS Total: 3, Motor Arm Score: 1 (Drift), Motor Leg Score: 0 (Normal), Language Score: 0 (Normal speech), Clinical Note: Resolution of aphasia [DOC-EHR-005, p.2]",
+        "citations": [
+          "[DOC-EHR-005, p.2]",
+          "[DOC-EHR-001, p.3]",
+          "[DOC-EHR-003, p.3]",
+          "[DOC-EHR-001, p.1]",
+          "[DOC-EHR-002, p.3]",
+          "[DOC-EHR-004, p.3]",
+          "[DOC-EHR-005, p.1]",
+          "[DOC-EHR-005, p.3]",
+          "[DOC-EHR-005, Table 5, p.2]",
+          "[DOC-EHR-001, Table 1, p.3]"
+        ],
+        "metrics": {
+          "faithfulness": 1.0,
+          "context_recall": 0.5,
+          "context_precision": 0.5811,
+          "answer_relevancy": 0.6942
+        }
+      }
+    }
+  ]
+}
